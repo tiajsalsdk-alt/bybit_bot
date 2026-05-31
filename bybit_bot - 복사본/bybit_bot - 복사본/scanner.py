@@ -49,15 +49,12 @@ async def scan_top_symbols():
     # 거래대금 내림차순 정렬
     all_usdt_tickers.sort(key=lambda x: x["turnover"], reverse=True)
 
-    # [2] 상위 20개 종목 추출 (금/스테이블 제외된 상태)
-    top_20 = all_usdt_tickers[:20]
-    watchlist = [t["symbol"] for t in top_20 if t["turnover"] >= MIN_VOLUME]
-
-    # [3] 블랙리스트 제거
-    watchlist = [s for s in watchlist if s not in BLACKLIST]
-
-    # 결과 로깅
-    watchlist.sort()
-    # log.info(f"Watchlist Updated ({len(watchlist)} symbols): {watchlist}")
+    # [2] 거래대금 50M 필터 및 ETH, SOL 최우선 배치
+    priority_syms = ["ETHUSDT", "SOLUSDT"]
+    filtered_tickers = [t for t in all_usdt_tickers if t["turnover"] >= MIN_VOLUME]
     
+    # 우선순위 종목을 리스트 최상단으로, 나머지는 거래대금 순
+    filtered_tickers.sort(key=lambda x: (x["symbol"] in priority_syms, x["turnover"]), reverse=True)
+    
+    watchlist = [t["symbol"] for t in filtered_tickers if t["symbol"] not in BLACKLIST]
     return watchlist

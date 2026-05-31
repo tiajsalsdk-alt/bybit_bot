@@ -5,6 +5,7 @@ import asyncio
 import random
 import logging
 import datetime as dt
+import ta # 기술 지표 라이브러리 추가
 
 os.system("")
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -19,16 +20,16 @@ from order_manager import (
     calc_tp_sl, place_hybrid_order,
     update_sl, close_position_market, monitor_positions,
     cancel_all_active_orders, close_all_active_positions,
-    check_trade_approval, handle_trade_result, check_cooldown
+    check_trade_approval, handle_trade_result, check_cooldown,
+    _entry_atr
 )
 from position_manager import (
     get_open_positions,
     check_regime_conflict, record_entry, _entry_regimes
 )
 from config import (
-    TF_REGIME, TF_ENTRY, CANDLES_NEEDED, DAILY_LOSS_LIMIT,
-    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, DYNAMIC_MAX_TREND, DYNAMIC_MAX_SIDE,
-    MAIN_LEV
+    ADX_TF, SIDEWAYS_TF, TREND_TF, CANDLES_NEEDED, DAILY_LOSS_LIMIT,
+    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, MAIN_LEV
 )
 
 # ── 색상 및 아이콘 ──────────────────────────────────────────
@@ -105,7 +106,7 @@ log = logging.getLogger(__name__)
 
 watchlist: list[str] = []
 regimes:   dict[str, Regime] = {}
-current_max_positions = DYNAMIC_MAX_SIDE 
+current_max_positions = 0
 symbol_adx = {} 
 symbol_ema = {} 
 
@@ -127,37 +128,29 @@ async def refresh_watchlist():
 
 async def run_regime_update():
     global current_max_positions, symbol_adx, symbol_ema
-    log.info("[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크")
+    log.info(f"[{ADX_TF}m] 1H ADX 장세 및 대추세 필터(EMA 50) 업데이트")
     
-    try:
-        btc_df = await fetch_candles("BTCUSDT", TF_REGIME, limit=CANDLES_NEEDED)
-        btc_df = add_indicators(btc_df)
-        market_adx = btc_df.iloc[-1]["adx"]
-        if market_adx >= ADX_TREND_LEVEL:
-            current_max_positions = DYNAMIC_MAX_TREND
-        else:
-            current_max_positions = DYNAMIC_MAX_SIDE
-    except Exception as e:
-        if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
-        log.error(f"시장 국면 판단 오류: {e}")
-
     for symbol in watchlist:
         try:
-            df = await fetch_candles(symbol, TF_REGIME, limit=CANDLES_NEEDED)
-            if len(df) < CANDLES_NEEDED:
-                continue
-            df = add_indicators(df)
-            regimes[symbol] = detect_regime(df)
+            # 1. 1시간봉 데이터로 장세 및 대추세 판별
+            df_1h = await fetch_candles(symbol, ADX_TF, limit=100)
+            if df_1h.empty: continue
+            df_1h = add_indicators(df_1h)
             
-            last_row = df.iloc[-1]
-            symbol_adx[symbol] = last_row["adx"]
-            symbol_ema[symbol] = last_row["ema200"]
+            symbol_adx[symbol] = df_1h.iloc[-1]["adx"]
+            symbol_ema[symbol] = ta.trend.ema_indicator(df_1h['close'], window=50).iloc[-1]
+            regimes[symbol] = detect_regime(df_1h)
             
-            log.info(f"  {symbol}  {REGIME_ICON.get(regimes[symbol], '').strip()} (ADX: {symbol_adx[symbol]:.1f})")
-            
-            await asyncio.sleep(0.4)
+            # [MTF 3분할 기준] 25↑ 추세(5개), 22↓ 횡보(3개), 23~24 데드존(0개)
+            if symbol == "BTCUSDT": 
+                adx_v = symbol_adx[symbol]
+                if adx_v >= ADX_TREND_LEVEL: current_max_positions = 5
+                elif adx_v <= ADX_SIDEWAYS_LEVEL: current_max_positions = 3
+                else: current_max_positions = 0 # 데드존
+
+            log.info(f"  {symbol}  {REGIME_ICON.get(regimes[symbol], '').strip()} (1H ADX: {symbol_adx[symbol]:.1f})")
+            await asyncio.sleep(0.5) 
         except Exception as e:
-            if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
             log.error(f"장세 오류 {symbol}: {e}")
 
 
@@ -165,80 +158,74 @@ async def run_entry_check(wallet: float):
     positions = await get_open_positions()
     print_status(wallet, positions, regimes, current_max_positions)
 
-    if len(positions) >= current_max_positions:
+    # 전체 시장 데드존 체크
+    if current_max_positions == 0:
+        log.info("💤 시장 1H ADX 23~24 데드존 (관망). 진입을 건너뜁니다.")
         return
 
     for symbol in watchlist:
         try:
-            if any(p["symbol"] == symbol for p in positions):
+            if any(p["symbol"] == symbol for p in positions): continue
+            
+            adx_1h = symbol_adx.get(symbol, 0.0)
+            ema_1h = symbol_ema.get(symbol, 0.0)
+            
+            # [MTF Routing] 1H ADX 3분할 분기
+            if adx_1h >= ADX_TREND_LEVEL:
+                entry_tf = TREND_TF
+            elif adx_1h <= ADX_SIDEWAYS_LEVEL:
+                entry_tf = SIDEWAYS_TF
+            else:
+                print(f"  [Pass] {symbol} - 1H ADX {adx_1h:.1f} 데드존 (관망)")
                 continue
             
             await cancel_all_active_orders(symbol)
 
-            df_entry = await fetch_candles(symbol, TF_ENTRY, limit=CANDLES_NEEDED)
-            if len(df_entry) < CANDLES_NEEDED:
-                continue
-            df_entry = add_indicators(df_entry)
+            # [Fetch Data] 1H Regime + Target Entry TF
+            df_1h    = add_indicators(await fetch_candles(symbol, ADX_TF, limit=100))
+            df_entry = add_indicators(await fetch_candles(symbol, entry_tf, limit=100))
 
-            required_cols = ['bw', 'd_low', 'stoch_d', 'ema20']
-            if not all(col in df_entry.columns for col in required_cols):
-                await asyncio.sleep(0.4)
-                continue
-
-            adx_htf = symbol_adx.get(symbol, 0.0)
-            ema_htf  = symbol_ema.get(symbol, 0.0)
-            if adx_htf == 0.0 or ema_htf == 0.0:
-                await asyncio.sleep(0.4)
-                continue
-
-            signal = get_signal(df_entry, adx_htf, ema_htf, symbol)
+            # 시그널 수령 (4개 값: side, engine, entry_p, ma20)
+            signal = get_signal(df_1h, df_entry, symbol, ema_1h)
             if signal is None:
-                await asyncio.sleep(0.4)
+                await asyncio.sleep(0.2)
                 continue
 
-            side, engine_name = signal
-            entry_price = df_entry.iloc[-1]["close"]
-            atr         = df_entry.iloc[-1]["atr"]
+            side, engine_name, target_price, ma20_val = signal
+            atr = df_entry.iloc[-1]["atr"]
+            _entry_atr[symbol] = atr
 
-            approved = check_trade_approval(
-                signal_type=side,
-                current_price=entry_price,
-                adx_htf=adx_htf,
-                ema_htf=ema_htf,
-                current_position_count=len(positions)
-            )
-            
+            # 승인 체크 (1H ADX 기준으로 통과 여부 결정)
+            approved = check_trade_approval(side, target_price, adx_1h, ema_1h, len(positions))
             if not approved:
-                await asyncio.sleep(0.4)
+                await asyncio.sleep(0.2)
                 continue
             
-            # [Bug Fix 1] 실시간 잔고 기반 수량 계산 (wallet 인자는 참고용, 내부에서 재조회)
-            qty = await calc_qty(symbol, entry_price, wallet, engine_name)
+            qty = await calc_qty(symbol, target_price, wallet, engine_name)
             if qty <= 0:
-                await asyncio.sleep(0.4)
+                await asyncio.sleep(0.2)
                 continue
 
-            tp, sl = calc_tp_sl(symbol, side, entry_price, atr, engine_name)
-            print_signal(side, symbol, engine_name, MAIN_LEV, qty, entry_price, tp, sl)
+            tp, sl = calc_tp_sl(symbol, side, target_price, atr, engine_name)
             
-            ok = await place_hybrid_order(
+            # [핵심] 5초 타임아웃 팰백 주문 실행 (Non-blocking)
+            asyncio.create_task(place_hybrid_order(
                 symbol=symbol, side=side, qty=qty,
-                entry_price=entry_price, tp_price=tp, sl_price=sl,
-            )
-            if ok:
-                record_entry(symbol, engine_name)
+                entry_price=target_price, tp_price=tp, sl_price=sl,
+                engine_name=engine_name, ma20_target=ma20_val
+            ))
+            record_entry(symbol, engine_name)
 
         except Exception as e:
-            if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
             log.error(f"{symbol} 오류: {e}")
         
-        await asyncio.sleep(0.4)
+        await asyncio.sleep(0.3)
 
 
 async def main():
     setup_logging()
     print_banner()
-    log.info("🚀 봇 가동 시작 (SMC Sniper V3 - Survival Fixed)")
+    log.info("🚀 하이브리드 엔진 V3 가동 시작 (SMC 제거 / MTF 1H ADX)")
 
     await refresh_watchlist()
     try:
@@ -298,13 +285,10 @@ async def main():
             await run_entry_check(wallet)
 
         except RuntimeError as e:
-            # [Bug Fix 3] RuntimeError 처리 및 continue 들여쓰기 수정
             if "CIRCUIT_BREAKER_TRIGGERED" in str(e):
                 log.critical("🚨 [CIRCUIT BREAKER] 중요 API 연속 실패! 봇을 60초간 대기 상태로 전환합니다.")
                 await asyncio.sleep(60)
-                continue # 정상적인 회로 차단 후 다음 루프로
-            
-            # [Bug Fix 6] 기타 RuntimeError 발생 시 무한 루프 방지
+                continue 
             log.error(f"기타 런타임 에러 발생: {e}. 30초 대기.")
             await asyncio.sleep(30)
             continue

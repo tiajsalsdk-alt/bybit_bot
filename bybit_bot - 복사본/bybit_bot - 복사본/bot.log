@@ -35632,3 +35632,1059 @@ Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linea
 2026-05-31 02:45:10 [ERROR] API rate limit will reset at 02:45:12.195. Sleeping for 2000 ms. Retrying...
 2026-05-31 02:45:12 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 38.7)
 2026-05-31 02:45:12 [INFO]   WLDUSDT  [92m^ UP  [0m (ADX: 60.6)
+2026-05-31 19:37:50 [INFO] 🚀 봇 가동 시작 (SMC Sniper V3 - Survival Fixed)
+2026-05-31 19:37:50 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 19:37:51 [ERROR] [91m[Error Trace] API Error (API key is invalid. (ErrCode: 10003) (ErrTime: 10:37:51).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED&coin=USDT.). 1/5 재시도 중... (1초 대기)[0m
+2026-05-31 19:37:52 [ERROR] [91m[Error Trace] API Error (API key is invalid. (ErrCode: 10003) (ErrTime: 10:37:52).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED&coin=USDT.). 2/5 재시도 중... (2초 대기)[0m
+2026-05-31 19:37:54 [ERROR] [91m[Error Trace] API Error (API key is invalid. (ErrCode: 10003) (ErrTime: 10:37:54).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED&coin=USDT.). 3/5 재시도 중... (4초 대기)[0m
+2026-05-31 19:37:58 [ERROR] [91m[Error Trace] API Error (API key is invalid. (ErrCode: 10003) (ErrTime: 10:37:58).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED&coin=USDT.). 4/5 재시도 중... (8초 대기)[0m
+2026-05-31 19:38:07 [CRITICAL] [91m[Error Trace] API Failure after 5 attempts: API key is invalid. (ErrCode: 10003) (ErrTime: 10:38:07).
+Request → GET https://api-demo.bybit.com/v5/account/wallet-balance: accountType=UNIFIED&coin=USDT.[0m
+2026-05-31 19:41:11 [INFO] 🚀 봇 가동 시작 (SMC Sniper V3 - Survival Fixed)
+2026-05-31 19:41:11 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 19:41:12 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 19:41:12 [ERROR] 장세 오류 ETHUSDT: name 'ta' is not defined
+2026-05-31 19:41:12 [ERROR] 장세 오류 SOLUSDT: name 'ta' is not defined
+2026-05-31 19:41:12 [ERROR] 장세 오류 BTCUSDT: name 'ta' is not defined
+2026-05-31 19:41:12 [ERROR] 장세 오류 HYPEUSDT: name 'ta' is not defined
+2026-05-31 19:41:12 [ERROR] 장세 오류 XLMUSDT: name 'ta' is not defined
+2026-05-31 19:41:12 [ERROR] 장세 오류 BNBUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 WLDUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 LABUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 NEARUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 XRPUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 ZECUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 HUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 ONDOUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 PORTALUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 ASTERUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 ALLOUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 TONUSDT: name 'ta' is not defined
+2026-05-31 19:41:13 [ERROR] 장세 오류 HBARUSDT: name 'ta' is not defined
+2026-05-31 19:41:14 [INFO] 대기 중 — 다음 정각: 19:45:00 (226초 후)
+2026-05-31 19:45:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 19:45:04 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 19:45:04 [ERROR] 장세 오류 ETHUSDT: name 'ta' is not defined
+2026-05-31 19:45:04 [ERROR] 장세 오류 SOLUSDT: name 'ta' is not defined
+2026-05-31 19:45:04 [ERROR] 장세 오류 BTCUSDT: name 'ta' is not defined
+2026-05-31 19:45:04 [ERROR] 장세 오류 HYPEUSDT: name 'ta' is not defined
+2026-05-31 19:45:04 [ERROR] 장세 오류 XLMUSDT: name 'ta' is not defined
+2026-05-31 19:45:04 [ERROR] 장세 오류 BNBUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 WLDUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 LABUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 NEARUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 XRPUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 ZECUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 HUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 ONDOUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 PORTALUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 ASTERUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 ALLOUSDT: name 'ta' is not defined
+2026-05-31 19:45:05 [ERROR] 장세 오류 TONUSDT: name 'ta' is not defined
+2026-05-31 19:45:06 [ERROR] 장세 오류 HBARUSDT: name 'ta' is not defined
+2026-05-31 19:45:14 [INFO] 대기 중 — 다음 정각: 19:50:00 (285초 후)
+2026-05-31 19:50:12 [INFO] 대기 중 — 다음 정각: 19:55:00 (288초 후)
+2026-05-31 19:55:13 [INFO] 대기 중 — 다음 정각: 20:00:00 (287초 후)
+2026-05-31 20:00:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 20:00:04 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 20:00:05 [ERROR] 장세 오류 ETHUSDT: name 'ta' is not defined
+2026-05-31 20:00:05 [ERROR] 장세 오류 SOLUSDT: name 'ta' is not defined
+2026-05-31 20:00:05 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=BTCUSDT. Sleeping then trying again.
+2026-05-31 20:00:05 [ERROR] API rate limit will reset at 20:00:07.298. Sleeping for 1999 ms. Retrying...
+2026-05-31 20:00:07 [ERROR] 장세 오류 BTCUSDT: name 'ta' is not defined
+2026-05-31 20:00:07 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=HYPEUSDT. Sleeping then trying again.
+2026-05-31 20:00:07 [ERROR] API rate limit will reset at 20:00:09.471. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:00:09 [ERROR] 장세 오류 HYPEUSDT: name 'ta' is not defined
+2026-05-31 20:00:09 [ERROR] 장세 오류 XLMUSDT: name 'ta' is not defined
+2026-05-31 20:00:09 [ERROR] 장세 오류 BNBUSDT: name 'ta' is not defined
+2026-05-31 20:00:09 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=WLDUSDT. Sleeping then trying again.
+2026-05-31 20:00:09 [ERROR] API rate limit will reset at 20:00:11.824. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:00:11 [ERROR] 장세 오류 WLDUSDT: name 'ta' is not defined
+2026-05-31 20:00:11 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=LABUSDT. Sleeping then trying again.
+2026-05-31 20:00:11 [ERROR] API rate limit will reset at 20:00:13.999. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:00:14 [ERROR] 장세 오류 LABUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 NEARUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 XRPUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 ZECUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 HUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 ONDOUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 PORTALUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 ASTERUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 ALLOUSDT: name 'ta' is not defined
+2026-05-31 20:00:14 [ERROR] 장세 오류 TONUSDT: name 'ta' is not defined
+2026-05-31 20:00:15 [ERROR] 장세 오류 HBARUSDT: name 'ta' is not defined
+2026-05-31 20:00:19 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=5&limit=300&symbol=ZECUSDT. Sleeping then trying again.
+2026-05-31 20:00:19 [ERROR] API rate limit will reset at 20:00:21.342. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:00:24 [INFO] 대기 중 — 다음 정각: 20:05:00 (275초 후)
+2026-05-31 20:05:12 [INFO] 대기 중 — 다음 정각: 20:10:00 (287초 후)
+2026-05-31 20:10:12 [INFO] 대기 중 — 다음 정각: 20:15:00 (288초 후)
+2026-05-31 20:15:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 20:15:05 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 20:15:05 [ERROR] 장세 오류 ETHUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 SOLUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 BTCUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 HYPEUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 XLMUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 BNBUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 WLDUSDT: name 'ta' is not defined
+2026-05-31 20:15:05 [ERROR] 장세 오류 LABUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 NEARUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 ZECUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 XRPUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 HUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 ONDOUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 ASTERUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] 장세 오류 PORTALUSDT: name 'ta' is not defined
+2026-05-31 20:15:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=TONUSDT. Sleeping then trying again.
+2026-05-31 20:15:06 [ERROR] API rate limit will reset at 20:15:08.647. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:15:08 [ERROR] 장세 오류 TONUSDT: name 'ta' is not defined
+2026-05-31 20:15:08 [ERROR] 장세 오류 ALLOUSDT: name 'ta' is not defined
+2026-05-31 20:15:08 [ERROR] 장세 오류 HBARUSDT: name 'ta' is not defined
+2026-05-31 20:15:16 [INFO] 대기 중 — 다음 정각: 20:20:00 (283초 후)
+2026-05-31 20:20:12 [INFO] 대기 중 — 다음 정각: 20:25:00 (288초 후)
+2026-05-31 20:25:12 [INFO] 대기 중 — 다음 정각: 20:30:00 (288초 후)
+2026-05-31 20:30:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 20:30:04 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 20:30:05 [ERROR] 장세 오류 ETHUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 SOLUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 BTCUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 HYPEUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 XLMUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 BNBUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 WLDUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 LABUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 NEARUSDT: name 'ta' is not defined
+2026-05-31 20:30:05 [ERROR] 장세 오류 ZECUSDT: name 'ta' is not defined
+2026-05-31 20:30:06 [ERROR] 장세 오류 XRPUSDT: name 'ta' is not defined
+2026-05-31 20:30:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=HUSDT. Sleeping then trying again.
+2026-05-31 20:30:06 [ERROR] API rate limit will reset at 20:30:08.129. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:30:08 [ERROR] 장세 오류 HUSDT: name 'ta' is not defined
+2026-05-31 20:30:08 [ERROR] 장세 오류 ONDOUSDT: name 'ta' is not defined
+2026-05-31 20:30:08 [ERROR] 장세 오류 ASTERUSDT: name 'ta' is not defined
+2026-05-31 20:30:08 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=PORTALUSDT. Sleeping then trying again.
+2026-05-31 20:30:08 [ERROR] API rate limit will reset at 20:30:10.493. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:30:10 [ERROR] 장세 오류 PORTALUSDT: name 'ta' is not defined
+2026-05-31 20:30:10 [ERROR] 장세 오류 TONUSDT: name 'ta' is not defined
+2026-05-31 20:30:10 [ERROR] 장세 오류 ALLOUSDT: name 'ta' is not defined
+2026-05-31 20:30:10 [ERROR] 장세 오류 HBARUSDT: name 'ta' is not defined
+2026-05-31 20:30:12 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=5&limit=300&symbol=XLMUSDT. Sleeping then trying again.
+2026-05-31 20:30:12 [ERROR] API rate limit will reset at 20:30:14.775. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:30:15 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=5&limit=300&symbol=BNBUSDT. Sleeping then trying again.
+2026-05-31 20:30:15 [ERROR] API rate limit will reset at 20:30:17.296. Sleeping for 2000 ms. Retrying...
+2026-05-31 20:30:22 [INFO] 대기 중 — 다음 정각: 20:35:00 (277초 후)
+2026-05-31 20:39:48 [INFO] 🚀 봇 가동 시작 (SMC Sniper V3 - Survival Fixed)
+2026-05-31 20:39:48 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 20:39:49 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 20:39:49 [INFO]   ETHUSDT  [2m# WAIT[0m (ADX: 23.6)
+2026-05-31 20:39:50 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 16.4)
+2026-05-31 20:39:51 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 16.4)
+2026-05-31 20:39:51 [INFO]   HYPEUSDT  [2m# WAIT[0m (ADX: 23.3)
+2026-05-31 20:39:52 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 29.0)
+2026-05-31 20:39:53 [INFO]   BNBUSDT  [91mv DOWN[0m (ADX: 28.8)
+2026-05-31 20:39:54 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 33.9)
+2026-05-31 20:39:54 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 37.8)
+2026-05-31 20:39:55 [INFO]   NEARUSDT  [91mv DOWN[0m (ADX: 25.5)
+2026-05-31 20:39:56 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 32.7)
+2026-05-31 20:39:56 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 18.9)
+2026-05-31 20:39:57 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 21.0)
+2026-05-31 20:39:58 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 19.3)
+2026-05-31 20:39:59 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.6)
+2026-05-31 20:39:59 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 13.3)
+2026-05-31 20:40:00 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 26.7)
+2026-05-31 20:40:01 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 33.7)
+2026-05-31 20:40:01 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-05-31 20:40:02 [INFO] 대기 중 — 다음 정각: 20:45:00 (297초 후)
+2026-05-31 20:46:48 [INFO] 🚀 봇 가동 시작 (SMC Sniper V3 - Survival Fixed)
+2026-05-31 20:46:48 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 20:46:48 [INFO] [1H/15m] 장세 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 20:46:48 [INFO]   ETHUSDT  [2m# WAIT[0m (ADX: 22.7)
+2026-05-31 20:46:49 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 15.7)
+2026-05-31 20:46:50 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 15.5)
+2026-05-31 20:46:51 [INFO]   HYPEUSDT  [2m# WAIT[0m (ADX: 24.5)
+2026-05-31 20:46:51 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 30.8)
+2026-05-31 20:46:52 [INFO]   BNBUSDT  [91mv DOWN[0m (ADX: 28.9)
+2026-05-31 20:46:53 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 35.4)
+2026-05-31 20:46:54 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 40.1)
+2026-05-31 20:46:54 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 24.6)
+2026-05-31 20:46:55 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 32.6)
+2026-05-31 20:46:56 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 18.4)
+2026-05-31 20:46:56 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 20.4)
+2026-05-31 20:46:57 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 19.6)
+2026-05-31 20:46:58 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.2)
+2026-05-31 20:46:58 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.8)
+2026-05-31 20:46:59 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 27.4)
+2026-05-31 20:47:00 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 35.1)
+2026-05-31 20:47:00 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 26.1)
+2026-05-31 20:47:01 [INFO] 대기 중 — 다음 정각: 20:50:00 (178초 후)
+2026-05-31 21:04:41 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 21:04:41 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 21:04:42 [INFO] [1H/15m] FVG 추세 탐색 및 대추세 필터(EMA 50) 업데이트
+2026-05-31 21:04:43 [INFO]   ETHUSDT  [WAIT] (ADX: 22.7)
+2026-05-31 21:04:44 [INFO]   SOLUSDT  [WAIT] (ADX: 16.6)
+2026-05-31 21:04:44 [INFO]   BTCUSDT  [WAIT] (ADX: 15.3)
+2026-05-31 21:04:45 [INFO]   HYPEUSDT  [TREND] (ADX: 25.1)
+2026-05-31 21:04:46 [INFO]   XLMUSDT  [TREND] (ADX: 33.2)
+2026-05-31 21:04:47 [INFO]   BNBUSDT  [TREND] (ADX: 28.0)
+2026-05-31 21:04:47 [INFO]   LABUSDT  [TREND] (ADX: 42.6)
+2026-05-31 21:04:48 [INFO]   WLDUSDT  [TREND] (ADX: 36.1)
+2026-05-31 21:04:49 [INFO]   NEARUSDT  [WAIT] (ADX: 23.4)
+2026-05-31 21:04:50 [INFO]   ZECUSDT  [TREND] (ADX: 31.8)
+2026-05-31 21:04:51 [INFO]   XRPUSDT  [WAIT] (ADX: 17.7)
+2026-05-31 21:04:52 [INFO]   ONDOUSDT  [WAIT] (ADX: 20.2)
+2026-05-31 21:04:52 [INFO]   HUSDT  [WAIT] (ADX: 19.8)
+2026-05-31 21:04:53 [INFO]   ASTERUSDT  [WAIT] (ADX: 21.1)
+2026-05-31 21:04:54 [INFO]   PORTALUSDT  [WAIT] (ADX: 12.7)
+2026-05-31 21:04:54 [INFO]   TONUSDT  [TREND] (ADX: 27.2)
+2026-05-31 21:04:55 [INFO]   ALLOUSDT  [TREND] (ADX: 36.5)
+2026-05-31 21:04:56 [INFO]   HBARUSDT  [TREND] (ADX: 26.7)
+2026-05-31 21:04:56 [INFO] 대기 중 — 다음 정각: 21:05:00 (3초 후)
+2026-05-31 21:05:02 [INFO] 💤 시장 횡보 중 (ADX < 25). FVG 탐색을 건너뜁니다.
+2026-05-31 21:05:02 [INFO] 대기 중 — 다음 정각: 21:10:00 (298초 후)
+2026-05-31 21:25:58 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 21:25:58 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 21:25:59 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 21:25:59 [ERROR] 시장 국면 판단 오류: name 'ADX_SIDEWAYS_LEVEL' is not defined
+2026-05-31 21:25:59 [INFO]   ETHUSDT  [2m# WAIT[0m (ADX: 22.1)
+2026-05-31 21:26:00 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 16.4)
+2026-05-31 21:26:01 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 15.0)
+2026-05-31 21:26:01 [INFO]   HYPEUSDT  [91mv DOWN[0m (ADX: 25.2)
+2026-05-31 21:26:02 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 32.5)
+2026-05-31 21:26:03 [INFO]   BNBUSDT  [92m^ UP  [0m (ADX: 26.6)
+2026-05-31 21:26:03 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.7)
+2026-05-31 21:26:04 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 36.7)
+2026-05-31 21:26:05 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 22.6)
+2026-05-31 21:26:06 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 31.8)
+2026-05-31 21:26:06 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 17.1)
+2026-05-31 21:26:07 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 20.8)
+2026-05-31 21:26:08 [INFO]   HUSDT  [2m# WAIT[0m (ADX: 22.2)
+2026-05-31 21:26:08 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.3)
+2026-05-31 21:26:09 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 11.8)
+2026-05-31 21:26:10 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 28.3)
+2026-05-31 21:26:10 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 38.7)
+2026-05-31 21:26:11 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 25.3)
+2026-05-31 21:26:12 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 25.6)
+2026-05-31 21:26:12 [INFO] 대기 중 — 다음 정각: 21:30:00 (227초 후)
+2026-05-31 21:30:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 21:30:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 21:30:04 [ERROR] 시장 국면 판단 오류: name 'ADX_SIDEWAYS_LEVEL' is not defined
+2026-05-31 21:30:04 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 21.7)
+2026-05-31 21:30:05 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 16.2)
+2026-05-31 21:30:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BTCUSDT. Sleeping then trying again.
+2026-05-31 21:30:06 [ERROR] API rate limit will reset at 21:30:08.093. Sleeping for 2000 ms. Retrying...
+2026-05-31 21:30:08 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 14.7)
+2026-05-31 21:30:09 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=HYPEUSDT. Sleeping then trying again.
+2026-05-31 21:30:09 [ERROR] API rate limit will reset at 21:30:11.208. Sleeping for 2000 ms. Retrying...
+2026-05-31 21:30:11 [INFO]   HYPEUSDT  [91mv DOWN[0m (ADX: 25.2)
+2026-05-31 21:30:12 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 32.9)
+2026-05-31 21:30:13 [INFO]   BNBUSDT  [92m^ UP  [0m (ADX: 25.3)
+2026-05-31 21:30:13 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.0)
+2026-05-31 21:30:14 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 37.3)
+2026-05-31 21:30:15 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 22.2)
+2026-05-31 21:30:16 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 31.8)
+2026-05-31 21:30:16 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 16.5)
+2026-05-31 21:30:17 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 21.4)
+2026-05-31 21:30:18 [INFO]   HUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-05-31 21:30:18 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.3)
+2026-05-31 21:30:19 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 11.1)
+2026-05-31 21:30:20 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 29.2)
+2026-05-31 21:30:21 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 40.8)
+2026-05-31 21:30:21 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 24.8)
+2026-05-31 21:30:22 [INFO] 💤 시장 횡보 중 (ADX < 25). FVG 탐색을 건너뜁니다.
+2026-05-31 21:30:22 [INFO] 대기 중 — 다음 정각: 21:35:00 (277초 후)
+2026-05-31 21:35:04 [INFO] 💤 시장 횡보 중 (ADX < 25). FVG 탐색을 건너뜁니다.
+2026-05-31 21:35:05 [INFO] 대기 중 — 다음 정각: 21:40:00 (295초 후)
+2026-05-31 21:45:40 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 21:45:40 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 21:45:41 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 21:45:41 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 21.2)
+2026-05-31 21:45:42 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 15.1)
+2026-05-31 21:45:43 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 14.7)
+2026-05-31 21:45:44 [INFO]   HYPEUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 21:45:44 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 34.1)
+2026-05-31 21:45:45 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 24.2)
+2026-05-31 21:45:46 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.7)
+2026-05-31 21:45:46 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 35.4)
+2026-05-31 21:45:47 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 24.2)
+2026-05-31 21:45:48 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 30.5)
+2026-05-31 21:45:48 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 16.5)
+2026-05-31 21:45:49 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 22.0)
+2026-05-31 21:45:50 [INFO]   HUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-05-31 21:45:50 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.3)
+2026-05-31 21:45:51 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 10.4)
+2026-05-31 21:45:52 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 30.1)
+2026-05-31 21:45:53 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 42.6)
+2026-05-31 21:45:53 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 25.7)
+2026-05-31 21:45:54 [INFO]   SUIUSDT  [2m# WAIT[0m (ADX: 23.8)
+2026-05-31 21:45:55 [INFO] 대기 중 — 다음 정각: 21:50:00 (245초 후)
+2026-05-31 21:50:12 [INFO] 대기 중 — 다음 정각: 21:55:00 (287초 후)
+2026-05-31 21:55:13 [INFO] 대기 중 — 다음 정각: 22:00:00 (286초 후)
+2026-05-31 22:00:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:00:05 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:00:05 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 21.5)
+2026-05-31 22:00:06 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 14.4)
+2026-05-31 22:00:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BTCUSDT. Sleeping then trying again.
+2026-05-31 22:00:06 [ERROR] API rate limit will reset at 22:00:08.775. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:00:08 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 15.1)
+2026-05-31 22:00:09 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 21.8)
+2026-05-31 22:00:10 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=XLMUSDT. Sleeping then trying again.
+2026-05-31 22:00:10 [ERROR] API rate limit will reset at 22:00:12.168. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:00:12 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 34.9)
+2026-05-31 22:00:13 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-05-31 22:00:13 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=LABUSDT. Sleeping then trying again.
+2026-05-31 22:00:13 [ERROR] API rate limit will reset at 22:00:15.719. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:00:15 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 45.8)
+2026-05-31 22:00:16 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 34.8)
+2026-05-31 22:00:17 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 24.9)
+2026-05-31 22:00:18 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 29.9)
+2026-05-31 22:00:19 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 16.5)
+2026-05-31 22:00:19 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=ONDOUSDT. Sleeping then trying again.
+2026-05-31 22:00:19 [ERROR] API rate limit will reset at 22:00:21.909. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:00:22 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 22.5)
+2026-05-31 22:00:22 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 20.5)
+2026-05-31 22:00:23 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.9)
+2026-05-31 22:00:24 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 29.1)
+2026-05-31 22:00:25 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 9.8)
+2026-05-31 22:00:26 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 40.7)
+2026-05-31 22:00:26 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 26.0)
+2026-05-31 22:00:27 [INFO]   SUIUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-05-31 22:00:34 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=5&limit=300&symbol=HUSDT. Sleeping then trying again.
+2026-05-31 22:00:34 [ERROR] API rate limit will reset at 22:00:36.263. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:00:39 [INFO] 대기 중 — 다음 정각: 22:05:00 (260초 후)
+2026-05-31 22:05:11 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=5&limit=300&symbol=TONUSDT. Sleeping then trying again.
+2026-05-31 22:05:11 [ERROR] API rate limit will reset at 22:05:13.287. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:05:15 [INFO] 대기 중 — 다음 정각: 22:10:00 (285초 후)
+2026-05-31 22:10:12 [INFO] 대기 중 — 다음 정각: 22:15:00 (287초 후)
+2026-05-31 22:14:19 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 22:14:19 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:14:19 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:14:20 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 21.5)
+2026-05-31 22:14:20 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 14.6)
+2026-05-31 22:14:21 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 15.3)
+2026-05-31 22:14:22 [INFO]   HYPEUSDT  [2m# WAIT[0m (ADX: 22.7)
+2026-05-31 22:14:22 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 35.0)
+2026-05-31 22:14:23 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 22.4)
+2026-05-31 22:14:24 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 45.8)
+2026-05-31 22:14:24 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 35.0)
+2026-05-31 22:14:25 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-05-31 22:14:26 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 30.2)
+2026-05-31 22:14:27 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 17.3)
+2026-05-31 22:14:27 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 21.6)
+2026-05-31 22:14:28 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 20.8)
+2026-05-31 22:14:29 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 21.9)
+2026-05-31 22:14:29 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 28.4)
+2026-05-31 22:14:30 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 10.0)
+2026-05-31 22:14:31 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 40.8)
+2026-05-31 22:14:31 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 26.0)
+2026-05-31 22:14:32 [INFO]   SUIUSDT  [2m# WAIT[0m (ADX: 23.7)
+2026-05-31 22:14:33 [INFO] 대기 중 — 다음 정각: 22:15:00 (27초 후)
+2026-05-31 22:15:02 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:15:02 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:15:02 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 21.4)
+2026-05-31 22:15:03 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 14.1)
+2026-05-31 22:15:04 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 15.6)
+2026-05-31 22:15:05 [INFO]   HYPEUSDT  [2m# WAIT[0m (ADX: 22.5)
+2026-05-31 22:15:06 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 35.7)
+2026-05-31 22:15:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=BNBUSDT. Sleeping then trying again.
+2026-05-31 22:15:06 [ERROR] API rate limit will reset at 22:15:08.819. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:15:08 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BNBUSDT. Sleeping then trying again.
+2026-05-31 22:15:08 [ERROR] API rate limit will reset at 22:15:10.984. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:15:11 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BNBUSDT. Sleeping then trying again.
+2026-05-31 22:15:11 [ERROR] API rate limit will reset at 22:15:13.069. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:15:13 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BNBUSDT. Sleeping then trying again.
+2026-05-31 22:15:13 [ERROR] API rate limit will reset at 22:15:15.154. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:15:15 [ERROR] [91m[Error Trace] API Error (Bad request. retries exceeded maximum. (ErrCode: 400) (ErrTime: 13:15:15).
+Request → GET https://api.bybit.com/v5/market/kline: category=linear&interval=15&limit=300&symbol=BNBUSDT.). 1/5 재시도 중... (1초 대기)[0m
+2026-05-31 22:15:16 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.8)
+2026-05-31 22:15:16 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 46.7)
+2026-05-31 22:15:17 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 34.7)
+2026-05-31 22:15:18 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 25.2)
+2026-05-31 22:15:19 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 30.0)
+2026-05-31 22:15:19 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 18.0)
+2026-05-31 22:15:20 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 21.1)
+2026-05-31 22:15:21 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 19.9)
+2026-05-31 22:15:21 [INFO]   ASTERUSDT  [2m# WAIT[0m (ADX: 22.2)
+2026-05-31 22:15:22 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 27.7)
+2026-05-31 22:15:23 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 9.6)
+2026-05-31 22:15:23 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 40.9)
+2026-05-31 22:15:24 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 26.2)
+2026-05-31 22:15:25 [INFO]   SUIUSDT  [2m# WAIT[0m (ADX: 23.3)
+2026-05-31 22:15:31 [ERROR] ONDOUSDT 오류: name 'SIDEWAYS_PRO_PCT' is not defined
+2026-05-31 22:15:35 [INFO] 🎯 [HBARUSDT] TREND_FVG 지정가 매복 (@0.09852). 30초 대기...
+2026-05-31 22:16:08 [WARNING] 🚫 [HBARUSDT] 지정가 미체결 취소.
+2026-05-31 22:16:09 [INFO] 대기 중 — 다음 정각: 22:20:00 (231초 후)
+2026-05-31 22:20:06 [INFO] 🎯 [XLMUSDT] TREND_FVG 지정가 매복 (@0.26196). 30초 대기...
+2026-05-31 22:20:39 [WARNING] 🚫 [XLMUSDT] 지정가 미체결 취소.
+2026-05-31 22:20:40 [INFO] 🎯 [LABUSDT] TREND_FVG 지정가 매복 (@7.3339). 30초 대기...
+2026-05-31 22:21:14 [WARNING] 🚫 [LABUSDT] 지정가 미체결 취소.
+2026-05-31 22:21:19 [INFO] 대기 중 — 다음 정각: 22:25:00 (221초 후)
+2026-05-31 22:25:09 [INFO] 🎯 [ZECUSDT] TREND_FVG 지정가 매복 (@551.17). 30초 대기...
+2026-05-31 22:25:42 [WARNING] 🚫 [ZECUSDT] 지정가 미체결 취소.
+2026-05-31 22:25:46 [INFO] 대기 중 — 다음 정각: 22:30:00 (253초 후)
+2026-05-31 22:30:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:30:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:30:04 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 19.4)
+2026-05-31 22:30:05 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 14.2)
+2026-05-31 22:30:06 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 13.3)
+2026-05-31 22:30:06 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 20.8)
+2026-05-31 22:30:07 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 37.6)
+2026-05-31 22:30:08 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 22.5)
+2026-05-31 22:30:09 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.6)
+2026-05-31 22:30:09 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=WLDUSDT. Sleeping then trying again.
+2026-05-31 22:30:09 [ERROR] API rate limit will reset at 22:30:11.737. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:30:11 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 34.3)
+2026-05-31 22:30:12 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 26.5)
+2026-05-31 22:30:13 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 30.8)
+2026-05-31 22:30:14 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 19.9)
+2026-05-31 22:30:14 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 20.6)
+2026-05-31 22:30:15 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 19.1)
+2026-05-31 22:30:16 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 19.2)
+2026-05-31 22:30:16 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 26.6)
+2026-05-31 22:30:17 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 11.0)
+2026-05-31 22:30:18 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 41.0)
+2026-05-31 22:30:18 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 27.2)
+2026-05-31 22:30:27 [INFO] 대기 중 — 다음 정각: 22:35:00 (272초 후)
+2026-05-31 22:35:08 [INFO] 🎯 [ZECUSDT] TREND_FVG 지정가 매복 (@553.55). 30초 대기...
+2026-05-31 22:35:41 [WARNING] 🚫 [ZECUSDT] 지정가 미체결 취소.
+2026-05-31 22:35:45 [INFO] 대기 중 — 다음 정각: 22:40:00 (255초 후)
+2026-05-31 22:40:11 [INFO] 대기 중 — 다음 정각: 22:45:00 (288초 후)
+2026-05-31 22:42:08 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 22:42:08 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:42:09 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:42:09 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 19.7)
+2026-05-31 22:42:10 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 13.4)
+2026-05-31 22:42:11 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 14.0)
+2026-05-31 22:42:11 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 20.6)
+2026-05-31 22:42:12 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 37.4)
+2026-05-31 22:42:13 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 22.8)
+2026-05-31 22:42:13 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.7)
+2026-05-31 22:42:14 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 34.4)
+2026-05-31 22:42:15 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 26.6)
+2026-05-31 22:42:15 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 31.4)
+2026-05-31 22:42:16 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 19.1)
+2026-05-31 22:42:17 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 21.1)
+2026-05-31 22:42:17 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 18.7)
+2026-05-31 22:42:18 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 20.0)
+2026-05-31 22:42:19 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 26.5)
+2026-05-31 22:42:20 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 11.4)
+2026-05-31 22:42:20 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 40.1)
+2026-05-31 22:42:21 [INFO]   HBARUSDT  [92m^ UP  [0m (ADX: 26.3)
+2026-05-31 22:42:22 [INFO] 대기 중 — 다음 정각: 22:45:00 (158초 후)
+2026-05-31 22:45:03 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:45:03 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:45:03 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 19.3)
+2026-05-31 22:45:04 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 12.6)
+2026-05-31 22:45:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 22:45:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 22:45:05 [INFO]   ETHUSDT  [96m~ S.UP[0m (ADX: 19.3)
+2026-05-31 22:45:05 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 13.8)
+2026-05-31 22:45:05 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 12.6)
+2026-05-31 22:45:06 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 19.6)
+2026-05-31 22:45:06 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 13.8)
+2026-05-31 22:45:06 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 36.8)
+2026-05-31 22:45:07 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 19.6)
+2026-05-31 22:45:07 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=BNBUSDT. Sleeping then trying again.
+2026-05-31 22:45:07 [ERROR] API rate limit will reset at 22:45:09.352. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:45:07 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 36.8)
+2026-05-31 22:45:08 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 23.2)
+2026-05-31 22:45:09 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.6)
+2026-05-31 22:45:09 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 23.2)
+2026-05-31 22:45:09 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 35.0)
+2026-05-31 22:45:10 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.6)
+2026-05-31 22:45:10 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 27.4)
+2026-05-31 22:45:10 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 35.0)
+2026-05-31 22:45:11 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 32.2)
+2026-05-31 22:45:11 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 27.4)
+2026-05-31 22:45:12 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 19.5)
+2026-05-31 22:45:12 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 32.2)
+2026-05-31 22:45:12 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 21.6)
+2026-05-31 22:45:13 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 19.5)
+2026-05-31 22:45:13 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 17.6)
+2026-05-31 22:45:13 [INFO]   ONDOUSDT  [93m~ S.DN[0m (ADX: 21.6)
+2026-05-31 22:45:14 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 19.8)
+2026-05-31 22:45:14 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 17.6)
+2026-05-31 22:45:14 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 25.7)
+2026-05-31 22:45:14 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=ASTERUSDT. Sleeping then trying again.
+2026-05-31 22:45:14 [ERROR] API rate limit will reset at 22:45:16.984. Sleeping for 2000 ms. Retrying...
+2026-05-31 22:45:15 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.2)
+2026-05-31 22:45:16 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 37.1)
+2026-05-31 22:45:16 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 24.6)
+2026-05-31 22:45:17 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 19.8)
+2026-05-31 22:45:17 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 25.7)
+2026-05-31 22:45:18 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.2)
+2026-05-31 22:45:19 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 37.1)
+2026-05-31 22:45:19 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 24.6)
+2026-05-31 22:45:25 [INFO] 대기 중 — 다음 정각: 22:50:00 (275초 후)
+2026-05-31 22:45:28 [INFO] 대기 중 — 다음 정각: 22:50:00 (272초 후)
+2026-05-31 22:50:10 [INFO] 🎯 [TONUSDT] TREND_FVG 지정가 매복 (@1.892). 30초 대기...
+2026-05-31 22:50:11 [INFO] 🎯 [TONUSDT] TREND_FVG 지정가 매복 (@1.892). 30초 대기...
+2026-05-31 22:50:44 [WARNING] 🚫 [TONUSDT] 지정가 미체결 취소.
+2026-05-31 22:50:44 [WARNING] 🚫 [TONUSDT] 지정가 미체결 취소.
+2026-05-31 22:50:45 [INFO] 대기 중 — 다음 정각: 22:55:00 (254초 후)
+2026-05-31 22:50:46 [INFO] 대기 중 — 다음 정각: 22:55:00 (254초 후)
+2026-05-31 22:55:11 [INFO] 대기 중 — 다음 정각: 23:00:00 (288초 후)
+2026-05-31 23:00:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:00:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:00:05 [INFO]   ETHUSDT  [93m~ S.DN[0m (ADX: 20.3)
+2026-05-31 23:00:05 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 13.4)
+2026-05-31 23:00:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BTCUSDT. Sleeping then trying again.
+2026-05-31 23:00:06 [ERROR] API rate limit will reset at 23:00:08.593. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:00:08 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BTCUSDT. Sleeping then trying again.
+2026-05-31 23:00:08 [ERROR] API rate limit will reset at 23:00:10.673. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:00:10 [INFO]   BTCUSDT  [96m~ S.UP[0m (ADX: 15.1)
+2026-05-31 23:00:11 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 19.2)
+2026-05-31 23:00:12 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 36.2)
+2026-05-31 23:00:12 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-05-31 23:00:13 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 37.0)
+2026-05-31 23:00:14 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=LABUSDT. Sleeping then trying again.
+2026-05-31 23:00:14 [ERROR] API rate limit will reset at 23:00:16.120. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:00:16 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.3)
+2026-05-31 23:00:16 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=NEARUSDT. Sleeping then trying again.
+2026-05-31 23:00:16 [ERROR] API rate limit will reset at 23:00:18.974. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:00:19 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 28.0)
+2026-05-31 23:00:19 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 31.3)
+2026-05-31 23:00:20 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 18.7)
+2026-05-31 23:00:21 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 22.2)
+2026-05-31 23:00:21 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 17.4)
+2026-05-31 23:00:22 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 19.5)
+2026-05-31 23:00:23 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 25.7)
+2026-05-31 23:00:23 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.5)
+2026-05-31 23:00:24 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 35.3)
+2026-05-31 23:00:25 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 23:00:26 [INFO]   SUIUSDT  [93m~ S.DN[0m (ADX: 20.6)
+2026-05-31 23:00:34 [INFO] 대기 중 — 다음 정각: 23:05:00 (265초 후)
+2026-05-31 23:05:07 [INFO] 🎯 [WLDUSDT] TREND_FVG 지정가 매복 (@0.3265). 30초 대기...
+2026-05-31 23:05:40 [WARNING] 🚫 [WLDUSDT] 지정가 미체결 취소.
+2026-05-31 23:05:41 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 23:05:41 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:05:42 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:05:42 [INFO] 🎯 [NEARUSDT] TREND_FVG 지정가 매복 (@2.3188). 30초 대기...
+2026-05-31 23:05:42 [INFO]   ETHUSDT  [93m~ S.DN[0m (ADX: 20.8)
+2026-05-31 23:05:43 [INFO]   SOLUSDT  [96m~ S.UP[0m (ADX: 13.8)
+2026-05-31 23:05:43 [INFO]   BTCUSDT  [93m~ S.DN[0m (ADX: 15.7)
+2026-05-31 23:05:44 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 19.5)
+2026-05-31 23:05:45 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 36.2)
+2026-05-31 23:05:45 [INFO]   BNBUSDT  [2m# WAIT[0m (ADX: 23.4)
+2026-05-31 23:05:46 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 37.4)
+2026-05-31 23:05:47 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 44.4)
+2026-05-31 23:05:48 [INFO]   NEARUSDT  [92m^ UP  [0m (ADX: 26.3)
+2026-05-31 23:05:48 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 30.8)
+2026-05-31 23:05:49 [INFO]   XRPUSDT  [96m~ S.UP[0m (ADX: 17.7)
+2026-05-31 23:05:50 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 22.3)
+2026-05-31 23:05:51 [INFO]   ASTERUSDT  [96m~ S.UP[0m (ADX: 19.8)
+2026-05-31 23:05:52 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 17.7)
+2026-05-31 23:05:52 [INFO]   TONUSDT  [92m^ UP  [0m (ADX: 25.6)
+2026-05-31 23:05:53 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.1)
+2026-05-31 23:05:54 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 35.7)
+2026-05-31 23:05:54 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.8)
+2026-05-31 23:05:55 [INFO]   SUIUSDT  [93m~ S.DN[0m (ADX: 21.7)
+2026-05-31 23:05:56 [INFO] 대기 중 — 다음 정각: 23:10:00 (244초 후)
+2026-05-31 23:06:15 [WARNING] 🚫 [NEARUSDT] 지정가 미체결 취소.
+2026-05-31 23:06:17 [ERROR] ASTERUSDT 오류: name 'SIDEWAYS_PRO_PCT' is not defined
+2026-05-31 23:06:19 [INFO] 대기 중 — 다음 정각: 23:10:00 (220초 후)
+2026-05-31 23:20:11 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 23:20:11 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:20:12 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:20:12 [INFO]   ETHUSDT  [2m# WAIT[0m (ADX: 25.0)
+2026-05-31 23:20:13 [INFO]   SOLUSDT  [93m~ S.DN[0m (ADX: 18.3)
+2026-05-31 23:20:14 [INFO]   BTCUSDT  [93m~ S.DN[0m (ADX: 19.3)
+2026-05-31 23:20:14 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 17.3)
+2026-05-31 23:20:15 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 35.4)
+2026-05-31 23:20:16 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.9)
+2026-05-31 23:20:16 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 40.3)
+2026-05-31 23:20:17 [INFO]   XRPUSDT  [93m~ S.DN[0m (ADX: 21.3)
+2026-05-31 23:20:18 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 43.8)
+2026-05-31 23:20:18 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 24.6)
+2026-05-31 23:20:19 [INFO]   ZECUSDT  [91mv DOWN[0m (ADX: 28.5)
+2026-05-31 23:20:20 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 23.7)
+2026-05-31 23:20:21 [INFO]   ASTERUSDT  [2m# WAIT[0m (ADX: 22.4)
+2026-05-31 23:20:21 [INFO]   TONUSDT  [2m# WAIT[0m (ADX: 25.0)
+2026-05-31 23:20:22 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 17.5)
+2026-05-31 23:20:23 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.0)
+2026-05-31 23:20:23 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 27.2)
+2026-05-31 23:20:24 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 34.5)
+2026-05-31 23:20:25 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.6)
+2026-05-31 23:20:26 [INFO] 대기 중 — 다음 정각: 23:25:00 (274초 후)
+2026-05-31 23:20:36 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 23:20:36 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:20:36 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:20:37 [INFO]   ETHUSDT  [2m# WAIT[0m (ADX: 25.0)
+2026-05-31 23:20:37 [INFO]   SOLUSDT  [93m~ S.DN[0m (ADX: 18.3)
+2026-05-31 23:20:38 [INFO]   BTCUSDT  [93m~ S.DN[0m (ADX: 19.3)
+2026-05-31 23:20:39 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 17.3)
+2026-05-31 23:20:40 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 35.4)
+2026-05-31 23:20:40 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.9)
+2026-05-31 23:20:41 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 40.3)
+2026-05-31 23:20:42 [INFO]   XRPUSDT  [93m~ S.DN[0m (ADX: 21.3)
+2026-05-31 23:20:42 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 43.8)
+2026-05-31 23:20:43 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 24.6)
+2026-05-31 23:20:44 [INFO]   ZECUSDT  [91mv DOWN[0m (ADX: 28.5)
+2026-05-31 23:20:44 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 23.7)
+2026-05-31 23:20:45 [INFO]   ASTERUSDT  [2m# WAIT[0m (ADX: 22.4)
+2026-05-31 23:20:46 [INFO]   TONUSDT  [2m# WAIT[0m (ADX: 25.0)
+2026-05-31 23:20:47 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 17.5)
+2026-05-31 23:20:47 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 27.2)
+2026-05-31 23:20:48 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.0)
+2026-05-31 23:20:49 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 34.5)
+2026-05-31 23:20:49 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 23:20:50 [INFO] 대기 중 — 다음 정각: 23:25:00 (249초 후)
+2026-05-31 23:25:04 [ERROR] ETHUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:05 [ERROR] SOLUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:05 [ERROR] BTCUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:06 [ERROR] HYPEUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:06 [ERROR] XLMUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:07 [ERROR] BNBUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:07 [ERROR] WLDUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:08 [ERROR] XRPUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:08 [ERROR] LABUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:09 [ERROR] NEARUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:09 [ERROR] ZECUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:10 [ERROR] ONDOUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:10 [ERROR] ASTERUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:11 [ERROR] TONUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:11 [ERROR] HUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:12 [ERROR] SUIUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:12 [ERROR] PORTALUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:13 [ERROR] ALLOUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:13 [ERROR] HBARUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:25:14 [INFO] 대기 중 — 다음 정각: 23:30:00 (286초 후)
+2026-05-31 23:30:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:30:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:30:05 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 27.3)
+2026-05-31 23:30:05 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=SOLUSDT. Sleeping then trying again.
+2026-05-31 23:30:05 [ERROR] API rate limit will reset at 23:30:07.837. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:30:07 [INFO]   SOLUSDT  [93m~ S.DN[0m (ADX: 20.8)
+2026-05-31 23:30:08 [INFO]   BTCUSDT  [93m~ S.DN[0m (ADX: 21.7)
+2026-05-31 23:30:09 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 16.2)
+2026-05-31 23:30:09 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=XLMUSDT. Sleeping then trying again.
+2026-05-31 23:30:09 [ERROR] API rate limit will reset at 23:30:11.917. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:30:12 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 34.1)
+2026-05-31 23:30:12 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.2)
+2026-05-31 23:30:13 [INFO]   XRPUSDT  [2m# WAIT[0m (ADX: 22.8)
+2026-05-31 23:30:14 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 42.4)
+2026-05-31 23:30:14 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 22.6)
+2026-05-31 23:30:15 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 43.3)
+2026-05-31 23:30:16 [INFO]   ZECUSDT  [91mv DOWN[0m (ADX: 26.9)
+2026-05-31 23:30:17 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 24.8)
+2026-05-31 23:30:17 [INFO]   ASTERUSDT  [2m# WAIT[0m (ADX: 24.1)
+2026-05-31 23:30:18 [INFO]   TONUSDT  [2m# WAIT[0m (ADX: 24.5)
+2026-05-31 23:30:19 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 16.0)
+2026-05-31 23:30:19 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 31.0)
+2026-05-31 23:30:20 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.2)
+2026-05-31 23:30:21 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 33.4)
+2026-05-31 23:30:21 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 23:30:22 [ERROR] ETHUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:23 [ERROR] SOLUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:23 [ERROR] BTCUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:24 [ERROR] HYPEUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:24 [ERROR] XLMUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:25 [ERROR] BNBUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:25 [ERROR] XRPUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:26 [ERROR] WLDUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:26 [ERROR] NEARUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:27 [ERROR] LABUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:27 [ERROR] ZECUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:28 [ERROR] ONDOUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:28 [ERROR] ASTERUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:29 [ERROR] TONUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:29 [ERROR] HUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:30 [ERROR] SUIUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:30 [ERROR] PORTALUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:31 [ERROR] ALLOUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:32 [ERROR] HBARUSDT 오류: name 'ema_htf' is not defined
+2026-05-31 23:30:37 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 23:30:37 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:30:37 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:30:38 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 27.3)
+2026-05-31 23:30:38 [INFO]   SOLUSDT  [93m~ S.DN[0m (ADX: 20.8)
+2026-05-31 23:30:39 [INFO]   BTCUSDT  [93m~ S.DN[0m (ADX: 21.7)
+2026-05-31 23:30:40 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 16.2)
+2026-05-31 23:30:40 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 34.1)
+2026-05-31 23:30:41 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.2)
+2026-05-31 23:30:42 [INFO]   XRPUSDT  [2m# WAIT[0m (ADX: 22.8)
+2026-05-31 23:30:43 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 42.4)
+2026-05-31 23:30:43 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 22.6)
+2026-05-31 23:30:44 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 43.3)
+2026-05-31 23:30:45 [INFO]   ZECUSDT  [91mv DOWN[0m (ADX: 26.9)
+2026-05-31 23:30:45 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 24.8)
+2026-05-31 23:30:46 [INFO]   ASTERUSDT  [2m# WAIT[0m (ADX: 24.1)
+2026-05-31 23:30:47 [INFO]   TONUSDT  [2m# WAIT[0m (ADX: 24.5)
+2026-05-31 23:30:47 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 16.0)
+2026-05-31 23:30:48 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 31.0)
+2026-05-31 23:30:49 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.2)
+2026-05-31 23:30:50 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 33.9)
+2026-05-31 23:30:50 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 23:30:51 [INFO]   DOGEUSDT  [93m~ S.DN[0m (ADX: 21.0)
+2026-05-31 23:30:52 [INFO] 대기 중 — 다음 정각: 23:35:00 (248초 후)
+2026-05-31 23:35:09 [INFO] 🎯 [ZECUSDT] TREND_FVG 지정가 매복 (@543.99). 30초 대기...
+2026-05-31 23:35:42 [WARNING] 🚫 [ZECUSDT] 지정가 미체결 취소.
+2026-05-31 23:35:45 [INFO] 🎯 [ALLOUSDT] TREND_FVG 지정가 매복 (@0.26777). 30초 대기...
+2026-05-31 23:36:19 [WARNING] 🚫 [ALLOUSDT] 지정가 미체결 취소.
+2026-05-31 23:36:20 [INFO] 대기 중 — 다음 정각: 23:40:00 (220초 후)
+2026-05-31 23:40:12 [INFO] 대기 중 — 다음 정각: 23:45:00 (288초 후)
+2026-05-31 23:45:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:45:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:45:05 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 29.5)
+2026-05-31 23:45:06 [INFO]   SOLUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-05-31 23:45:06 [INFO]   BTCUSDT  [2m# WAIT[0m (ADX: 24.0)
+2026-05-31 23:45:07 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 15.1)
+2026-05-31 23:45:08 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 31.8)
+2026-05-31 23:45:08 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.4)
+2026-05-31 23:45:09 [INFO]   XRPUSDT  [2m# WAIT[0m (ADX: 24.1)
+2026-05-31 23:45:10 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=WLDUSDT. Sleeping then trying again.
+2026-05-31 23:45:10 [ERROR] API rate limit will reset at 23:45:12.299. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:45:12 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 44.4)
+2026-05-31 23:45:13 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=NEARUSDT. Sleeping then trying again.
+2026-05-31 23:45:13 [ERROR] API rate limit will reset at 23:45:15.002. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:45:15 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 21.6)
+2026-05-31 23:45:15 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 42.9)
+2026-05-31 23:45:16 [INFO]   ZECUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-05-31 23:45:17 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=ONDOUSDT. Sleeping then trying again.
+2026-05-31 23:45:17 [ERROR] API rate limit will reset at 23:45:19.292. Sleeping for 2000 ms. Retrying...
+2026-05-31 23:45:19 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 25.9)
+2026-05-31 23:45:20 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 25.7)
+2026-05-31 23:45:20 [INFO]   TONUSDT  [2m# WAIT[0m (ADX: 22.6)
+2026-05-31 23:45:21 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 14.5)
+2026-05-31 23:45:22 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 34.5)
+2026-05-31 23:45:22 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 12.8)
+2026-05-31 23:45:23 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 33.8)
+2026-05-31 23:45:24 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-05-31 23:45:25 [INFO]   DOGEUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 23:45:25 [INFO] 💤 시장 횡보 중 (ADX < 25). FVG 탐색을 건너뜁니다.
+2026-05-31 23:45:25 [INFO] 대기 중 — 다음 정각: 23:50:00 (274초 후)
+2026-05-31 23:50:04 [INFO] 💤 시장 횡보 중 (ADX < 25). FVG 탐색을 건너뜁니다.
+2026-05-31 23:50:04 [INFO] 대기 중 — 다음 정각: 23:55:00 (295초 후)
+2026-05-31 23:55:04 [INFO] 💤 시장 횡보 중 (ADX < 25). FVG 탐색을 건너뜁니다.
+2026-05-31 23:55:05 [INFO] 대기 중 — 다음 정각: 00:00:00 (295초 후)
+2026-05-31 23:57:19 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-05-31 23:57:19 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-05-31 23:57:19 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-05-31 23:57:20 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 29.5)
+2026-05-31 23:57:20 [INFO]   SOLUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-05-31 23:57:21 [INFO]   BTCUSDT  [2m# WAIT[0m (ADX: 24.0)
+2026-05-31 23:57:22 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 15.1)
+2026-05-31 23:57:23 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 31.7)
+2026-05-31 23:57:23 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 20.4)
+2026-05-31 23:57:24 [INFO]   XRPUSDT  [2m# WAIT[0m (ADX: 24.1)
+2026-05-31 23:57:25 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 44.6)
+2026-05-31 23:57:25 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 21.6)
+2026-05-31 23:57:26 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 42.2)
+2026-05-31 23:57:27 [INFO]   ZECUSDT  [92m^ UP  [0m (ADX: 25.3)
+2026-05-31 23:57:27 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 25.9)
+2026-05-31 23:57:28 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 25.8)
+2026-05-31 23:57:29 [INFO]   TONUSDT  [2m# WAIT[0m (ADX: 22.1)
+2026-05-31 23:57:30 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 14.9)
+2026-05-31 23:57:30 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 34.5)
+2026-05-31 23:57:31 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 13.1)
+2026-05-31 23:57:32 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 34.3)
+2026-05-31 23:57:32 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-05-31 23:57:33 [INFO]   DOGEUSDT  [2m# WAIT[0m (ADX: 22.9)
+2026-05-31 23:57:34 [INFO] 대기 중 — 다음 정각: 00:00:00 (146초 후)
+2026-06-01 00:00:03 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:00:03 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:00:03 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 31.7)
+2026-06-01 00:00:04 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:00:05 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 26.0)
+2026-06-01 00:00:06 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 14.1)
+2026-06-01 00:00:06 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=XLMUSDT. Sleeping then trying again.
+2026-06-01 00:00:06 [ERROR] API rate limit will reset at 00:00:08.653. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:00:08 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 30.0)
+2026-06-01 00:00:09 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 19.9)
+2026-06-01 00:00:10 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=XRPUSDT. Sleeping then trying again.
+2026-06-01 00:00:10 [ERROR] API rate limit will reset at 00:00:12.233. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:00:12 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=XRPUSDT. Sleeping then trying again.
+2026-06-01 00:00:12 [ERROR] API rate limit will reset at 00:00:14.317. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:00:14 [INFO]   XRPUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:00:15 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=WLDUSDT. Sleeping then trying again.
+2026-06-01 00:00:15 [ERROR] API rate limit will reset at 00:00:17.114. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:00:17 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 46.7)
+2026-06-01 00:00:17 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 20.5)
+2026-06-01 00:00:18 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 40.6)
+2026-06-01 00:00:19 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 23.9)
+2026-06-01 00:00:20 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 26.8)
+2026-06-01 00:00:20 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 25.8)
+2026-06-01 00:00:21 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 20.8)
+2026-06-01 00:00:22 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 14.5)
+2026-06-01 00:00:22 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 37.7)
+2026-06-01 00:00:23 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 13.6)
+2026-06-01 00:00:24 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 34.4)
+2026-06-01 00:00:24 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=HBARUSDT. Sleeping then trying again.
+2026-06-01 00:00:24 [ERROR] API rate limit will reset at 00:00:26.850. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:00:27 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-06-01 00:00:27 [INFO]   DOGEUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-06-01 00:00:28 [ERROR] ETHUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:28 [ERROR] SOLUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:29 [ERROR] HYPEUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:29 [ERROR] XLMUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:30 [ERROR] BNBUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:30 [ERROR] XRPUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:30 [ERROR] WLDUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:31 [ERROR] NEARUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:31 [ERROR] LABUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:32 [ERROR] ZECUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:32 [ERROR] ONDOUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:32 [ERROR] ASTERUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:33 [ERROR] TONUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:33 [ERROR] HUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:34 [ERROR] SUIUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:34 [ERROR] PORTALUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:34 [ERROR] ALLOUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:35 [ERROR] HBARUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:35 [ERROR] DOGEUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:00:36 [INFO] 대기 중 — 다음 정각: 00:05:00 (264초 후)
+2026-06-01 00:04:15 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-06-01 00:04:15 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:04:16 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:04:16 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 31.7)
+2026-06-01 00:04:17 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:04:18 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 26.1)
+2026-06-01 00:04:18 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 14.1)
+2026-06-01 00:04:19 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 30.2)
+2026-06-01 00:04:20 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 19.9)
+2026-06-01 00:04:21 [INFO]   XRPUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:04:21 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 46.7)
+2026-06-01 00:04:22 [INFO]   LABUSDT  [91mv DOWN[0m (ADX: 39.2)
+2026-06-01 00:04:23 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 20.4)
+2026-06-01 00:04:23 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 23.9)
+2026-06-01 00:04:24 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 26.9)
+2026-06-01 00:04:25 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 25.8)
+2026-06-01 00:04:25 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 21.1)
+2026-06-01 00:04:26 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 14.2)
+2026-06-01 00:04:27 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 37.7)
+2026-06-01 00:04:28 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 13.6)
+2026-06-01 00:04:28 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 34.7)
+2026-06-01 00:04:29 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-06-01 00:04:30 [INFO]   DOGEUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-06-01 00:04:30 [INFO] 대기 중 — 다음 정각: 00:05:00 (29초 후)
+2026-06-01 00:05:02 [ERROR] ETHUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:02 [ERROR] SOLUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:03 [ERROR] HYPEUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:03 [ERROR] XLMUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:04 [ERROR] BNBUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:04 [ERROR] XRPUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:04 [ERROR] ETHUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:04 [ERROR] WLDUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:05 [ERROR] SOLUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:05 [ERROR] LABUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:05 [ERROR] HYPEUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:05 [ERROR] NEARUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:05 [ERROR] XLMUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:06 [ERROR] ZECUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:06 [ERROR] BNBUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:06 [ERROR] ONDOUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:06 [ERROR] XRPUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:06 [ERROR] ASTERUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:07 [ERROR] WLDUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:07 [ERROR] TONUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:07 [ERROR] NEARUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:07 [ERROR] HUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:07 [ERROR] LABUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:08 [ERROR] SUIUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:08 [ERROR] ZECUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:08 [ERROR] PORTALUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:08 [ERROR] ONDOUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:08 [ERROR] ALLOUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:09 [ERROR] ASTERUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:09 [ERROR] HBARUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:09 [ERROR] TONUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:09 [ERROR] DOGEUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:09 [ERROR] HUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:10 [INFO] 대기 중 — 다음 정각: 00:10:00 (290초 후)
+2026-06-01 00:05:10 [ERROR] SUIUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:10 [ERROR] PORTALUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:11 [ERROR] ALLOUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:11 [ERROR] HBARUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:11 [ERROR] DOGEUSDT 오류: name 'df_entry' is not defined
+2026-06-01 00:05:12 [INFO] 대기 중 — 다음 정각: 00:10:00 (288초 후)
+2026-06-01 00:07:47 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-06-01 00:07:47 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:07:48 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:07:48 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 31.7)
+2026-06-01 00:07:49 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:07:50 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 26.1)
+2026-06-01 00:07:51 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 14.1)
+2026-06-01 00:07:51 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 30.2)
+2026-06-01 00:07:52 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 19.5)
+2026-06-01 00:07:53 [INFO]   XRPUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:07:53 [INFO]   LABUSDT  [92m^ UP  [0m (ADX: 39.2)
+2026-06-01 00:07:54 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 46.7)
+2026-06-01 00:07:55 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 20.4)
+2026-06-01 00:07:56 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 23.9)
+2026-06-01 00:07:56 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 26.9)
+2026-06-01 00:07:57 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 25.8)
+2026-06-01 00:07:58 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 21.1)
+2026-06-01 00:07:58 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 14.2)
+2026-06-01 00:07:59 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 37.7)
+2026-06-01 00:08:00 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 13.9)
+2026-06-01 00:08:01 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 35.0)
+2026-06-01 00:08:01 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-06-01 00:08:02 [INFO]   DOGEUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-06-01 00:08:03 [INFO] 대기 중 — 다음 정각: 00:10:00 (117초 후)
+2026-06-01 00:10:10 [INFO] 대기 중 — 다음 정각: 00:15:00 (289초 후)
+2026-06-01 00:11:07 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-06-01 00:11:07 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:11:08 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:11:08 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 31.7)
+2026-06-01 00:11:09 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:11:10 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 26.1)
+2026-06-01 00:11:10 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 14.1)
+2026-06-01 00:11:11 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 30.2)
+2026-06-01 00:11:12 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 19.5)
+2026-06-01 00:11:12 [INFO]   XRPUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:11:13 [INFO]   LABUSDT  [92m^ UP  [0m (ADX: 39.3)
+2026-06-01 00:11:14 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 46.7)
+2026-06-01 00:11:15 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 20.4)
+2026-06-01 00:11:15 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 23.8)
+2026-06-01 00:11:16 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 26.9)
+2026-06-01 00:11:17 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 21.2)
+2026-06-01 00:11:17 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 25.8)
+2026-06-01 00:11:18 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 14.2)
+2026-06-01 00:11:19 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 37.7)
+2026-06-01 00:11:19 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 13.9)
+2026-06-01 00:11:20 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 35.0)
+2026-06-01 00:11:21 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.5)
+2026-06-01 00:11:21 [INFO]   DOGEUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-06-01 00:11:22 [INFO] 대기 중 — 다음 정각: 00:15:00 (217초 후)
+2026-06-01 00:15:04 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:15:04 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:15:04 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 33.7)
+2026-06-01 00:15:05 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 27.0)
+2026-06-01 00:15:05 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 28.0)
+2026-06-01 00:15:06 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 16.9)
+2026-06-01 00:15:07 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 28.7)
+2026-06-01 00:15:08 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BNBUSDT. Sleeping then trying again.
+2026-06-01 00:15:08 [ERROR] API rate limit will reset at 00:15:10.024. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:15:10 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 18.7)
+2026-06-01 00:15:10 [INFO]   XRPUSDT  [91mv DOWN[0m (ADX: 25.8)
+2026-06-01 00:15:11 [INFO]   LABUSDT  [92m^ UP  [0m (ADX: 38.3)
+2026-06-01 00:15:12 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 19.0)
+2026-06-01 00:15:12 [INFO]   WLDUSDT  [91mv DOWN[0m (ADX: 48.7)
+2026-06-01 00:15:13 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 22.7)
+2026-06-01 00:15:14 [INFO]   ONDOUSDT  [91mv DOWN[0m (ADX: 26.9)
+2026-06-01 00:15:15 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 20.9)
+2026-06-01 00:15:15 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 26.4)
+2026-06-01 00:15:16 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 13.5)
+2026-06-01 00:15:17 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 40.7)
+2026-06-01 00:15:17 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 14.6)
+2026-06-01 00:15:18 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 36.0)
+2026-06-01 00:15:19 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.7)
+2026-06-01 00:15:19 [INFO]   DOGEUSDT  [91mv DOWN[0m (ADX: 26.3)
+2026-06-01 00:15:25 [INFO] 🎯 [TONUSDT] SIDEWAYS_ANTI 지정가 매복 (@1.899). 5초 타임아웃 감시...
+2026-06-01 00:15:29 [INFO] 대기 중 — 다음 정각: 00:20:00 (271초 후)
+2026-06-01 00:15:30 [INFO] ✅ Sell TONUSDT 지정가 체결 완료!
+2026-06-01 00:15:31 [ERROR] [91m[Error Trace] Logic Error Exception (10001): Qty invalid (ErrCode: 10001) (ErrTime: 15:15:31).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "TONUSDT", "side": "Buy", "orderType": "Limit", "price": "1.8799", "qty": "214.20000000000002", "reduceOnly": true, "postOnly": true, "positionIdx": 0}.. 재시도 중단.[0m
+2026-06-01 00:15:31 [INFO] 💰 [TONUSDT] 50% 반익절 예약 완료 @1.8799050000000002
+2026-06-01 00:20:14 [INFO] 🎯 [ALLOUSDT] TREND_FVG 지정가 매복 (@0.28997). 5초 타임아웃 감시...
+2026-06-01 00:20:16 [INFO] 대기 중 — 다음 정각: 00:25:00 (284초 후)
+2026-06-01 00:20:20 [ERROR] [91m[Error Trace] Logic Error Exception (10001): TakeProfit:30016000 set for Buy position should be higher than base_price:30093000??LastPrice (ErrCode: 10001) (ErrTime: 15:20:20).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "ALLOUSDT", "side": "Buy", "qty": "1400.0", "takeProfit": "0.30016", "stopLoss": "0.28318", "tpOrderType": "Market", "slOrderType": "Market", "tpTriggerBy": "LastPrice", "slTriggerBy": "LastPrice", "positionIdx": 0, "timeInForce": "GTC", "tpslMode": "Full", "orderType": "Market"}.. 재시도 중단.[0m
+2026-06-01 00:28:14 [INFO] 🚀 FVG Trend Engine V1 가동 시작 (BTC 제외 / ETH,SOL 집중)
+2026-06-01 00:28:14 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:28:15 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:28:15 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 32.2)
+2026-06-01 00:28:16 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 25.9)
+2026-06-01 00:28:16 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 26.7)
+2026-06-01 00:28:17 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 17.1)
+2026-06-01 00:28:18 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 28.8)
+2026-06-01 00:28:19 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 18.7)
+2026-06-01 00:28:19 [INFO]   XRPUSDT  [2m# WAIT[0m (ADX: 25.0)
+2026-06-01 00:28:20 [INFO]   LABUSDT  [92m^ UP  [0m (ADX: 39.2)
+2026-06-01 00:28:21 [INFO]   NEARUSDT  [93m~ S.DN[0m (ADX: 21.3)
+2026-06-01 00:28:21 [INFO]   WLDUSDT  [92m^ UP  [0m (ADX: 43.9)
+2026-06-01 00:28:22 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 23.7)
+2026-06-01 00:28:23 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 24.7)
+2026-06-01 00:28:23 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 21.4)
+2026-06-01 00:28:24 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 26.1)
+2026-06-01 00:28:25 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 39.4)
+2026-06-01 00:28:26 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 13.5)
+2026-06-01 00:28:26 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 15.0)
+2026-06-01 00:28:27 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 36.9)
+2026-06-01 00:28:28 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-06-01 00:28:28 [INFO]   DOGEUSDT  [91mv DOWN[0m (ADX: 25.0)
+2026-06-01 00:28:29 [INFO] 대기 중 — 다음 정각: 00:30:00 (91초 후)
+2026-06-01 00:30:02 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:30:03 [INFO] [1H/15m] 하이브리드(FVG+Sideways) 장세 업데이트
+2026-06-01 00:30:03 [INFO]   ETHUSDT  [91mv DOWN[0m (ADX: 32.6)
+2026-06-01 00:30:04 [INFO]   SOLUSDT  [91mv DOWN[0m (ADX: 26.7)
+2026-06-01 00:30:04 [INFO]   BTCUSDT  [91mv DOWN[0m (ADX: 27.3)
+2026-06-01 00:30:05 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=HYPEUSDT. Sleeping then trying again.
+2026-06-01 00:30:05 [ERROR] API rate limit will reset at 00:30:07.421. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:30:07 [INFO]   HYPEUSDT  [96m~ S.UP[0m (ADX: 18.1)
+2026-06-01 00:30:08 [INFO]   XLMUSDT  [92m^ UP  [0m (ADX: 27.5)
+2026-06-01 00:30:08 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=15&limit=300&symbol=BNBUSDT. Sleeping then trying again.
+2026-06-01 00:30:08 [ERROR] API rate limit will reset at 00:30:10.915. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:30:11 [INFO]   BNBUSDT  [96m~ S.UP[0m (ADX: 18.0)
+2026-06-01 00:30:11 [ERROR] Too many visits. Exceeded the API Rate Limit. (ErrCode: 10006). Hit the API rate limit on https://api.bybit.com/v5/market/kline?category=linear&interval=60&limit=100&symbol=XRPUSDT. Sleeping then trying again.
+2026-06-01 00:30:11 [ERROR] API rate limit will reset at 00:30:13.615. Sleeping for 2000 ms. Retrying...
+2026-06-01 00:30:13 [INFO]   XRPUSDT  [2m# WAIT[0m (ADX: 25.0)
+2026-06-01 00:30:14 [INFO]   LABUSDT  [92m^ UP  [0m (ADX: 38.4)
+2026-06-01 00:30:15 [INFO]   NEARUSDT  [2m# WAIT[0m (ADX: 22.2)
+2026-06-01 00:30:15 [INFO]   WLDUSDT  [92m^ UP  [0m (ADX: 41.2)
+2026-06-01 00:30:16 [INFO]   ZECUSDT  [2m# WAIT[0m (ADX: 23.6)
+2026-06-01 00:30:17 [INFO]   ONDOUSDT  [2m# WAIT[0m (ADX: 23.1)
+2026-06-01 00:30:17 [INFO]   TONUSDT  [96m~ S.UP[0m (ADX: 21.4)
+2026-06-01 00:30:18 [INFO]   ASTERUSDT  [91mv DOWN[0m (ADX: 26.3)
+2026-06-01 00:30:19 [INFO]   SUIUSDT  [91mv DOWN[0m (ADX: 40.9)
+2026-06-01 00:30:20 [INFO]   HUSDT  [96m~ S.UP[0m (ADX: 12.8)
+2026-06-01 00:30:20 [INFO]   PORTALUSDT  [96m~ S.UP[0m (ADX: 16.0)
+2026-06-01 00:30:21 [INFO]   ALLOUSDT  [92m^ UP  [0m (ADX: 39.0)
+2026-06-01 00:30:22 [INFO]   HBARUSDT  [2m# WAIT[0m (ADX: 22.8)
+2026-06-01 00:30:22 [INFO]   DOGEUSDT  [91mv DOWN[0m (ADX: 25.3)
+2026-06-01 00:30:24 [INFO] 🎯 [HYPEUSDT] 지정가 매복 (@68.950). 5초 대기...
+2026-06-01 00:30:25 [ERROR] [91m[Error Trace] Logic Error Exception (10001): Price invalid (ErrCode: 10001) (ErrTime: 15:30:25).
+Request → POST https://api.bybit.com/v5/order/create: {"category": "linear", "symbol": "XLMUSDT", "side": "Buy", "qty": "1611", "positionIdx": 0, "timeInForce": "GTC", "orderType": "Limit", "price": "0", "takeProfit": "0", "stopLoss": "0", "tpTriggerBy": "LastPrice", "slTriggerBy": "LastPrice"}.. 재시도 중단.[0m
+2026-06-01 00:30:29 [INFO] ✅ Sell HYPEUSDT 지정가 체결 완료!
+2026-06-01 00:30:33 [INFO] 대기 중 — 다음 정각: 00:35:00 (267초 후)
+2026-06-01 00:53:45 [INFO] 🚀 하이브리드 엔진 V3 가동 시작 (SMC 제거 / MTF 1H ADX)
+2026-06-01 00:53:45 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 00:53:45 [INFO] [60m] 1H ADX 장세 및 대추세 필터(EMA 50) 업데이트
+2026-06-01 00:53:45 [INFO]   ETHUSDT  [93m~ S.DN[0m (1H ADX: 17.2)
+2026-06-01 00:53:46 [INFO]   SOLUSDT  [93m~ S.DN[0m (1H ADX: 13.8)
+2026-06-01 00:53:47 [INFO]   BTCUSDT  [93m~ S.DN[0m (1H ADX: 17.3)
+2026-06-01 00:53:47 [INFO]   HYPEUSDT  [93m~ S.DN[0m (1H ADX: 21.7)
+2026-06-01 00:53:48 [INFO]   XLMUSDT  [93m~ S.DN[0m (1H ADX: 21.4)
+2026-06-01 00:53:48 [INFO]   BNBUSDT  [92m^ UP  [0m (1H ADX: 43.9)
+2026-06-01 00:53:49 [INFO]   XRPUSDT  [93m~ S.DN[0m (1H ADX: 13.8)
+2026-06-01 00:53:50 [INFO]   LABUSDT  [92m^ UP  [0m (1H ADX: 43.1)
+2026-06-01 00:53:50 [INFO]   WLDUSDT  [93m~ S.DN[0m (1H ADX: 23.5)
+2026-06-01 00:53:51 [INFO]   NEARUSDT  [91mv DOWN[0m (1H ADX: 29.4)
+2026-06-01 00:53:51 [INFO]   ZECUSDT  [93m~ S.DN[0m (1H ADX: 23.0)
+2026-06-01 00:53:52 [INFO]   ONDOUSDT  [93m~ S.DN[0m (1H ADX: 20.7)
+2026-06-01 00:53:53 [INFO]   TONUSDT  [92m^ UP  [0m (1H ADX: 40.0)
+2026-06-01 00:53:53 [INFO]   ASTERUSDT  [92m^ UP  [0m (1H ADX: 44.2)
+2026-06-01 00:53:54 [INFO]   SUIUSDT  [93m~ S.DN[0m (1H ADX: 18.8)
+2026-06-01 00:53:54 [INFO]   HUSDT  [92m^ UP  [0m (1H ADX: 37.4)
+2026-06-01 00:53:55 [INFO]   ALLOUSDT  [93m~ S.DN[0m (1H ADX: 20.5)
+2026-06-01 00:53:56 [INFO]   PORTALUSDT  [92m^ UP  [0m (1H ADX: 50.2)
+2026-06-01 00:53:56 [INFO]   HBARUSDT  [93m~ S.DN[0m (1H ADX: 12.8)
+2026-06-01 00:53:57 [INFO]   DOGEUSDT  [93m~ S.DN[0m (1H ADX: 15.5)
+2026-06-01 00:53:58 [INFO] 대기 중 — 다음 정각: 00:55:00 (62초 후)
+2026-06-01 00:55:13 [INFO] 대기 중 — 다음 정각: 01:00:00 (286초 후)
+2026-06-01 01:03:12 [INFO] 🚀 하이브리드 엔진 V3 가동 시작 (SMC 제거 / MTF 1H ADX)
+2026-06-01 01:03:12 [INFO] 거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)
+2026-06-01 01:03:12 [INFO] [60m] 1H ADX 장세 및 대추세 필터(EMA 50) 업데이트
+2026-06-01 01:03:12 [INFO]   ETHUSDT  [93m~ S.DN[0m (1H ADX: 18.6)
+2026-06-01 01:03:13 [INFO]   SOLUSDT  [93m~ S.DN[0m (1H ADX: 15.2)
+2026-06-01 01:03:14 [INFO]   BTCUSDT  [93m~ S.DN[0m (1H ADX: 18.9)
+2026-06-01 01:03:14 [INFO]   HYPEUSDT  [93m~ S.DN[0m (1H ADX: 21.5)
+2026-06-01 01:03:15 [INFO]   XLMUSDT  [93m~ S.DN[0m (1H ADX: 20.1)
+2026-06-01 01:03:15 [INFO]   BNBUSDT  [92m^ UP  [0m (1H ADX: 42.4)
+2026-06-01 01:03:16 [INFO]   XRPUSDT  [93m~ S.DN[0m (1H ADX: 14.7)
+2026-06-01 01:03:17 [INFO]   LABUSDT  [92m^ UP  [0m (1H ADX: 41.3)
+2026-06-01 01:03:17 [INFO]   NEARUSDT  [91mv DOWN[0m (1H ADX: 27.9)
+2026-06-01 01:03:18 [INFO]   WLDUSDT  [93m~ S.DN[0m (1H ADX: 22.0)
+2026-06-01 01:03:18 [INFO]   ZECUSDT  [93m~ S.DN[0m (1H ADX: 23.1)
+2026-06-01 01:03:19 [INFO]   ONDOUSDT  [93m~ S.DN[0m (1H ADX: 19.3)
+2026-06-01 01:03:20 [INFO]   TONUSDT  [92m^ UP  [0m (1H ADX: 39.8)
+2026-06-01 01:03:20 [INFO]   ASTERUSDT  [92m^ UP  [0m (1H ADX: 42.3)
+2026-06-01 01:03:21 [INFO]   SUIUSDT  [93m~ S.DN[0m (1H ADX: 21.4)
+2026-06-01 01:03:21 [INFO]   HUSDT  [92m^ UP  [0m (1H ADX: 37.2)
+2026-06-01 01:03:22 [INFO]   ALLOUSDT  [93m~ S.DN[0m (1H ADX: 23.2)
+2026-06-01 01:03:23 [INFO]   PORTALUSDT  [92m^ UP  [0m (1H ADX: 50.7)
+2026-06-01 01:03:23 [INFO]   HBARUSDT  [93m~ S.DN[0m (1H ADX: 12.5)
+2026-06-01 01:03:24 [INFO]   DOGEUSDT  [93m~ S.DN[0m (1H ADX: 16.9)
+2026-06-01 01:03:24 [INFO] 대기 중 — 다음 정각: 01:05:00 (95초 후)

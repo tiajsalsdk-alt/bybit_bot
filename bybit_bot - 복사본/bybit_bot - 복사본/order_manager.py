@@ -8,11 +8,12 @@ from market_data import get_session, fetch_candles, api_call, get_balance
 from notifier import send
 from indicators import add_indicators
 from config import (
-    MAIN_LEV, ALT_LEV,
-    SIDEWAYS_PRO_PCT, SIDEWAYS_ANTI_PCT, TREND_SEED_PCT,
+    MAIN_LEV, 
+    WEIGHT_SIDEWAYS, WEIGHT_TREND,
     LIMIT_TIMEOUT, ATR_SL_MULT_TREND, ATR_TP_MULT_TREND, ATR_SL_MULT_SIDEWAYS,
-    ROE_TAKE_PROFIT_PCT, TREND_HALF_TP_ROE, TF_ENTRY, BB_LEN, BB_STD,
-    ADX_TREND, ADX_SIDEWAYS
+    ROE_TAKE_PROFIT_PCT, TREND_HALF_TP_ROE, BB_LEN, BB_STD,
+    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, FEE_BUFFER, ENTRY_TIMEOUT,
+    SIDEWAYS_TF
 )
 
 log = logging.getLogger(__name__)
@@ -82,7 +83,6 @@ async def set_leverage(symbol: str, leverage: int) -> bool:
     return False
 
 async def update_sl(symbol: str, new_sl: float):
-    """[Bug Fix 5] 손절선 설정 재시도 및 에러 전파"""
     max_retries = 3
     for i in range(max_retries):
         try:
@@ -96,8 +96,6 @@ async def update_sl(symbol: str, new_sl: float):
             if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
             log.error(f"[{symbol}] SL 업데이트 중 예외 발생 ({i+1}/{max_retries}): {e}")
         await asyncio.sleep(1)
-    
-    log.critical(f"🚨 [{symbol}] 손절선 설정 최종 실패! 시스템 개입 필요.")
     return False
 
 def handle_trade_result(is_win: bool):
@@ -114,58 +112,40 @@ def handle_trade_result(is_win: bool):
     save_cooldown_data(consecutive_losses, cooldown_until)
 
 def check_cooldown():
-    global consecutive_losses, cooldown_until
-    # 영속화된 데이터 기반 체크
     l, u = load_cooldown_data()
     if time.time() < u:
         return True
     return False
 
 async def calc_qty(symbol: str, entry_price: float, current_wallet: float, engine_name: str) -> float:
-    """[Bug Fix 1] Dead Code 제거 및 실시간 잔고 팩트체크"""
     try:
-        # 실시간 가용 잔고 재조회 (팩트체크)
         wallet_usdt = await get_balance()
     except Exception as e:
-        if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
-        log.error(f"[{symbol}] 잔고 조회 실패, 이전 데이터 사용: {e}")
+        log.error(f"[{symbol}] 잔고 조회 실패: {e}")
         wallet_usdt = current_wallet
 
-    if engine_name == "SIDEWAYS_PRO":
-        seed_pct = SIDEWAYS_PRO_PCT
-    elif engine_name == "SIDEWAYS_ANTI":
-        seed_pct = SIDEWAYS_ANTI_PCT
-    else:
-        seed_pct = TREND_SEED_PCT
-
-    margin = wallet_usdt * seed_pct
+    weight = WEIGHT_TREND if "TREND" in engine_name else WEIGHT_SIDEWAYS
+    margin = wallet_usdt * weight
     
-    # [수정] 0.95 같은 의미 없는 가드 삭제. 실 잔고 기반 계산.
     if margin <= 0:
-        log.warning(f"[{symbol}] 진입 마진 부족 (Margin: {margin:.2f})")
+        log.warning(f"[{symbol}] 진입 마진 부족 (Weight: {weight}, Wallet: {wallet_usdt:.2f})")
         return 0.0
 
-    leverage = MAIN_LEV
-    notional = margin * leverage
+    notional = margin * MAIN_LEV
     raw_qty = notional / entry_price
     
     info = await get_instrument_info(symbol)
     qty = math.floor(raw_qty / info["qty_step"]) * info["qty_step"]
-    
-    if qty < info["min_qty"]: 
-        log.warning(f"[{symbol}] 최소 수량 미달 (Qty: {qty}, Min: {info['min_qty']})")
-        return 0.0
-        
     return round(qty, 8)
 
 def calc_tp_sl(symbol: str, side: str, entry_p: float, atr: float, engine_name: str):
     if "SIDEWAYS" in engine_name:
         if side == "Buy":
             sl = entry_p - (atr * ATR_SL_MULT_SIDEWAYS)
-            tp = entry_p * (1 + ROE_TAKE_PROFIT_PCT) 
+            tp = entry_p + (atr * 2.0) 
         else:
             sl = entry_p + (atr * ATR_SL_MULT_SIDEWAYS)
-            tp = entry_p * (1 - ROE_TAKE_PROFIT_PCT)
+            tp = entry_p - (atr * 2.0)
     else:
         sl = entry_p - (atr * ATR_SL_MULT_TREND) if side == "Buy" else entry_p + (atr * ATR_SL_MULT_TREND)
         tp = entry_p + (atr * ATR_TP_MULT_TREND) if side == "Buy" else entry_p - (atr * ATR_TP_MULT_TREND)
@@ -178,86 +158,95 @@ async def is_order_filled(symbol: str, order_id: str) -> bool:
         resp = await api_call(session.get_order_history, category="linear", symbol=symbol, orderId=order_id)
         if resp and resp.get("retCode") == 0:
             order_list = resp["result"]["list"]
-            if order_list:
-                return order_list[0]["orderStatus"] == "Filled"
+            if order_list and order_list[0]["orderStatus"] == "Filled":
+                return True
     except Exception as e:
         if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
     return False
 
-async def verify_position_exists(symbol: str) -> bool:
-    try:
-        session = get_session()
-        resp = await api_call(session.get_positions, category="linear", symbol=symbol)
-        if resp and resp.get("retCode") == 0:
-            for p in resp["result"]["list"]:
-                if p["symbol"] == symbol and float(p.get("size", 0)) > 0:
-                    return True
-    except Exception as e:
-        if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
-    return False
+# [유틸리티] 소수점 정밀도 및 규격 포맷팅
+def format_precision(value: float, step: float, is_floor: bool = False) -> str:
+    if not value or step <= 0: return "0"
+    p = len(str(float(step)).rstrip('0').split('.')[-1]) if '.' in str(float(step)) else 0
+    if is_floor:
+        multi = 10 ** p
+        val = math.floor(round(value * multi, 10)) / multi
+    else:
+        val = round(round(value / step) * step, p)
+    return f"{val:.{p}f}"
 
-async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: float, tp_price: float, sl_price: float, is_entry: bool = True) -> bool:
+async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: float, tp_price: float, sl_price: float, is_entry: bool = True, engine_name: str = "", ma20_target: float = 0.0) -> bool:
     if not await set_leverage(symbol, MAIN_LEV): return False
-    session = get_session()
+    session = get_session(); info = await get_instrument_info(symbol)
+    tick = info["tick_size"]; step = info["qty_step"]
     
-    # 스프레드 체크
-    if is_entry:
-        try:
-            ticker_resp = await api_call(session.get_tickers, category="linear", symbol=symbol)
-            if ticker_resp and ticker_resp.get("retCode") == 0:
-                ticker_info = ticker_resp["result"]["list"][0]
-                ask = float(ticker_info["ask1Price"]); bid = float(ticker_info["bid1Price"])
-                spread_pct = (ask - bid) / bid
-                if spread_pct > 0.001:
-                    log.warning(f"🚫 [{symbol}] 스프레드 초과 ({spread_pct*100:.3f}%).")
-                    return False
-        except Exception as e:
-            if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
-
-    info = await get_instrument_info(symbol)
-    tick = info["tick_size"]
-    wait_time = 5 if is_entry else 2
-    entry_s = str(round_to_tick(entry_price, tick))
-    tp_s = str(round_to_tick(tp_price, tick)); sl_s = str(round_to_tick(sl_price, tick))
-
-    common = dict(
-        category="linear", symbol=symbol, side=side, qty=str(qty),
-        takeProfit=tp_s, stopLoss=sl_s, tpOrderType="Market", slOrderType="Market",
-        tpTriggerBy="LastPrice", slTriggerBy="LastPrice", positionIdx=0,
-        timeInForce="GTC", tpslMode="Full"
-    )
+    qty_s = format_precision(qty, step, is_floor=True)
+    entry_s = format_precision(entry_price, tick)
+    
+    common = dict(category="linear", symbol=symbol, side=side, qty=qty_s, positionIdx=0, timeInForce="GTC")
 
     try:
-        resp = await api_call(session.place_order, **common, orderType="Limit", price=entry_s)
+        # 1. 지정가(Limit) 매복 시도 (최초 TP/SL 포함)
+        resp = await api_call(session.place_order, **common, orderType="Limit", price=entry_s,
+                             takeProfit=format_precision(tp_price, tick),
+                             stopLoss=format_precision(sl_price, tick),
+                             tpTriggerBy="LastPrice", slTriggerBy="LastPrice")
+        
         if resp and resp.get("retCode") == 0:
             order_id = resp["result"]["orderId"]
-            await asyncio.sleep(wait_time)
+            log.info(f"🎯 [{symbol}] 지정가 매복 (@{entry_s}). {ENTRY_TIMEOUT}초 대기...")
+            await asyncio.sleep(ENTRY_TIMEOUT)
             
-            check = await api_call(session.get_open_orders, category="linear", symbol=symbol, orderId=order_id)
-            active_orders = check.get("result", {}).get("list", []) if check else []
-            if not active_orders:
-                if await is_order_filled(symbol, order_id):
-                    log.info(f"✅ {side} {symbol} 체결 (지정가)")
-                    if is_entry: _entry_times[symbol] = time.time()
-                    return True
-            
-            await api_call(session.cancel_order, category="linear", symbol=symbol, orderId=order_id)
+            # 2. 체결 확인 및 팰백 (Timeout Fallback)
+            if await is_order_filled(symbol, order_id):
+                log.info(f"✅ {side} {symbol} 지정가 체결 완료!")
+                act_entry = entry_price 
+            else:
+                await api_call(session.cancel_order, category="linear", symbol=symbol, orderId=order_id)
+                print(f"  [Timeout] {symbol} - 지정가 미체결로 5초 후 시장가 전환")
+                
+                # ① 순수 시장가 진입 주문 (에러 방지용 TP/SL 제외)
+                resp2 = await api_call(session.place_order, category="linear", symbol=symbol, side=side, 
+                                     orderType="Market", qty=qty_s, positionIdx=0)
+                
+                if resp2 and resp2.get("retCode") == 0:
+                    await asyncio.sleep(1.0) # 포지션 갱신 대기
+                    pos_resp = await api_call(session.get_positions, category="linear", symbol=symbol)
+                    if pos_resp and pos_resp.get("retCode") == 0:
+                        pos_info = pos_resp["result"]["list"][0]
+                        act_entry = float(pos_info["avgPrice"])
+                        
+                        # ② 실제 체결가 기준 TP/SL 재계산
+                        atr = _entry_atr.get(symbol, 0.0)
+                        if side == "Buy":
+                            new_tp = act_entry + (atr * ATR_TP_MULT_TREND)
+                            new_sl = act_entry - (atr * ATR_SL_MULT_TREND)
+                        else:
+                            new_tp = act_entry - (atr * ATR_TP_MULT_TREND)
+                            new_sl = act_entry + (atr * ATR_SL_MULT_TREND)
+                            
+                        await api_call(session.set_trading_stop, category="linear", symbol=symbol, positionIdx=0,
+                                     takeProfit=format_precision(new_tp, tick),
+                                     stopLoss=format_precision(new_sl, tick),
+                                     tpTriggerBy="LastPrice", slTriggerBy="LastPrice")
+                        log.info(f"⚡ {symbol} 시장가 체결 및 TP/SL 재설정 완료 (@{act_entry})")
+                    else: return False
+                else: return False
 
-        resp2 = await api_call(session.place_order, **common, orderType="Market")
-        if resp2 and resp2.get("retCode") == 0:
-            log.info(f"✅ {side} {symbol} 체결 (시장가)")
-            if is_entry: _entry_times[symbol] = time.time()
+            # 3. 반익절 예약 (지정가 Maker)
+            if is_entry:
+                _entry_times[symbol] = time.time()
+                half_qty = format_precision(qty * 0.5, step, is_floor=True)
+                final_tp = ma20_target if "SIDEWAYS" in engine_name else (act_entry + (_entry_atr.get(symbol, 0) * 1.8) if side=="Buy" else act_entry - (_entry_atr.get(symbol, 0) * 1.8))
+                
+                await api_call(session.place_order, category="linear", symbol=symbol, 
+                         side="Sell" if side == "Buy" else "Buy", orderType="Limit", 
+                         price=format_precision(final_tp, tick), qty=half_qty, 
+                         reduceOnly=True, postOnly=True, positionIdx=0)
+                log.info(f"💰 [{symbol}] 50% 반익절 예약 완료 @{final_tp}")
             return True
-
     except Exception as e:
-        if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
-        log.error(f"⚠️ [{symbol}] 주문 중 예외 발생: {e}. 포지션 팩트체크 수행.")
-
-    if await verify_position_exists(symbol):
-        log.info(f"🔍 [{symbol}] 주문 중 오류가 있었으나 포지션 체결 확인됨.")
-        if is_entry: _entry_times[symbol] = time.time()
-        return True
-
+        log.error(f"⚠️ 주문 예외: {e}")
     return False
 
 async def monitor_positions(positions: list, entry_regimes: dict):
@@ -274,40 +263,32 @@ async def monitor_positions(positions: list, entry_regimes: dict):
         lev = float(pos.get("leverage", 10))
         engine = entry_regimes.get(sym, "")
 
+        # --- [FVG 전용] 본절 이동 (Break-even) 로직 ---
+        if engine == "TREND_FVG" and sym in _half_tp_done:
+            fee_buffer_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
+            await update_sl(sym, fee_buffer_price)
+
         entry_ts = _entry_times.get(sym)
         if entry_ts and (time.time() - entry_ts > 3600):
             log.warning(f"⏰ [{sym}] 타임 스탑 청산 (12캔들 경과)")
             await close_position_market(sym, side, qty)
             _entry_times.pop(sym, None); continue
 
-        if sym in _half_tp_done:
-            try:
-                hist_df = await fetch_candles(sym, TF_ENTRY, limit=5)
-                prev_row = hist_df.iloc[-2]
-                if side == "Buy" and current_p < prev_row["low"]:
-                    log.critical(f"📉 [{sym}] 동적 트레일링 스탑 (직전 저점 이탈)!")
-                    await close_position_market(sym, side, qty); continue
-                elif side == "Sell" and current_p > prev_row["high"]:
-                    log.critical(f"📈 [{sym}] 동적 트레일링 스탑 (직전 고점 돌파)!")
-                    await close_position_market(sym, side, qty); continue
-            except Exception as e:
-                if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
-
         roe = ((current_p - entry_p) / entry_p if side == "Buy" else (entry_p - current_p) / entry_p) * lev
 
         if "SIDEWAYS" in engine:
             try:
-                df = await fetch_candles(sym, TF_ENTRY, limit=25)
-                ma = df['close'].rolling(window=20).mean().iloc[-1]
-                bb_up = ma + (df['close'].rolling(window=20).std().iloc[-1] * BB_STD)
-                bb_dn = ma - (df['close'].rolling(window=20).std().iloc[-1] * BB_STD)
+                df = await fetch_candles(sym, SIDEWAYS_TF, limit=25)
+                ma = df['close'].rolling(window=BB_LEN).mean().iloc[-1]
+                bb_up = ma + (df['close'].rolling(window=BB_LEN).std().iloc[-1] * BB_STD)
+                bb_dn = ma - (df['close'].rolling(window=BB_LEN).std().iloc[-1] * BB_STD)
                 
                 hit_mid = (current_p >= ma) if side == "Buy" else (current_p <= ma)
                 if sym not in _half_tp_done and hit_mid:
                     info = await get_instrument_info(sym)
-                    half_qty = math.floor((qty * 0.5) / info["qty_step"]) * info["qty_step"]
-                    if half_qty >= info["min_qty"]:
-                        log.critical(f"🚀 [{sym}] 로직2: 볼벤 중앙선 반익절 (시장가)!")
+                    half_qty = format_precision(qty * 0.5, info["qty_step"], True)
+                    if float(half_qty) >= info["min_qty"]:
+                        log.critical(f"🚀 [{sym}] 횡보로직: 볼벤 중앙선 반익절 (시장가)!")
                         close_side = "Sell" if side == "Buy" else "Buy"
                         await api_call(get_session().place_order, category="linear", symbol=sym, side=close_side,
                                  orderType="Market", qty=str(half_qty), reduceOnly=True, positionIdx=0)
@@ -316,22 +297,22 @@ async def monitor_positions(positions: list, entry_regimes: dict):
 
                 hit_target = (current_p >= bb_up) if side == "Buy" else (current_p <= bb_dn)
                 if hit_target:
-                    log.critical(f"💰 [{sym}] 로직2: 목표가 도달 전량 익절!")
+                    log.critical(f"💰 [{sym}] 횡보로직: 목표가 도달 전량 익절!")
                     await close_position_market(sym, side, qty); continue
             except Exception as e:
-                if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
+                log.error(f"모니터링 오류: {e}")
             continue
 
         if sym not in _half_tp_done and roe >= TREND_HALF_TP_ROE:
             info = await get_instrument_info(sym)
-            half_qty = math.floor((qty * 0.5) / info["qty_step"]) * info["qty_step"]
-            if half_qty >= info["min_qty"]:
-                log.critical(f"🚀 [{sym}] SMC ROE {TREND_HALF_TP_ROE*100:.0f}% 반익절 (지정가)!")
+            half_qty = format_precision(qty * 0.5, info["qty_step"], True)
+            if float(half_qty) >= info["min_qty"]:
+                log.critical(f"🚀 [{sym}] {engine} ROE {TREND_HALF_TP_ROE*100:.0f}% 반익절 (지정가)!")
                 close_side = "Sell" if side == "Buy" else "Buy"
-                tp_p = entry_p * 1.01 if side == "Buy" else entry_p * 0.99
+                tp_p = current_p
                 await api_call(get_session().place_order, category="linear", symbol=sym, side=close_side,
-                         orderType="Limit", price=str(round_to_tick(tp_p, info["tick_size"])), 
-                         qty=str(half_qty), reduceOnly=True, positionIdx=0)
+                         orderType="Limit", price=format_precision(tp_p, info["tick_size"]), 
+                         qty=half_qty, reduceOnly=True, postOnly=True, positionIdx=0)
                 await update_sl(sym, entry_p); _half_tp_done.add(sym)
 
 async def close_all_active_positions():
@@ -357,7 +338,6 @@ async def cancel_all_active_orders(symbol: str):
     return False
 
 async def close_position_market(symbol: str, side: str, qty: float):
-    """[Bug Fix 2] 시장가 청산 재시도 및 무음 처리 제거"""
     close_side = "Sell" if side == "Buy" else "Buy"
     max_retries = 3
     for i in range(max_retries):
@@ -368,30 +348,25 @@ async def close_position_market(symbol: str, side: str, qty: float):
                 log.info(f"✅ [{symbol}] 시장가 청산 성공.")
                 await cancel_all_active_orders(symbol)
                 return True
-            log.error(f"❌ [{symbol}] 청산 실패 ({i+1}/{max_retries}): {resp.get('retMsg')}")
         except Exception as e:
             if "CIRCUIT_BREAKER_TRIGGERED" in str(e): raise e
             log.error(f"⚠️ [{symbol}] 청산 중 예외 발생 ({i+1}/{max_retries}): {e}")
         await asyncio.sleep(2)
-    
-    log.critical(f"🚨 [{symbol}] 모든 청산 재시도 실패! 자금 위험 상태.")
     return False
 
-def check_trade_approval(signal_type, current_price, adx_htf, ema_htf, current_position_count):
+def check_trade_approval(signal_type, target_price, adx_htf, ema_htf, current_position_count):
     if check_cooldown():
         log.warning("❄️ [COOL DOWN] 쿨다운 중.")
         return False
     
-    if ADX_SIDEWAYS < adx_htf < ADX_TREND: 
-        return False
-        
-    if adx_htf <= ADX_SIDEWAYS: 
+    if adx_htf < ADX_TREND_LEVEL: # 횡보장 (최대 3개)
         return current_position_count < 3
         
-    if adx_htf >= ADX_TREND:
+    if adx_htf >= ADX_TREND_LEVEL: # 추세장 (최대 5개)
         if current_position_count >= 5: return False
         is_long = signal_type.upper() in ["BUY", "LONG"]
-        if current_price > ema_htf and is_long: return True
-        if current_price < ema_htf and not is_long: return True
+        if is_long and target_price < ema_htf: return False
+        if not is_long and target_price > ema_htf: return False
+        return True
         
     return False
