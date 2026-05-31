@@ -1,7 +1,0 @@
-ta: OK
-pybit: OK
-schedule: OK
-requests: OK
-pandas/numpy: OK
-indicators: OK — 컬럼: ['ts', 'open', 'high', 'low', 'close', 'volume', 'adx', 'ema200', 'bb_upper', 'bb_lower', 'rsi', 'srsi_k', 'srsi_d', 'st_dir', 'obv', 'obv_ma', 'mfi', 'atr', 'vol_ma']
-모든 테스트 통과!
