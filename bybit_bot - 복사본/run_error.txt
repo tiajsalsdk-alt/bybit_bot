@@ -1,0 +1,31 @@
+2026-05-17 02:41:22,790 [INFO] [NOTIFY] 🤖 바이비트 자동매매 봇 시작!
+2026-05-17 02:41:24,061 [INFO] 봇 초기화...
+2026-05-17 02:41:24,063 [INFO] 종목 스캔 시작...
+2026-05-17 02:41:24,700 [INFO] Watchlist: ['BTCUSDT', 'ETHUSDT', 'SUIUSDT', 'SOLUSDT', 'BNBUSDT']
+2026-05-17 02:41:24,701 [INFO] [NOTIFY] 📋 종목 업데이트: BTCUSDT, ETHUSDT, SUIUSDT, SOLUSDT, BNBUSDT
+2026-05-17 02:41:25,718 [INFO] 장세 판단 업데이트...
+2026-05-17 02:41:25,819 [INFO]   BTCUSDT: DOWNTREND
+2026-05-17 02:41:26,221 [INFO]   ETHUSDT: DOWNTREND
+2026-05-17 02:41:26,620 [INFO]   SUIUSDT: DOWNTREND
+2026-05-17 02:41:27,031 [INFO]   SOLUSDT: DOWNTREND
+2026-05-17 02:41:27,430 [INFO]   BNBUSDT: DOWNTREND
+Traceback (most recent call last):
+  File "C:\Users\user\bybit_bot\main.py", line 177, in <module>
+    main()
+  File "C:\Users\user\bybit_bot\main.py", line 162, in main
+    job_update_regimes()
+  File "C:\Users\user\bybit_bot\main.py", line 72, in job_update_regimes
+    positions = get_open_positions()
+                ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\bybit_bot\position_manager.py", line 19, in get_open_positions
+    resp = get_session().get_positions(category="linear", settleCoin="USDT")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311-32\Lib\site-packages\pybit\_v5_position.py", line 22, in get_positions
+    return self._submit_request(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311-32\Lib\site-packages\pybit\_http_manager.py", line 242, in _submit_request
+    self._check_status_code(response, method, path, req_params)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python311-32\Lib\site-packages\pybit\_http_manager.py", line 445, in _check_status_code
+    raise FailedRequestError(
+pybit.exceptions.FailedRequestError: Http status code is not 200. (ErrCode: 401) (ErrTime: 17:41:27).
+Request → GET https://api-testnet.bybit.com/v5/position/list: category=linear&settleCoin=USDT.
