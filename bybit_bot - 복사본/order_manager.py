@@ -11,7 +11,8 @@ from config import (
     ATR_SL_MULT_TREND, TREND_TP1_R_MULT, TREND_TP2_R_MULT, ATR_SL_MULT_SIDEWAYS,
     FEE_BUFFER, LIMIT_TIMEOUT_MINS, SIDEWAYS_TF, TREND_TF,
     ADX_SIDEWAYS_LEVEL, ADX_TREND_LEVEL, BB_LEN, BB_STD,
-    COOLDOWN_FILE, SL_COOLDOWN_MINS
+    COOLDOWN_FILE, SL_COOLDOWN_MINS,
+    TS_ACTIVATION_ROE, TS_CALLBACK_ROE
 )
 
 log = logging.getLogger(__name__)
@@ -28,18 +29,20 @@ def set_physical_lock(symbol: str):
     with open(COOLDOWN_FILE, 'w') as f: json.dump(data, f)
     log.critical(f"⚠️ [{symbol}] 손절 감지! 물리적 락 작동 ({SL_COOLDOWN_MINS}분간 진입 금지)")
 
-# [V3.5] 물리적 락 상태 확인 함수
-def is_physically_locked(symbol: str) -> bool:
+# [V3.5] 물리적 락 상태 확인 함수 (silent 모드 추가로 로그 스패밍 방지)
+def is_physically_locked(symbol: str, silent: bool = False) -> bool:
     if not os.path.exists(COOLDOWN_FILE): return False
     try:
         with open(COOLDOWN_FILE, 'r') as f: data = json.load(f)
         unlock_time = data.get(symbol, 0)
         if time.time() < unlock_time:
-            rem = int((unlock_time - time.time()) / 60)
-            log.warning(f"  [Lock] {symbol} 진입 차단 중 ({rem}분 남음)")
+            if not silent:
+                rem = int((unlock_time - time.time()) / 60)
+                log.warning(f"  [Lock] {symbol} 진입 차단 중 ({rem}분 남음)")
             return True
     except: return False
     return False
+
 _half_tp_done = set()
 _entry_atr = {}      
 _instrument_info_cache = {}
@@ -57,16 +60,26 @@ async def get_instrument_info(symbol: str):
 
 def format_precision(value: float, step: float, is_floor: bool = False) -> str:
     if not value or step <= 0: return "0"
-    p = len(str(float(step)).rstrip('0').split('.')[-1]) if '.' in str(float(step)) else 0
+    
+    # [V3.5 최적화] 과학적 표기법 및 정수형 스텝 대응
+    step_str = format(step, 'f').rstrip('0')
+    if '.' in step_str:
+        p = len(step_str.split('.')[-1])
+    else:
+        p = 0
+
     if is_floor:
         m = 10 ** p
         v = math.floor(round(value * m, 10)) / m
     else:
         v = round(round(value / step) * step, p)
+    
+    # p가 0일 때 .0f로 출력되어 정수로 표현되도록 보장
     return f"{v:.{p}f}"
 
 async def calc_qty(symbol: str, entry_price: float, engine_name: str) -> float:
     wallet_usdt = await get_balance()
+    if wallet_usdt is None: return 0.0
     weight = WEIGHT_TREND if "TREND" in engine_name else WEIGHT_SIDEWAYS
     margin = wallet_usdt * weight
     
@@ -86,9 +99,18 @@ def calc_tp_sl(symbol: str, side: str, entry_p: float, atr: float, engine_name: 
     return tp, sl
 
 async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: float, tp_price: float, sl_price: float, engine_name: str, ma20_target: float = 0.0) -> bool:
+    if symbol in _active_limit_orders:
+        log.warning(f"⚠️ [{symbol}] 이미 활성 주문이 존재합니다. 중복 진입을 차단합니다.")
+        return False
+
     session = get_session(); info = await get_instrument_info(symbol)
     tick, step = info["tick_size"], info["qty_step"]
     qty_s, entry_s = format_precision(qty, step, True), format_precision(entry_price, tick)
+
+    try:
+        # [V3.5 방어] 주문 전 레버리지 강제 설정 (청산 위험 방지)
+        await api_call(session.set_leverage, category="linear", symbol=symbol, buyLeverage=str(MAIN_LEV), sellLeverage=str(MAIN_LEV))
+    except: pass # 이미 동일 레버리지면 에러 발생 가능
 
     try:
         # [V3.1 핵심 수정] timeInForce="PostOnly" 강제 적용하여 시장가 추격(FOMO) 원천 차단
@@ -128,20 +150,20 @@ async def monitor_positions(positions: list, entry_regimes: dict):
             _entry_times[sym] = time.time()
             engine = order_info["engine"]
             
-            # 횡보장일 경우 MA20 반익절 즉시 예약
+            # 횡보장일 경우 MA20 반익절 즉시 예약 (V3.5 PostOnly 규격 교정)
             if "SIDEWAYS" in engine:
                 info = await get_instrument_info(sym)
                 half_qty = format_precision(float(order_info["qty"]) * 0.5, info["qty_step"], is_floor=True)
                 await api_call(session.place_order, category="linear", symbol=sym, side="Sell" if order_info["side"]=="Buy" else "Buy",
                              orderType="Limit", price=format_precision(order_info["ma20_target"], info["tick_size"]), qty=half_qty, 
-                             reduceOnly=True, postOnly=True, positionIdx=0)
+                             reduceOnly=True, timeInForce="PostOnly", positionIdx=0)
             _active_limit_orders.pop(sym, None)
             continue
             
         if time.time() - order_info["time"] > (LIMIT_TIMEOUT_MINS * 60):
             await api_call(session.cancel_all_orders, category="linear", symbol=sym)
             _active_limit_orders.pop(sym, None)
-            print(f"  [Cancel] {sym} - {LIMIT_TIMEOUT_MINS}분 미체결로 주문 취소 (FOMO 방지)")
+            log.info(f"  [Cancel] {sym} - {LIMIT_TIMEOUT_MINS}분 미체결로 주문 취소 (FOMO 방지)")
 
     if not positions:
         _half_tp_done.clear()
@@ -156,8 +178,7 @@ async def monitor_positions(positions: list, entry_regimes: dict):
         entry_p = float(pos["avgPrice"]); curr_p = float(pos["markPrice"])
         engine = entry_regimes.get(sym, "")
         info = await get_instrument_info(sym); tick = info["tick_size"]
-        atr = _entry_atr.get(sym, 0.0)
-
+        
         # --- [1] 횡보장 동적 익절 관리 ---
         if "SIDEWAYS" in engine:
             try:
@@ -170,14 +191,23 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                     hit_ma20 = (curr_p >= ma20) if side == "Buy" else (curr_p <= ma20)
                     if hit_ma20:
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
+                        
+                        # [V3.6] 트레일링 스탑 파라미터 계산
+                        act_p = entry_p * (1 + (TS_ACTIVATION_ROE / MAIN_LEV)) if side == "Buy" else entry_p * (1 - (TS_ACTIVATION_ROE / MAIN_LEV))
+                        ts_dist = entry_p * TS_CALLBACK_ROE
+
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
-                                     stopLoss=format_precision(be_price, tick), positionIdx=0)
-                        _half_tp_done.add(sym); log.critical(f"🚀 [{sym}] 횡보 1차 MA20 도달! 본절 SL 이동 완료.")
+                                     stopLoss=format_precision(be_price, tick),
+                                     activationPrice=format_precision(act_p, tick),
+                                     trailingStop=format_precision(ts_dist, tick),
+                                     positionIdx=0)
+                        _half_tp_done.add(sym); log.critical(f"🚀 [{sym}] 횡보 1차 MA20 도달! 본절 SL 및 TS(10%/4%) 설정 완료.")
                 else:
                     # 횡보장 최종 청산 또는 손절 감시
                     is_sl_hit = (curr_p <= float(pos["stopLoss"])) if side == "Buy" else (curr_p >= float(pos["stopLoss"]))
                     if is_sl_hit:
-                        set_physical_lock(sym)
+                        if not is_physically_locked(sym, silent=True):
+                            set_physical_lock(sym)
                     
                     await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                  takeProfit=format_precision(bb_target, tick), tpTriggerBy="LastPrice", positionIdx=0)
@@ -199,16 +229,26 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                         close_side = "Sell" if side == "Buy" else "Buy"
                         await api_call(session.place_order, category="linear", symbol=sym, side=close_side,
                                      orderType="Limit", price=format_precision(curr_p, tick), 
-                                     qty=half_qty, reduceOnly=True, postOnly=True, positionIdx=0)
+                                     qty=half_qty, reduceOnly=True, timeInForce="PostOnly", positionIdx=0)
+                        
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
+
+                        # [V3.6] 트레일링 스탑 파라미터 계산
+                        act_p = entry_p * (1 + (TS_ACTIVATION_ROE / MAIN_LEV)) if side == "Buy" else entry_p * (1 - (TS_ACTIVATION_ROE / MAIN_LEV))
+                        ts_dist = entry_p * TS_CALLBACK_ROE
+
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
-                                     stopLoss=format_precision(be_price, tick), positionIdx=0)
+                                     stopLoss=format_precision(be_price, tick),
+                                     activationPrice=format_precision(act_p, tick),
+                                     trailingStop=format_precision(ts_dist, tick),
+                                     positionIdx=0)
                         _half_tp_done.add(sym)
             
-            # [V3.5] 추세장 손절 감시
+            # [V3.5] 추세장 손절 감시 (Bug Fix: 쿨다운 무한 리셋 방지)
             is_sl_hit = (curr_p <= float(pos["stopLoss"])) if side == "Buy" else (curr_p >= float(pos["stopLoss"]))
             if is_sl_hit:
-                set_physical_lock(sym)
+                if not is_physically_locked(sym, silent=True):
+                    set_physical_lock(sym)
 
 async def close_position_market(symbol: str, side: str, qty: float):
     close_side = "Sell" if side == "Buy" else "Buy"
@@ -221,6 +261,7 @@ def check_trade_approval(side, price, adx, ema, count):
     return count < 3 if adx < ADX_TREND_LEVEL else False
 
 async def cancel_all_active_orders(s): await api_call(get_session().cancel_all_orders, category="linear", symbol=s)
+
 async def get_open_positions():
     resp = await api_call(get_session().get_positions, category="linear", settleCoin="USDT")
     if not resp or resp.get("retCode") != 0: return []

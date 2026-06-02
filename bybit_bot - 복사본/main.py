@@ -20,7 +20,7 @@ from order_manager import (
 )
 from config import (
     ADX_TF, SIDEWAYS_TF, TREND_TF, CANDLES_NEEDED,
-    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, MAIN_LEV
+    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, MAIN_LEV, DAILY_LOSS_LIMIT
 )
 
 log = logging.getLogger(__name__)
@@ -30,6 +30,27 @@ symbol_adx = {}
 symbol_ema = {} 
 current_max_positions = 0
 _entry_regimes = {}
+
+async def check_daily_loss(wallet: float) -> bool:
+    """오늘 발생한 총 손실이 설정된 한도를 초과했는지 확인"""
+    if wallet <= 0: return False
+    session = get_session()
+    now = dt.datetime.now(dt.timezone.utc)
+    start_of_day = int(now.replace(hour=0, minute=0, second=0, microsecond=0).timestamp() * 1000)
+    
+    try:
+        resp = await api_call(session.get_closed_pnl, category="linear", startTime=start_of_day)
+        if not resp or resp.get("retCode") != 0: return False
+        
+        daily_pnl = sum(float(p["closedPnl"]) for p in resp["result"]["list"])
+        loss_limit_amount = wallet * DAILY_LOSS_LIMIT
+        
+        if daily_pnl < -loss_limit_amount:
+            log.critical(f"🛑 [RISK] 일일 손실 한도 초과! 매매를 정지합니다. (PnL: {daily_pnl:.2f}, Limit: -{loss_limit_amount:.2f})")
+            return True
+    except Exception as e:
+        log.error(f"PnL 체크 에러: {e}")
+    return False
 
 def setup_logging():
     root = logging.getLogger()
@@ -65,8 +86,11 @@ async def run_entry_check(wallet: float):
 
     for symbol in watchlist:
         try:
-            # [방어 1] 이미 포지션 보유 중이면 즉시 제외
+            # [방어 1] 이미 포지션 보유 중이거나 활성 주문이 있으면 즉시 제외
             if any(p["symbol"] == symbol for p in positions): continue
+            
+            from order_manager import _active_limit_orders
+            if symbol in _active_limit_orders: continue
             
             # [방어 2] 물리적 글로벌 락(cooldown.json) 확인
             from order_manager import is_physically_locked
@@ -102,27 +126,51 @@ async def run_entry_check(wallet: float):
 
 async def main():
     setup_logging()
-    log.info("🚀 V3.4 Full-Fill 하이브리드 엔진 마스터 가동 시작")
+    log.info("🚀 V3.5 Master Full-Fill 하이브리드 엔진 가동 시작")
     await refresh_watchlist()
     await run_regime_update()
-    
+
+    # [V3.5] 시작 즉시 1회 체크 수행
+    wallet = await get_balance()
+    if wallet:
+        if await check_daily_loss(wallet): return
+        await run_entry_check(wallet)
+
     while True:
         try:
             wallet = await get_balance()
+            if wallet is None:
+                log.error("❌ 잔고 조회 실패! 통신 확인 필요. 30초 후 재시도.")
+                await asyncio.sleep(30)
+                continue
+
+            if await check_daily_loss(wallet):
+                log.warning("💤 일일 손실 한도 도달로 인해 오늘 매매를 정지합니다. (내일 다시 실행하세요)")
+                await asyncio.sleep(3600)
+                continue
+
             curr_pos = await get_open_positions()
             if curr_pos: await monitor_positions(curr_pos, _entry_regimes)
-            
+
             now = dt.datetime.now()
-            if now.minute % 5 == 0:
+            # 5분 정각 체크 (0, 5, 10...)
+            if now.minute % 5 == 0 and now.second < 15:
                 if now.minute % 15 == 0:
                     await refresh_watchlist()
                     await run_regime_update()
                 await run_entry_check(wallet)
-                await asyncio.sleep(60)
-            await asyncio.sleep(10)
+                await asyncio.sleep(60) # 중복 체크 방지
+            else:
+                # 봇 생존 확인용 하트비트 (30초마다)
+                if now.second % 30 == 0:
+                    next_run = 5 - (now.minute % 5)
+                    log.info(f"  [Heartbeat] 봇 생동 중.. 다음 진입 체크까지 {next_run}분 내외")
+                    await asyncio.sleep(1)
+
+            await asyncio.sleep(1)
         except Exception as e:
             log.error(f"메인 루프 에러: {e}")
-            await asyncio.sleep(30)
+            await asyncio.sleep(5)
 
 if __name__ == "__main__":
     asyncio.run(main())

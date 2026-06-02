@@ -44,13 +44,17 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
     rsi_ind = ta.momentum.RSIIndicator(close=c, window=STOCH_RSI_LEN)
     df["rsi"] = rsi_ind.rsi()
     
-    # StochRSI 직접 계산 (ta 라이브러리 호환성 확보)
+    # StochRSI 직접 계산 (ta 라이브러리 호환성 확보 및 NaN 방어)
     rsi = df["rsi"]
     rsi_min = rsi.rolling(window=STOCH_K_LEN).min()
     rsi_max = rsi.rolling(window=STOCH_K_LEN).max()
-    stoch_rsi = (rsi - rsi_min) / (rsi_max - rsi_min) * 100
-    df["stoch_k"] = stoch_rsi.rolling(window=STOCH_SMOOTH).mean()
-    df["stoch_d"] = df["stoch_k"].rolling(window=STOCH_D_LEN).mean()
+    
+    # [V3.5 방어] 분모가 0인 경우(rsi_max == rsi_min) 처리 및 NaN 제거
+    denom = rsi_max - rsi_min
+    stoch_rsi = ((rsi - rsi_min) / denom * 100).fillna(0)
+    
+    df["stoch_k"] = stoch_rsi.rolling(window=STOCH_SMOOTH).mean().fillna(0)
+    df["stoch_d"] = df["stoch_k"].rolling(window=STOCH_D_LEN).mean().fillna(0)
 
     # 4. 거래량 이평선
     df["vol_sma"] = v.rolling(window=VOL_SMA_LEN).mean()

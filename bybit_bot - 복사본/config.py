@@ -1,12 +1,16 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# .env 파일 로드 로직 복구
+load_dotenv(Path(__file__).parent / ".env")
 
 # ── [V3.5 Master Full-Fill Engine Configuration] ──
 
-# API 인증 정보 (보안을 위해 비움)
-API_KEY    = ""
-API_SECRET = ""
-DEMO       = False  # 실전 매매 모드
+# API 인증 정보 (환경 변수에서 로드)
+API_KEY    = os.getenv("BYBIT_API_KEY", "")
+API_SECRET = os.getenv("BYBIT_API_SECRET", "")
+DEMO       = os.getenv("DEMO", "false").lower() == "true"
 
 # ── 종목 필터링 ──────────────────────────────────────────
 VIP_SYMBOLS   = ["ETHUSDT", "SOLUSDT"]
@@ -37,14 +41,14 @@ STOCH_RSI_K_LIMIT_SHORT = 20      # 숏 과매도 필터
 FVG_SL_ATR_BUFFER       = 0.5     # 구조적 손절 ATR 버퍼
 FVG_RISK_CAP_ATR_MULT   = 2.5     # 리스크 캡 (손절폭 제한)
 TREND_TP1_R_MULT        = 1.2     # 1차 목표가 (1.2R)
-TREND_TP2_R_MULT     = 2.0     # 2차 목표가 (2.0R)
+TREND_TP2_R_MULT        = 2.0     # 2차 목표가 (2.0R)
 
 # ── [횡보장: 15m 볼린저 밴드 Mean Reversion] ──────────────────
-SIDEWAYS_TF        = "15"
-BB_LEN             = 20
-BB_STD             = 1.5
-STOCH_PRO_LOW      = 30      # 과매도 기준 (30 이하 롱)
-STOCH_PRO_HIGH     = 70      # 과매수 기준 (70 이상 숏)
+SIDEWAYS_TF          = "15"
+BB_LEN               = 20
+BB_STD               = 1.5
+STOCH_PRO_LOW        = 30      # 과매도 기준 (30 이하 롱)
+STOCH_PRO_HIGH       = 70      # 과매수 기준 (70 이상 숏)
 ATR_SL_MULT_SIDEWAYS = 1.0   # 횡보장 손절 (1.0 ATR)
 
 # ── [리스크 통제: 글로벌 진입 락] ──────────────────
@@ -67,3 +71,7 @@ STOCH_RSI_LEN  = 14
 STOCH_K_LEN    = 14
 STOCH_D_LEN    = 3
 STOCH_SMOOTH   = 3
+
+# [V3.6] 트레일링 스탑 고도화 설정
+TS_ACTIVATION_ROE = 0.10  # 트레일링 스탑 발동 기준 수익률 (+10% ROE)
+TS_CALLBACK_ROE = 0.04    # 고점 대비 하락 청산 기준 비율 (-4% 가격 변동)
