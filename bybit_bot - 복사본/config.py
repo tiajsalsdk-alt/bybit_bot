@@ -58,7 +58,6 @@ SL_COOLDOWN_MINS   = 30              # 손절 발생 시 진입 금지 시간 (3
 # ── 기타 설정 ──────────────────────────────────────────
 TREND_TF       = "5"     
 CANDLES_NEEDED = 300     
-DAILY_LOSS_LIMIT   = 0.10    
 MAX_TOTAL_USAGE    = 0.90    
 
 # 지표 계산 파라미터
@@ -72,6 +71,17 @@ STOCH_K_LEN    = 14
 STOCH_D_LEN    = 3
 STOCH_SMOOTH   = 3
 
+# ── [극단적 이격도 및 RSI 브레이크 설정] ──
+RSI_PERIOD         = 14      # RSI 계산 기간
+RSI_OVERSOLD       = 30      # 이 수치 이하 숏 진입 금지
+RSI_OVERBOUGHT     = 70      # 이 수치 이상 롱 진입 금지
+EMA_MAX_DISPARITY  = 0.15    # EMA 50 대비 최대 이격도 (15%)
+
+# ── [동적 밴(Dynamic Blacklist) 필터 설정] ──
+MIN_LISTING_DAYS   = 14      # 상장된 지 14일이 지난 코인만 허용
+EXCLUDE_ASSETS     = ["PAXG", "USDC", "USDD", "DAI", "BUSD", "TUSD", "EUR", "GBP"]
+MAX_SPREAD_RATE    = 0.003   # 최대 허용 스프레드 (0.3%)
+
 # [V3.6] 트레일링 스탑 고도화 설정
 TS_ACTIVATION_ROE = 0.10  # 트레일링 스탑 발동 기준 수익률 (+10% ROE)
-TS_CALLBACK_ROE = 0.04    # 고점 대비 하락 청산 기준 비율 (-4% 가격 변동)
+TS_CALLBACK_ROE = 0.04    # 고점 대비 하락 청산 기준 수익률 (-4% ROE)

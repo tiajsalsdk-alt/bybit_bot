@@ -192,14 +192,19 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                     if hit_ma20:
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
                         
-                        # [V3.6] 트레일링 스탑 파라미터 계산
-                        act_p = entry_p * (1 + (TS_ACTIVATION_ROE / MAIN_LEV)) if side == "Buy" else entry_p * (1 - (TS_ACTIVATION_ROE / MAIN_LEV))
-                        ts_dist = entry_p * TS_CALLBACK_ROE
+                        # [V3.6] 트레일링 스탑 파라미터 계산 (사용자 지정 수학 공식 적용)
+                        leverage = MAIN_LEV
+                        if side == "Buy":
+                            activation_price = entry_p * (1 + (TS_ACTIVATION_ROE / leverage))
+                        else:
+                            activation_price = entry_p * (1 - (TS_ACTIVATION_ROE / leverage))
+                        
+                        distance = entry_p * (TS_CALLBACK_ROE / leverage)
 
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                      stopLoss=format_precision(be_price, tick),
-                                     activationPrice=format_precision(act_p, tick),
-                                     trailingStop=format_precision(ts_dist, tick),
+                                     activationPrice=format_precision(activation_price, tick),
+                                     trailingStop=format_precision(distance, tick),
                                      positionIdx=0)
                         _half_tp_done.add(sym); log.critical(f"🚀 [{sym}] 횡보 1차 MA20 도달! 본절 SL 및 TS(10%/4%) 설정 완료.")
                 else:
@@ -233,14 +238,19 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                         
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
 
-                        # [V3.6] 트레일링 스탑 파라미터 계산
-                        act_p = entry_p * (1 + (TS_ACTIVATION_ROE / MAIN_LEV)) if side == "Buy" else entry_p * (1 - (TS_ACTIVATION_ROE / MAIN_LEV))
-                        ts_dist = entry_p * TS_CALLBACK_ROE
+                        # [V3.6] 트레일링 스탑 파라미터 계산 (사용자 지정 수학 공식 적용)
+                        leverage = MAIN_LEV
+                        if side == "Buy":
+                            activation_price = entry_p * (1 + (TS_ACTIVATION_ROE / leverage))
+                        else:
+                            activation_price = entry_p * (1 - (TS_ACTIVATION_ROE / leverage))
+                        
+                        distance = entry_p * (TS_CALLBACK_ROE / leverage)
 
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                      stopLoss=format_precision(be_price, tick),
-                                     activationPrice=format_precision(act_p, tick),
-                                     trailingStop=format_precision(ts_dist, tick),
+                                     activationPrice=format_precision(activation_price, tick),
+                                     trailingStop=format_precision(distance, tick),
                                      positionIdx=0)
                         _half_tp_done.add(sym)
             

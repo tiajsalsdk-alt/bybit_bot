@@ -20,7 +20,8 @@ from order_manager import (
 )
 from config import (
     ADX_TF, SIDEWAYS_TF, TREND_TF, CANDLES_NEEDED,
-    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, MAIN_LEV, DAILY_LOSS_LIMIT
+    ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, MAIN_LEV,
+    RSI_OVERSOLD, RSI_OVERBOUGHT, EMA_MAX_DISPARITY
 )
 
 log = logging.getLogger(__name__)
@@ -28,29 +29,9 @@ log = logging.getLogger(__name__)
 watchlist: list[str] = []
 symbol_adx = {} 
 symbol_ema = {} 
+symbol_rsi = {} # RSI 저장용 추가
 current_max_positions = 0
 _entry_regimes = {}
-
-async def check_daily_loss(wallet: float) -> bool:
-    """오늘 발생한 총 손실이 설정된 한도를 초과했는지 확인"""
-    if wallet <= 0: return False
-    session = get_session()
-    now = dt.datetime.now(dt.timezone.utc)
-    start_of_day = int(now.replace(hour=0, minute=0, second=0, microsecond=0).timestamp() * 1000)
-    
-    try:
-        resp = await api_call(session.get_closed_pnl, category="linear", startTime=start_of_day)
-        if not resp or resp.get("retCode") != 0: return False
-        
-        daily_pnl = sum(float(p["closedPnl"]) for p in resp["result"]["list"])
-        loss_limit_amount = wallet * DAILY_LOSS_LIMIT
-        
-        if daily_pnl < -loss_limit_amount:
-            log.critical(f"🛑 [RISK] 일일 손실 한도 초과! 매매를 정지합니다. (PnL: {daily_pnl:.2f}, Limit: -{loss_limit_amount:.2f})")
-            return True
-    except Exception as e:
-        log.error(f"PnL 체크 에러: {e}")
-    return False
 
 def setup_logging():
     root = logging.getLogger()
@@ -63,13 +44,14 @@ async def refresh_watchlist():
     watchlist = await scan_top_symbols()
 
 async def run_regime_update():
-    global current_max_positions, symbol_adx, symbol_ema
+    global current_max_positions, symbol_adx, symbol_ema, symbol_rsi
     log.info(f"[{ADX_TF}m] 1H ADX 장세 및 대추세 필터(EMA 50) 업데이트")
     for symbol in watchlist:
         try:
             df_1h = add_indicators(await fetch_candles(symbol, ADX_TF))
             symbol_adx[symbol] = df_1h.iloc[-1]["adx"]
             symbol_ema[symbol] = df_1h.iloc[-1]["ema50"]
+            symbol_rsi[symbol] = df_1h.iloc[-1]["rsi"] # RSI 업데이트 추가
             if symbol == "BTCUSDT":
                 adx_val = symbol_adx[symbol]
                 # 데드존에서도 횡보 매매 허용을 위해 max_positions를 3으로 유지
@@ -98,6 +80,7 @@ async def run_entry_check(wallet: float):
             
             adx_1h = symbol_adx.get(symbol, 0.0)
             ema_h1 = symbol_ema.get(symbol, 0.0)
+            rsi_h1 = symbol_rsi.get(symbol, 50.0) # 기본값 50
             
             # 장세에 따른 타점 타임프레임 선택 (데드존 < 25 이므로 15m 할당)
             entry_tf = TREND_TF if adx_1h >= ADX_TREND_LEVEL else SIDEWAYS_TF
@@ -108,6 +91,22 @@ async def run_entry_check(wallet: float):
             signal = get_signal(df_1h, df_entry, symbol, ema_h1)
             if signal:
                 side, engine, entry_p, sl_p, ma20 = signal
+                
+                # ── [V3.8] 극단적 이격도 및 RSI 브레이크 필터 적용 ──
+                # 1. 이격도 계산: abs(현재가 - EMA50) / EMA50
+                disparity = abs(entry_p - ema_h1) / ema_h1
+                if disparity >= EMA_MAX_DISPARITY:
+                    # log.warning(f"  [Block] {symbol} 이격도 과다: {disparity*100:.1f}% >= {EMA_MAX_DISPARITY*100}%")
+                    continue
+                
+                # 2. RSI 극단 구간 체크 (추격 매매 방지)
+                if side == "Buy" and rsi_h1 >= RSI_OVERBOUGHT:
+                    # log.warning(f"  [Block] {symbol} 롱 진입 금지: RSI 과매수 ({rsi_h1:.1f} >= {RSI_OVERBOUGHT})")
+                    continue
+                if side == "Sell" and rsi_h1 <= RSI_OVERSOLD:
+                    # log.warning(f"  [Block] {symbol} 숏 진입 금지: RSI 과매도 ({rsi_h1:.1f} <= {RSI_OVERSOLD})")
+                    continue
+                
                 _entry_atr[symbol] = df_entry.iloc[-1]["atr"]
                 
                 if not check_trade_approval(side, entry_p, adx_1h, ema_h1, len(positions)): continue
@@ -133,7 +132,6 @@ async def main():
     # [V3.5] 시작 즉시 1회 체크 수행
     wallet = await get_balance()
     if wallet:
-        if await check_daily_loss(wallet): return
         await run_entry_check(wallet)
 
     while True:
@@ -142,11 +140,6 @@ async def main():
             if wallet is None:
                 log.error("❌ 잔고 조회 실패! 통신 확인 필요. 30초 후 재시도.")
                 await asyncio.sleep(30)
-                continue
-
-            if await check_daily_loss(wallet):
-                log.warning("💤 일일 손실 한도 도달로 인해 오늘 매매를 정지합니다. (내일 다시 실행하세요)")
-                await asyncio.sleep(3600)
                 continue
 
             curr_pos = await get_open_positions()
