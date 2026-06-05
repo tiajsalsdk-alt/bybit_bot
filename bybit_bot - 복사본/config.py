@@ -40,7 +40,6 @@ STOCH_RSI_K_LIMIT_LONG  = 80      # 롱 과열 필터
 STOCH_RSI_K_LIMIT_SHORT = 20      # 숏 과매도 필터
 FVG_SL_ATR_BUFFER       = 0.5     # 구조적 손절 ATR 버퍼
 FVG_RISK_CAP_ATR_MULT   = 2.5     # 리스크 캡 (손절폭 제한)
-TREND_TP1_R_MULT        = 1.2     # 1차 목표가 (1.2R)
 TREND_TP2_R_MULT        = 2.0     # 2차 목표가 (2.0R)
 
 # ── [횡보장: 15m 볼린저 밴드 Mean Reversion] ──────────────────
@@ -80,7 +79,3 @@ RSI_OVERBOUGHT             = 70      # 이 수치 이상 롱 진입 금지
 MIN_LISTING_DAYS   = 14      # 상장된 지 14일이 지난 코인만 허용
 EXCLUDE_ASSETS     = ["PAXG", "USDC", "USDD", "DAI", "BUSD", "TUSD", "EUR", "GBP"]
 MAX_SPREAD_RATE    = 0.003   # 최대 허용 스프레드 (0.3%)
-
-# [V3.6] 트레일링 스탑 고도화 설정 (10배 레버리지 기준)
-TS_ACTIVATION_ROE = 0.10  # 발동 조건: +10% ROE (코인 가격 1% 변동)
-TS_CALLBACK_ROE   = 0.04  # 추적 하락: 최고점 대비 -4% ROE (코인 가격 0.4% 변동)
