@@ -45,12 +45,12 @@ async def refresh_watchlist():
 
 async def run_regime_update():
     global current_max_positions, symbol_adx, symbol_ema, symbol_rsi
-    log.info(f"[{ADX_TF}m] 1H ADX 장세 및 대추세 필터(EMA 50) 업데이트")
+    log.info(f"[{ADX_TF}m] 1H ADX 장세 및 대추세 필터(EMA 60) 업데이트")
     for symbol in watchlist:
         try:
             df_1h = add_indicators(await fetch_candles(symbol, ADX_TF))
             symbol_adx[symbol] = df_1h.iloc[-1]["adx"]
-            symbol_ema[symbol] = df_1h.iloc[-1]["ema50"]
+            symbol_ema[symbol] = df_1h.iloc[-1]["ema60"]
             symbol_rsi[symbol] = df_1h.iloc[-1]["rsi"] # RSI 업데이트 추가
             if symbol == "BTCUSDT":
                 adx_val = symbol_adx[symbol]

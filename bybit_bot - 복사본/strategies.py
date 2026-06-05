@@ -6,8 +6,7 @@ from config import (
     FVG_VOL_MULT, ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL,
     BB_LEN, BB_STD, STOCH_PRO_LOW, STOCH_PRO_HIGH,
     STOCH_RSI_K_LIMIT_LONG, STOCH_RSI_K_LIMIT_SHORT,
-    FVG_RISK_CAP_ATR_MULT, FVG_SL_ATR_BUFFER,
-    LONG_MAX_DISPARITY_EMA50, SHORT_MAX_DISPARITY_EMA50
+    FVG_RISK_CAP_ATR_MULT, FVG_SL_ATR_BUFFER
 )
 
 import logging
@@ -55,11 +54,6 @@ def get_signal(df_1h: pd.DataFrame, df_entry: pd.DataFrame, symbol: str, htf_ema
         # Bullish FVG (Long)
         if c3['low'] > c1['high']:
             if is_long_trend:
-                # ── [V4.0] EMA 50 기준 2% 이격도 상투 방어 ──
-                if curr_close >= htf_ema * (1 + LONG_MAX_DISPARITY_EMA50):
-                    print(f"{COLOR_YELLOW}  [PASS] 롱 진입 포기: FVG 상투 회피 (EMA 50 대비 2% 초과){COLOR_RESET}")
-                    return None
-                
                 # 조건 1: 단기 과열 필터
                 if stoch_k >= STOCH_RSI_K_LIMIT_LONG:
                     print(f"  [Pass] {symbol} - StochRSI 과열 ({stoch_k:.1f} >= {STOCH_RSI_K_LIMIT_LONG})")
@@ -80,11 +74,6 @@ def get_signal(df_1h: pd.DataFrame, df_entry: pd.DataFrame, symbol: str, htf_ema
         # Bearish FVG (Short)
         elif c3['high'] < c1['low']:
             if not is_long_trend:
-                # ── [V4.0] EMA 50 기준 5% 이격도 지하실 방어 ──
-                if curr_close <= htf_ema * (1 - SHORT_MAX_DISPARITY_EMA50):
-                    print(f"{COLOR_RED}  [PASS] 숏 진입 포기: 지하실 낚시 회피 (EMA 50 대비 -5% 초과){COLOR_RESET}")
-                    return None
-
                 # 조건 1: 단기 과열 필터
                 if stoch_k <= STOCH_RSI_K_LIMIT_SHORT:
                     print(f"  [Pass] {symbol} - StochRSI 과매도 ({stoch_k:.1f} <= {STOCH_RSI_K_LIMIT_SHORT})")

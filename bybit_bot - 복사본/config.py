@@ -62,7 +62,7 @@ MAX_TOTAL_USAGE    = 0.90
 
 # 지표 계산 파라미터
 ADX_LEN        = 14
-EMA_LEN        = 200
+EMA_LEN        = 60      # 메인 기준선: EMA 60
 ATR_LEN        = 14
 RSI_LEN        = 14
 VOL_SMA_LEN    = 20    
@@ -75,8 +75,6 @@ STOCH_SMOOTH   = 3
 RSI_PERIOD                 = 14      # RSI 계산 기간
 RSI_OVERSOLD               = 30      # 이 수치 이하 숏 진입 금지
 RSI_OVERBOUGHT             = 70      # 이 수치 이상 롱 진입 금지
-LONG_MAX_DISPARITY_EMA50   = 0.02    # 롱 진입 50 EMA 대비 최대 2%
-SHORT_MAX_DISPARITY_EMA50  = 0.05    # 숏 진입 50 EMA 대비 최대 5%
 
 # ── [동적 밴(Dynamic Blacklist) 필터 설정] ──
 MIN_LISTING_DAYS   = 14      # 상장된 지 14일이 지난 코인만 허용

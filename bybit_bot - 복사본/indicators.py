@@ -18,7 +18,7 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
         
     # 최소 데이터 개수 미달 시 빈 컬럼이라도 생성하여 KeyError 방지
     if len(df) < 50:
-        for col in ['bw', 'd_low', 'd_high', 'stoch_k', 'stoch_d', 'ema20', 'ema50', 'ema200', 'adx', 'atr']:
+        for col in ['bw', 'd_low', 'd_high', 'stoch_k', 'stoch_d', 'ema20', 'ema60', 'ema200', 'adx', 'atr']:
             df[col] = np.nan
         return df
         
@@ -26,8 +26,8 @@ def add_indicators(df: pd.DataFrame) -> pd.DataFrame:
 
     # 1. 공통 지표
     df["adx"]    = ta.trend.ADXIndicator(high=h, low=l, close=c, window=ADX_LEN).adx()
-    df["ema200"] = ta.trend.EMAIndicator(close=c, window=EMA_LEN).ema_indicator()
-    df["ema50"]  = ta.trend.EMAIndicator(close=c, window=50).ema_indicator()
+    df["ema200"] = ta.trend.EMAIndicator(close=c, window=200).ema_indicator()
+    df["ema60"]  = ta.trend.EMAIndicator(close=c, window=EMA_LEN).ema_indicator()
     df["ema20"]  = ta.trend.EMAIndicator(close=c, window=20).ema_indicator()
     df["atr"]    = ta.volatility.AverageTrueRange(high=h, low=l, close=c, window=ATR_LEN).average_true_range()
 
