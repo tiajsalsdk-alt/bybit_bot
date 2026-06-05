@@ -21,7 +21,7 @@ from order_manager import (
 from config import (
     ADX_TF, SIDEWAYS_TF, TREND_TF, CANDLES_NEEDED,
     ADX_TREND_LEVEL, ADX_SIDEWAYS_LEVEL, MAIN_LEV,
-    RSI_OVERSOLD, RSI_OVERBOUGHT, EMA_MAX_DISPARITY
+    RSI_OVERSOLD, RSI_OVERBOUGHT
 )
 
 log = logging.getLogger(__name__)
@@ -92,24 +92,10 @@ async def run_entry_check(wallet: float):
             if signal:
                 side, engine, entry_p, sl_p, ma20 = signal
                 
-                # ── [V3.8] 극단적 이격도 및 RSI 브레이크 필터 적용 ──
-                # 1. 이격도 계산: abs(현재가 - EMA50) / EMA50
-                disparity = abs(entry_p - ema_h1) / ema_h1
-                if disparity >= EMA_MAX_DISPARITY:
-                    # log.warning(f"  [Block] {symbol} 이격도 과다: {disparity*100:.1f}% >= {EMA_MAX_DISPARITY*100}%")
-                    continue
-                
-                # 2. RSI 극단 구간 체크 (추격 매매 방지)
-                if side == "Buy" and rsi_h1 >= RSI_OVERBOUGHT:
-                    # log.warning(f"  [Block] {symbol} 롱 진입 금지: RSI 과매수 ({rsi_h1:.1f} >= {RSI_OVERBOUGHT})")
-                    continue
-                if side == "Sell" and rsi_h1 <= RSI_OVERSOLD:
-                    # log.warning(f"  [Block] {symbol} 숏 진입 금지: RSI 과매도 ({rsi_h1:.1f} <= {RSI_OVERSOLD})")
-                    continue
-                
                 _entry_atr[symbol] = df_entry.iloc[-1]["atr"]
-                
+
                 if not check_trade_approval(side, entry_p, adx_1h, ema_h1, len(positions)): continue
+
                 
                 qty = await calc_qty(symbol, entry_p, engine)
                 if qty > 0 and entry_p > 0:

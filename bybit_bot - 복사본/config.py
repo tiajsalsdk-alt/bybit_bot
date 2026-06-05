@@ -72,16 +72,17 @@ STOCH_D_LEN    = 3
 STOCH_SMOOTH   = 3
 
 # ── [극단적 이격도 및 RSI 브레이크 설정] ──
-RSI_PERIOD         = 14      # RSI 계산 기간
-RSI_OVERSOLD       = 30      # 이 수치 이하 숏 진입 금지
-RSI_OVERBOUGHT     = 70      # 이 수치 이상 롱 진입 금지
-EMA_MAX_DISPARITY  = 0.15    # EMA 50 대비 최대 이격도 (15%)
+RSI_PERIOD                 = 14      # RSI 계산 기간
+RSI_OVERSOLD               = 30      # 이 수치 이하 숏 진입 금지
+RSI_OVERBOUGHT             = 70      # 이 수치 이상 롱 진입 금지
+LONG_MAX_DISPARITY_EMA50   = 0.02    # 롱 진입 50 EMA 대비 최대 2%
+SHORT_MAX_DISPARITY_EMA50  = 0.05    # 숏 진입 50 EMA 대비 최대 5%
 
 # ── [동적 밴(Dynamic Blacklist) 필터 설정] ──
 MIN_LISTING_DAYS   = 14      # 상장된 지 14일이 지난 코인만 허용
 EXCLUDE_ASSETS     = ["PAXG", "USDC", "USDD", "DAI", "BUSD", "TUSD", "EUR", "GBP"]
 MAX_SPREAD_RATE    = 0.003   # 최대 허용 스프레드 (0.3%)
 
-# [V3.6] 트레일링 스탑 고도화 설정
-TS_ACTIVATION_ROE = 0.10  # 트레일링 스탑 발동 기준 수익률 (+10% ROE)
-TS_CALLBACK_ROE = 0.04    # 고점 대비 하락 청산 기준 수익률 (-4% ROE)
+# [V3.6] 트레일링 스탑 고도화 설정 (10배 레버리지 기준)
+TS_ACTIVATION_ROE = 0.10  # 발동 조건: +10% ROE (코인 가격 1% 변동)
+TS_CALLBACK_ROE   = 0.04  # 추적 하락: 최고점 대비 -4% ROE (코인 가격 0.4% 변동)

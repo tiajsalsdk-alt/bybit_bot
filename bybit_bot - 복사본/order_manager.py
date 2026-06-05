@@ -107,6 +107,7 @@ async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: fl
     tick, step = info["tick_size"], info["qty_step"]
     qty_s, entry_s = format_precision(qty, step, True), format_precision(entry_price, tick)
 
+    pos_idx = 1 if side == "Buy" else 2
     try:
         # [V3.5 방어] 주문 전 레버리지 강제 설정 (청산 위험 방지)
         await api_call(session.set_leverage, category="linear", symbol=symbol, buyLeverage=str(MAIN_LEV), sellLeverage=str(MAIN_LEV))
@@ -116,7 +117,7 @@ async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: fl
         # [V3.1 핵심 수정] timeInForce="PostOnly" 강제 적용하여 시장가 추격(FOMO) 원천 차단
         resp = await api_call(session.place_order, 
                              category="linear", symbol=symbol, side=side, 
-                             orderType="Limit", price=entry_s, qty=qty_s, positionIdx=0, 
+                             orderType="Limit", price=entry_s, qty=qty_s, positionIdx=pos_idx, 
                              timeInForce="PostOnly", 
                              takeProfit=format_precision(tp_price, tick), stopLoss=format_precision(sl_price, tick),
                              tpTriggerBy="LastPrice", slTriggerBy="LastPrice")
@@ -140,20 +141,24 @@ async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: fl
 
 async def set_immediate_trailing_stop(symbol: str, side: str, entry_p: float, tick: float):
     """
-    [V3.6] 포지션 인식 즉시 바이비트 서버에 트레일링 스탑을 직접 등록
+    [V3.6] 수학적 팩트에 근거하여 바이비트 서버 엔진에 트레일링 스탑을 직접 등록.
+    - 10% ROE 도달 시 발동 (Activation)
+    - 최고점 대비 -4% ROE 하락 시 청산 (Callback)
     """
     try:
         session = get_session()
-        # 수학적 팩트에 근거한 가격 계산 (레버리지 분할)
+        # [수학적 팩트] 가격 변동폭 = ROE / Leverage
         price_act_dist = entry_p * (TS_ACTIVATION_ROE / MAIN_LEV)
         price_ts_dist = entry_p * (TS_CALLBACK_ROE / MAIN_LEV)
 
         if side == 'Buy':
             activation_price = entry_p + price_act_dist
+            pos_idx = 1 # Hedge Mode: Long
         else:
             activation_price = entry_p - price_act_dist
+            pos_idx = 2 # Hedge Mode: Short
         
-        # 바이비트 API 규격에 맞춰 포맷팅
+        # 바이비트 API V5 규격에 맞춰 포맷팅 (Price Distance 방식)
         act_p_str = format_precision(activation_price, tick)
         ts_dist_str = format_precision(price_ts_dist, tick)
 
@@ -162,18 +167,17 @@ async def set_immediate_trailing_stop(symbol: str, side: str, entry_p: float, ti
                              symbol=symbol,
                              activationPrice=act_p_str,
                              trailingStop=ts_dist_str,
-                             side=side,
-                             positionIdx=0,
+                             positionIdx=pos_idx,
                              tpslMode="Full")
         
         if resp and resp.get("retCode") == 0:
-            log.info(f"✅ [{symbol}] 서버사이드 트레일링 스탑 설정 완료 (Act: {act_p_str}, Dist: {ts_dist_str})")
+            log.info(f"✅ [{symbol}] 거래소 TS 엔진 가동 (발동: {act_p_str}, 추적거리: {ts_dist_str})")
             return True
         else:
             msg = resp.get("retMsg") if resp else "Unknown"
             log.error(f"❌ [{symbol}] TS 설정 실패: {msg}")
     except Exception as e:
-        log.error(f"TS 설정 중 오류 발생: {e}")
+        log.error(f"TS 설정 중 치명적 오류: {e}")
     return False
 
 async def monitor_positions(positions: list, entry_regimes: dict):
@@ -195,9 +199,10 @@ async def monitor_positions(positions: list, entry_regimes: dict):
             # 횡보장일 경우 MA20 반익절 즉시 예약 (V3.5 PostOnly 규격 교정)
             if "SIDEWAYS" in engine:
                 half_qty = format_precision(float(order_info["qty"]) * 0.5, info["qty_step"], is_floor=True)
+                pos_idx = 1 if order_info["side"] == "Buy" else 2
                 await api_call(session.place_order, category="linear", symbol=sym, side="Sell" if order_info["side"]=="Buy" else "Buy",
                              orderType="Limit", price=format_precision(order_info["ma20_target"], info["tick_size"]), qty=half_qty, 
-                             reduceOnly=True, timeInForce="PostOnly", positionIdx=0)
+                             reduceOnly=True, timeInForce="PostOnly", positionIdx=pos_idx)
             _active_limit_orders.pop(sym, None)
             continue
             
@@ -219,6 +224,7 @@ async def monitor_positions(positions: list, entry_regimes: dict):
         entry_p = float(pos["avgPrice"]); curr_p = float(pos["markPrice"])
         engine = entry_regimes.get(sym, "")
         info = await get_instrument_info(sym); tick = info["tick_size"]
+        pos_idx = 1 if side == "Buy" else 2
         
         # [V3.6] 서버에 TS가 설정되어 있지 않다면 즉시 설정 (재시작 시 대응 등)
         ts_val = pos.get('trailingStop', '0')
@@ -240,7 +246,7 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                         
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                      stopLoss=format_precision(be_price, tick),
-                                     positionIdx=0)
+                                     positionIdx=pos_idx)
                         _half_tp_done.add(sym); log.critical(f"🚀 [{sym}] 횡보 1차 MA20 도달! 본절 SL 전환 완료 (TS는 이미 가동 중)")
                 else:
                     # 횡보장 최종 청산 또는 손절 감시
@@ -250,7 +256,7 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                             set_physical_lock(sym)
                     
                     await api_call(session.set_trading_stop, category="linear", symbol=sym, 
-                                 takeProfit=format_precision(bb_target, tick), tpTriggerBy="LastPrice", positionIdx=0)
+                                 takeProfit=format_precision(bb_target, tick), tpTriggerBy="LastPrice", positionIdx=pos_idx)
             except: continue
 
         # --- [2] 추세장 (TREND_FVG) 1.2R 반익반본 및 2.0R 최종 익절 ---
@@ -269,13 +275,13 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                         close_side = "Sell" if side == "Buy" else "Buy"
                         await api_call(session.place_order, category="linear", symbol=sym, side=close_side,
                                      orderType="Limit", price=format_precision(curr_p, tick), 
-                                     qty=half_qty, reduceOnly=True, timeInForce="PostOnly", positionIdx=0)
+                                     qty=half_qty, reduceOnly=True, timeInForce="PostOnly", positionIdx=pos_idx)
                         
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
 
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                      stopLoss=format_precision(be_price, tick),
-                                     positionIdx=0)
+                                     positionIdx=pos_idx)
                         _half_tp_done.add(sym)
             
             # [V3.5] 추세장 손절 감시 (Bug Fix: 쿨다운 무한 리셋 방지)
@@ -286,7 +292,8 @@ async def monitor_positions(positions: list, entry_regimes: dict):
 
 async def close_position_market(symbol: str, side: str, qty: float):
     close_side = "Sell" if side == "Buy" else "Buy"
-    await api_call(get_session().place_order, category="linear", symbol=symbol, side=close_side, orderType="Market", qty=str(qty), reduceOnly=True, positionIdx=0)
+    pos_idx = 1 if side == "Buy" else 2
+    await api_call(get_session().place_order, category="linear", symbol=symbol, side=close_side, orderType="Market", qty=str(qty), reduceOnly=True, positionIdx=pos_idx)
 
 def check_trade_approval(side, price, adx, ema, count):
     if adx >= ADX_TREND_LEVEL:
