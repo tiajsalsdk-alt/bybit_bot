@@ -107,7 +107,8 @@ async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: fl
     tick, step = info["tick_size"], info["qty_step"]
     qty_s, entry_s = format_precision(qty, step, True), format_precision(entry_price, tick)
 
-    pos_idx = 1 if side == "Buy" else 2
+    # pos_idx = 1 if side == "Buy" else 2 # [ONE-WAY MODE PATCH] positionIdx must be 0
+    pos_idx = 0 
     try:
         # [V3.5 방어] 주문 전 레버리지 강제 설정 (청산 위험 방지)
         await api_call(session.set_leverage, category="linear", symbol=symbol, buyLeverage=str(MAIN_LEV), sellLeverage=str(MAIN_LEV))
@@ -153,10 +154,12 @@ async def set_immediate_trailing_stop(symbol: str, side: str, entry_p: float, ti
 
         if side == 'Buy':
             activation_price = entry_p + price_act_dist
-            pos_idx = 1 # Hedge Mode: Long
+            # pos_idx = 1 # [ONE-WAY MODE PATCH]
         else:
             activation_price = entry_p - price_act_dist
-            pos_idx = 2 # Hedge Mode: Short
+            # pos_idx = 2 # [ONE-WAY MODE PATCH]
+        
+        pos_idx = 0 # One-Way Mode Fixed
         
         # 바이비트 API V5 규격에 맞춰 포맷팅 (Price Distance 방식)
         act_p_str = format_precision(activation_price, tick)
@@ -199,7 +202,8 @@ async def monitor_positions(positions: list, entry_regimes: dict):
             # 횡보장일 경우 MA20 반익절 즉시 예약 (V3.5 PostOnly 규격 교정)
             if "SIDEWAYS" in engine:
                 half_qty = format_precision(float(order_info["qty"]) * 0.5, info["qty_step"], is_floor=True)
-                pos_idx = 1 if order_info["side"] == "Buy" else 2
+                # pos_idx = 1 if order_info["side"] == "Buy" else 2 # [ONE-WAY MODE PATCH]
+                pos_idx = 0
                 await api_call(session.place_order, category="linear", symbol=sym, side="Sell" if order_info["side"]=="Buy" else "Buy",
                              orderType="Limit", price=format_precision(order_info["ma20_target"], info["tick_size"]), qty=half_qty, 
                              reduceOnly=True, timeInForce="PostOnly", positionIdx=pos_idx)
@@ -224,7 +228,8 @@ async def monitor_positions(positions: list, entry_regimes: dict):
         entry_p = float(pos["avgPrice"]); curr_p = float(pos["markPrice"])
         engine = entry_regimes.get(sym, "")
         info = await get_instrument_info(sym); tick = info["tick_size"]
-        pos_idx = 1 if side == "Buy" else 2
+        # pos_idx = 1 if side == "Buy" else 2 # [ONE-WAY MODE PATCH]
+        pos_idx = 0
         
         # [V3.6] 서버에 TS가 설정되어 있지 않다면 즉시 설정 (재시작 시 대응 등)
         ts_val = pos.get('trailingStop', '0')
@@ -292,7 +297,8 @@ async def monitor_positions(positions: list, entry_regimes: dict):
 
 async def close_position_market(symbol: str, side: str, qty: float):
     close_side = "Sell" if side == "Buy" else "Buy"
-    pos_idx = 1 if side == "Buy" else 2
+    # pos_idx = 1 if side == "Buy" else 2 # [ONE-WAY MODE PATCH]
+    pos_idx = 0
     await api_call(get_session().place_order, category="linear", symbol=symbol, side=close_side, orderType="Market", qty=str(qty), reduceOnly=True, positionIdx=pos_idx)
 
 def check_trade_approval(side, price, adx, ema, count):
