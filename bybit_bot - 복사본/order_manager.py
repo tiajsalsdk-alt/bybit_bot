@@ -138,6 +138,44 @@ async def place_hybrid_order(symbol: str, side: str, qty: float, entry_price: fl
     except Exception as e: log.error(f"주문 에러: {e}")
     return False
 
+async def set_immediate_trailing_stop(symbol: str, side: str, entry_p: float, tick: float):
+    """
+    [V3.6] 포지션 인식 즉시 바이비트 서버에 트레일링 스탑을 직접 등록
+    """
+    try:
+        session = get_session()
+        # 수학적 팩트에 근거한 가격 계산 (레버리지 분할)
+        price_act_dist = entry_p * (TS_ACTIVATION_ROE / MAIN_LEV)
+        price_ts_dist = entry_p * (TS_CALLBACK_ROE / MAIN_LEV)
+
+        if side == 'Buy':
+            activation_price = entry_p + price_act_dist
+        else:
+            activation_price = entry_p - price_act_dist
+        
+        # 바이비트 API 규격에 맞춰 포맷팅
+        act_p_str = format_precision(activation_price, tick)
+        ts_dist_str = format_precision(price_ts_dist, tick)
+
+        resp = await api_call(session.set_trading_stop,
+                             category="linear",
+                             symbol=symbol,
+                             activationPrice=act_p_str,
+                             trailingStop=ts_dist_str,
+                             side=side,
+                             positionIdx=0,
+                             tpslMode="Full")
+        
+        if resp and resp.get("retCode") == 0:
+            log.info(f"✅ [{symbol}] 서버사이드 트레일링 스탑 설정 완료 (Act: {act_p_str}, Dist: {ts_dist_str})")
+            return True
+        else:
+            msg = resp.get("retMsg") if resp else "Unknown"
+            log.error(f"❌ [{symbol}] TS 설정 실패: {msg}")
+    except Exception as e:
+        log.error(f"TS 설정 중 오류 발생: {e}")
+    return False
+
 async def monitor_positions(positions: list, entry_regimes: dict):
     session = get_session()
     current_positions = {p["symbol"] for p in positions}
@@ -150,9 +188,12 @@ async def monitor_positions(positions: list, entry_regimes: dict):
             _entry_times[sym] = time.time()
             engine = order_info["engine"]
             
+            # [V3.6 핵심] 체결 즉시 트레일링 스탑 선제적 등록
+            info = await get_instrument_info(sym)
+            await set_immediate_trailing_stop(sym, order_info["side"], order_info["entry"], info["tick_size"])
+
             # 횡보장일 경우 MA20 반익절 즉시 예약 (V3.5 PostOnly 규격 교정)
             if "SIDEWAYS" in engine:
-                info = await get_instrument_info(sym)
                 half_qty = format_precision(float(order_info["qty"]) * 0.5, info["qty_step"], is_floor=True)
                 await api_call(session.place_order, category="linear", symbol=sym, side="Sell" if order_info["side"]=="Buy" else "Buy",
                              orderType="Limit", price=format_precision(order_info["ma20_target"], info["tick_size"]), qty=half_qty, 
@@ -179,6 +220,11 @@ async def monitor_positions(positions: list, entry_regimes: dict):
         engine = entry_regimes.get(sym, "")
         info = await get_instrument_info(sym); tick = info["tick_size"]
         
+        # [V3.6] 서버에 TS가 설정되어 있지 않다면 즉시 설정 (재시작 시 대응 등)
+        ts_val = pos.get('trailingStop', '0')
+        if ts_val == '0' or ts_val == '':
+            await set_immediate_trailing_stop(sym, side, entry_p, tick)
+
         # --- [1] 횡보장 동적 익절 관리 ---
         if "SIDEWAYS" in engine:
             try:
@@ -192,21 +238,10 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                     if hit_ma20:
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
                         
-                        # [V3.6] 트레일링 스탑 파라미터 계산 (사용자 지정 수학 공식 적용)
-                        leverage = MAIN_LEV
-                        if side == "Buy":
-                            activation_price = entry_p * (1 + (TS_ACTIVATION_ROE / leverage))
-                        else:
-                            activation_price = entry_p * (1 - (TS_ACTIVATION_ROE / leverage))
-                        
-                        distance = entry_p * (TS_CALLBACK_ROE / leverage)
-
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                      stopLoss=format_precision(be_price, tick),
-                                     activationPrice=format_precision(activation_price, tick),
-                                     trailingStop=format_precision(distance, tick),
                                      positionIdx=0)
-                        _half_tp_done.add(sym); log.critical(f"🚀 [{sym}] 횡보 1차 MA20 도달! 본절 SL 및 TS(10%/4%) 설정 완료.")
+                        _half_tp_done.add(sym); log.critical(f"🚀 [{sym}] 횡보 1차 MA20 도달! 본절 SL 전환 완료 (TS는 이미 가동 중)")
                 else:
                     # 횡보장 최종 청산 또는 손절 감시
                     is_sl_hit = (curr_p <= float(pos["stopLoss"])) if side == "Buy" else (curr_p >= float(pos["stopLoss"]))
@@ -238,19 +273,8 @@ async def monitor_positions(positions: list, entry_regimes: dict):
                         
                         be_price = entry_p * (1 + FEE_BUFFER) if side == "Buy" else entry_p * (1 - FEE_BUFFER)
 
-                        # [V3.6] 트레일링 스탑 파라미터 계산 (사용자 지정 수학 공식 적용)
-                        leverage = MAIN_LEV
-                        if side == "Buy":
-                            activation_price = entry_p * (1 + (TS_ACTIVATION_ROE / leverage))
-                        else:
-                            activation_price = entry_p * (1 - (TS_ACTIVATION_ROE / leverage))
-                        
-                        distance = entry_p * (TS_CALLBACK_ROE / leverage)
-
                         await api_call(session.set_trading_stop, category="linear", symbol=sym, 
                                      stopLoss=format_precision(be_price, tick),
-                                     activationPrice=format_precision(activation_price, tick),
-                                     trailingStop=format_precision(distance, tick),
                                      positionIdx=0)
                         _half_tp_done.add(sym)
             
