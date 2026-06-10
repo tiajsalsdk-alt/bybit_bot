@@ -1,8 +1,0 @@
-KEY 길이: 18
-SECRET 길이: 36
-DEMO: False
-연결 서버: api.bybit.com
-
-잔고 조회: retCode=0 / OK
-인증 성공!
-포지션 조회: retCode=0 / OK
