@@ -1,0 +1,1358 @@
+
+[96m[1m==========================================
+    BYBIT AUTO TRADING BOT
+           DEMO MODE
+==========================================[0m
+
+[2m04:29:20[0m [2m[I][0m [97m🚀 봇 가동 시작 (돈치안 브레이크아웃 V1 + Sideways BB)[0m
+[2m04:29:20[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m04:29:20[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m04:29:21[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m04:29:21[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 10.1)[0m
+[2m04:29:22[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 16.8)[0m
+[2m04:29:22[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 12.2)[0m
+[2m04:29:23[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 14.8)[0m
+[2m04:29:23[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+[2m04:29:24[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 11.4)[0m
+[2m04:29:24[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 7.7)[0m
+[2m04:29:25[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.2)[0m
+[2m04:29:25[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 04:30:00 (34초 후)[0m
+[2m04:30:02[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m04:30:02[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m04:30:02[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m04:30:02[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+[2m04:30:03[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 15.8)[0m
+[2m04:30:03[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 11.8)[0m
+[2m04:30:04[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 14.1)[0m
+[2m04:30:04[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 8.8)[0m
+[2m04:30:05[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 10.9)[0m
+[2m04:30:05[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 7.4)[0m
+[2m04:30:06[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 8.9)[0m
+[2m04:30:06[0m [2m[I][0m [97m[일일 시작] 기준 잔고: 50,211 USDT[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m04:30:06[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.5 < 30
+  [Skip] [96mETHUSDT[0m - ADX 15.8 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 11.8 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 14.1 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 8.8 < 30
+  [Skip] [96mADAUSDT[0m - ADX 10.9 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 7.4 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 8.9 < 30
+[2m04:30:11[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 04:45:00 (889초 후)[0m
+[2m04:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m04:45:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.7)[0m
+[2m04:45:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 15.5)[0m
+[2m04:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.6)[0m
+[2m04:45:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 12.9)[0m
+[2m04:45:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 8.7)[0m
+[2m04:45:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 11.2)[0m
+[2m04:45:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.8)[0m
+[2m04:45:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 8.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m04:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.7 < 30
+  [Skip] [96mETHUSDT[0m - ADX 15.5 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.6 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 12.9 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 8.7 < 30
+  [Skip] [96mADAUSDT[0m - ADX 11.2 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.8 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 8.8 < 30
+[2m04:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 05:00:00 (881초 후)[0m
+[2m05:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m05:00:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.0)[0m
+[2m05:00:10[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 14.6)[0m
+[2m05:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 9.9)[0m
+[2m05:00:11[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 12.0)[0m
+[2m05:00:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 8.6)[0m
+[2m05:00:12[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 11.1)[0m
+[2m05:00:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.3)[0m
+[2m05:00:13[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.3)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m05:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.0 < 30
+  [Skip] [96mETHUSDT[0m - ADX 14.6 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 9.9 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 12.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 8.6 < 30
+  [Skip] [96mADAUSDT[0m - ADX 11.1 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.3 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.3 < 30
+[2m05:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 05:15:00 (881초 후)[0m
+[2m05:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m05:15:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+[2m05:15:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 14.8)[0m
+[2m05:15:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.3)[0m
+[2m05:15:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 12.5)[0m
+[2m05:15:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.4)[0m
+[2m05:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 12.3)[0m
+[2m05:15:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.9)[0m
+[2m05:15:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 10.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m05:15:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.5 < 30
+  [Skip] [96mETHUSDT[0m - ADX 14.8 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 12.5 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.4 < 30
+  [Skip] [96mADAUSDT[0m - ADX 12.3 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.9 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 10.0 < 30
+[2m05:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 05:30:00 (880초 후)[0m
+[2m05:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m05:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m05:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m05:30:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.4)[0m
+[2m05:30:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 14.5)[0m
+[2m05:30:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.2)[0m
+[2m05:30:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 12.1)[0m
+[2m05:30:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+[2m05:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 12.0)[0m
+[2m05:30:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.7)[0m
+[2m05:30:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m05:30:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.4 < 30
+  [Skip] [96mETHUSDT[0m - ADX 14.5 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.2 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 12.1 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.5 < 30
+  [Skip] [96mADAUSDT[0m - ADX 12.0 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.7 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.8 < 30
+[2m05:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 05:45:00 (881초 후)[0m
+[2m05:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m05:45:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 8.5)[0m
+[2m05:45:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 12.8)[0m
+[2m05:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 9.3)[0m
+[2m05:45:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.5)[0m
+[2m05:45:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 8.3)[0m
+[2m05:45:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 12.8)[0m
+[2m05:45:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.0)[0m
+[2m05:45:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.1)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m05:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 8.5 < 30
+  [Skip] [96mETHUSDT[0m - ADX 12.8 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 9.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.5 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 8.3 < 30
+  [Skip] [96mADAUSDT[0m - ADX 12.8 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.0 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.1 < 30
+[2m05:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 06:00:00 (881초 후)[0m
+[2m06:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m06:00:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 8.1)[0m
+[2m06:00:10[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 12.0)[0m
+[2m06:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 8.8)[0m
+[2m06:00:11[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 10.3)[0m
+[2m06:00:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 7.7)[0m
+[2m06:00:12[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 13.0)[0m
+[2m06:00:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 5.5)[0m
+[2m06:00:13[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 8.4)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m06:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 8.1 < 30
+  [Skip] [96mETHUSDT[0m - ADX 12.0 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 8.8 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 10.3 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 7.7 < 30
+  [Skip] [96mADAUSDT[0m - ADX 13.0 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 5.5 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 8.4 < 30
+[2m06:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 06:15:00 (881초 후)[0m
+[2m06:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m06:15:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.7)[0m
+[2m06:15:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 12.1)[0m
+[2m06:15:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 9.3)[0m
+[2m06:15:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.1)[0m
+[2m06:15:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 10.5)[0m
+[2m06:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 11.1)[0m
+[2m06:15:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.8)[0m
+[2m06:15:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m06:15:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.7 < 30
+  [Skip] [96mETHUSDT[0m - ADX 12.1 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 9.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.1 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 10.5 < 30
+  [Skip] [96mADAUSDT[0m - ADX 11.1 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.8 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.2 < 30
+[2m06:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 06:30:00 (881초 후)[0m
+[2m06:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m06:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m06:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m06:30:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 10.5)[0m
+[2m06:30:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 12.2)[0m
+[2m06:30:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+[2m06:30:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.3)[0m
+[2m06:30:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.5)[0m
+[2m06:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 10.7)[0m
+[2m06:30:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 7.6)[0m
+[2m06:30:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m06:30:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 10.5 < 30
+  [Skip] [96mETHUSDT[0m - ADX 12.2 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 9.5 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.3 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.5 < 30
+  [Skip] [96mADAUSDT[0m - ADX 10.7 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 7.6 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.8 < 30
+[2m06:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 06:45:00 (881초 후)[0m
+[2m06:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m06:45:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.9)[0m
+[2m06:45:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 12.4)[0m
+[2m06:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.4)[0m
+[2m06:45:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 12.0)[0m
+[2m06:45:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 12.1)[0m
+[2m06:45:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 10.3)[0m
+[2m06:45:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 8.8)[0m
+[2m06:45:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 10.6)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m06:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.9 < 30
+  [Skip] [96mETHUSDT[0m - ADX 12.4 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.4 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 12.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 12.1 < 30
+  [Skip] [96mADAUSDT[0m - ADX 10.3 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 8.8 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 10.6 < 30
+[2m06:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 07:00:00 (881초 후)[0m
+[2m07:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m07:00:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.4)[0m
+[2m07:00:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 11.3)[0m
+[2m07:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 9.7)[0m
+[2m07:00:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 10.9)[0m
+[2m07:00:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.7)[0m
+[2m07:00:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 10.9)[0m
+[2m07:00:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 8.5)[0m
+[2m07:00:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 10.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m07:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.4 < 30
+  [Skip] [96mETHUSDT[0m - ADX 11.3 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 9.7 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 10.9 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.7 < 30
+  [Skip] [96mADAUSDT[0m - ADX 10.9 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 8.5 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 10.0 < 30
+[2m07:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 07:15:00 (881초 후)[0m
+[2m07:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m07:15:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.9)[0m
+[2m07:15:10[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 11.1)[0m
+[2m07:15:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 12.3)[0m
+[2m07:15:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.1)[0m
+[2m07:15:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 10.2)[0m
+[2m07:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 12.9)[0m
+[2m07:15:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 7.6)[0m
+[2m07:15:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.1)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m07:15:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.9 < 30
+  [Skip] [96mETHUSDT[0m - ADX 11.1 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 12.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.1 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 10.2 < 30
+  [Skip] [96mADAUSDT[0m - ADX 12.9 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 7.6 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.1 < 30
+[2m07:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 07:30:00 (881초 후)[0m
+[2m07:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m07:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m07:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m07:30:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.0)[0m
+[2m07:30:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 11.4)[0m
+[2m07:30:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 13.3)[0m
+[2m07:30:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.0)[0m
+[2m07:30:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.9)[0m
+[2m07:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 13.9)[0m
+[2m07:30:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 7.0)[0m
+[2m07:30:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 8.4)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m07:30:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.0 < 30
+  [Skip] [96mETHUSDT[0m - ADX 11.4 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 13.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.9 < 30
+  [Skip] [96mADAUSDT[0m - ADX 13.9 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 7.0 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 8.4 < 30
+[2m07:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 07:45:00 (880초 후)[0m
+[2m07:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m07:45:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.2)[0m
+[2m07:45:10[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 11.3)[0m
+[2m07:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 14.3)[0m
+[2m07:45:11[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.0)[0m
+[2m07:45:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.4)[0m
+[2m07:45:12[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 14.8)[0m
+[2m07:45:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.5)[0m
+[2m07:45:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 7.9)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m07:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.2 < 30
+  [Skip] [96mETHUSDT[0m - ADX 11.3 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 14.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 10.9 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.4 < 30
+  [Skip] [96mADAUSDT[0m - ADX 14.8 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.5 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 7.9 < 30
+[2m07:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 08:00:00 (881초 후)[0m
+[2m08:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m08:00:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.8)[0m
+[2m08:00:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 9.9)[0m
+[2m08:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 14.0)[0m
+[2m08:00:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+[2m08:00:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.4)[0m
+[2m08:00:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 16.3)[0m
+[2m08:00:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.4)[0m
+[2m08:00:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 8.4)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m08:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.8 < 30
+  [Skip] [96mETHUSDT[0m - ADX 9.9 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 14.0 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 9.5 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.4 < 30
+  [Skip] [96mADAUSDT[0m - ADX 16.3 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.4 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 8.4 < 30
+[2m08:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 08:15:00 (880초 후)[0m
+[2m08:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m08:15:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 9.3)[0m
+[2m08:15:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 10.1)[0m
+[2m08:15:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 13.4)[0m
+[2m08:15:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 10.2)[0m
+[2m08:15:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.7)[0m
+[2m08:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 17.9)[0m
+[2m08:15:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.7)[0m
+[2m08:15:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 9.5)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m08:15:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 9.3 < 30
+  [Skip] [96mETHUSDT[0m - ADX 10.1 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 13.4 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 10.2 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.7 < 30
+  [Skip] [96mADAUSDT[0m - ADX 17.9 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.7 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 9.5 < 30
+[2m08:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 08:30:00 (881초 후)[0m
+[2m08:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m08:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m08:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m08:30:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 8.8)[0m
+[2m08:30:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 9.3)[0m
+[2m08:30:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 13.3)[0m
+[2m08:30:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 10.1)[0m
+[2m08:30:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 9.4)[0m
+[2m08:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 19.1)[0m
+[2m08:30:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 6.7)[0m
+[2m08:30:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 10.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m08:30:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 8.8 < 30
+  [Skip] [96mETHUSDT[0m - ADX 9.3 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 13.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 10.1 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 9.4 < 30
+  [Skip] [96mADAUSDT[0m - ADX 19.1 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 6.7 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 10.0 < 30
+[2m08:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 08:45:00 (881초 후)[0m
+[2m08:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m08:45:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 10.7)[0m
+[2m08:45:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 11.2)[0m
+[2m08:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 11.9)[0m
+[2m08:45:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.4)[0m
+[2m08:45:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.0)[0m
+[2m08:45:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 17.0)[0m
+[2m08:45:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 8.5)[0m
+[2m08:45:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 12.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m08:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 10.7 < 30
+  [Skip] [96mETHUSDT[0m - ADX 11.2 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 11.9 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.4 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.0 < 30
+  [Skip] [96mADAUSDT[0m - ADX 17.0 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 8.5 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 12.2 < 30
+[2m08:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 09:00:00 (881초 후)[0m
+[2m09:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m09:00:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.5)[0m
+[2m09:00:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 12.1)[0m
+[2m09:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 11.2)[0m
+[2m09:00:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.9)[0m
+[2m09:00:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.6)[0m
+[2m09:00:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 16.5)[0m
+[2m09:00:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 9.4)[0m
+[2m09:00:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 14.5)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m09:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.5 < 30
+  [Skip] [96mETHUSDT[0m - ADX 12.1 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 11.2 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.9 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.6 < 30
+  [Skip] [96mADAUSDT[0m - ADX 16.3 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 9.4 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 14.5 < 30
+[2m09:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 09:15:00 (880초 후)[0m
+[2m09:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m09:15:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.8)[0m
+[2m09:15:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 13.5)[0m
+[2m09:15:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.4)[0m
+[2m09:15:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.2)[0m
+[2m09:15:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.1)[0m
+[2m09:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 15.0)[0m
+[2m09:15:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 9.2)[0m
+[2m09:15:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 16.5)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m09:15:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.8 < 30
+  [Skip] [96mETHUSDT[0m - ADX 13.5 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.4 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.2 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.1 < 30
+  [Skip] [96mADAUSDT[0m - ADX 15.0 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 9.2 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 16.5 < 30
+[2m09:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 09:30:00 (880초 후)[0m
+[2m09:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m09:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m09:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m09:30:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 11.9)[0m
+[2m09:30:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 13.6)[0m
+[2m09:30:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.2)[0m
+[2m09:30:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 11.3)[0m
+[2m09:30:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.2)[0m
+[2m09:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 14.3)[0m
+[2m09:30:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 9.6)[0m
+[2m09:30:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 18.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m09:30:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 11.9 < 30
+  [Skip] [96mETHUSDT[0m - ADX 13.6 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.2 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 11.4 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.2 < 30
+  [Skip] [96mADAUSDT[0m - ADX 14.5 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 9.7 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 18.3 < 30
+[2m09:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 09:45:00 (880초 후)[0m
+[2m09:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m09:45:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 13.3)[0m
+[2m09:45:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 14.8)[0m
+[2m09:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.3)[0m
+[2m09:45:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 13.0)[0m
+[2m09:45:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 12.3)[0m
+[2m09:45:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 14.5)[0m
+[2m09:45:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 11.4)[0m
+[2m09:45:14[0m [2m[I][0m [97m  UNIUSDT  [93m~ S.DN[0m (ADX: 20.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m09:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 13.3 < 30
+  [Skip] [96mETHUSDT[0m - ADX 14.8 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 13.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 12.3 < 30
+  [Skip] [96mADAUSDT[0m - ADX 14.5 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 11.4 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 20.8 < 30
+[2m09:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 10:00:00 (880초 후)[0m
+[2m10:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m10:00:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 13.3)[0m
+[2m10:00:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 15.4)[0m
+[2m10:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 10.1)[0m
+[2m10:00:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 12.5)[0m
+[2m10:00:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 11.3)[0m
+[2m10:00:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 14.3)[0m
+[2m10:00:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 12.4)[0m
+[2m10:00:14[0m [2m[I][0m [97m  UNIUSDT  [2m# WAIT[0m (ADX: 22.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m10:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 13.3 < 30
+  [Skip] [96mETHUSDT[0m - ADX 15.4 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 10.1 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 12.5 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 11.3 < 30
+  [Skip] [96mADAUSDT[0m - ADX 14.3 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 12.4 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 22.8 < 30
+[2m10:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 10:15:00 (880초 후)[0m
+[2m10:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m10:15:10[0m [2m[I][0m [97m  BTCUSDT  [93m~ S.DN[0m (ADX: 18.3)[0m
+[2m10:15:11[0m [2m[I][0m [97m  ETHUSDT  [93m~ S.DN[0m (ADX: 20.2)[0m
+[2m10:15:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 14.1)[0m
+[2m10:15:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 16.4)[0m
+[2m10:15:12[0m [2m[I][0m [97m  XRPUSDT  [93m~ S.DN[0m (ADX: 14.8)[0m
+[2m10:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 18.7)[0m
+[2m10:15:13[0m [2m[I][0m [97m  LINKUSDT  [93m~ S.DN[0m (ADX: 17.2)[0m
+[2m10:15:14[0m [2m[I][0m [97m  UNIUSDT  [2m# WAIT[0m (ADX: 27.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m10:15:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [93m~ S.DN[0m  [2mETH[0m [93m~ S.DN[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [93m~ S.DN[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 18.3 < 30
+  [Skip] [96mETHUSDT[0m - ADX 20.2 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 14.1 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 16.4 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 14.8 < 30
+  [Skip] [96mADAUSDT[0m - ADX 18.7 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 17.2 < 30
+  [Skip] [96mUNIUSDT[0m - ADX 27.0 < 30
+[2m10:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 10:30:00 (880초 후)[0m
+[2m10:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m10:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m10:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m10:30:10[0m [2m[I][0m [97m  BTCUSDT  [96m~ S.UP[0m (ADX: 21.6)[0m
+[2m10:30:11[0m [2m[I][0m [97m  ETHUSDT  [2m# WAIT[0m (ADX: 23.6)[0m
+[2m10:30:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 17.4)[0m
+[2m10:30:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 19.5)[0m
+[2m10:30:12[0m [2m[I][0m [97m  XRPUSDT  [96m~ S.UP[0m (ADX: 18.2)[0m
+[2m10:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 21.5)[0m
+[2m10:30:13[0m [2m[I][0m [97m  LINKUSDT  [96m~ S.UP[0m (ADX: 21.6)[0m
+[2m10:30:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 30.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m10:30:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/3[0m
+  [2mBTC[0m [96m~ S.UP[0m  [2mETH[0m [2m# WAIT[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [96m~ S.UP[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 21.6 < 30
+  [Skip] [96mETHUSDT[0m - ADX 23.6 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 17.4 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 19.5 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 18.2 < 30
+  [Skip] [96mADAUSDT[0m - ADX 21.5 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 21.6 < 30
+  [Skip] [96mUNIUSDT[0m - StochRSI 과열 (97)
+[2m10:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 10:45:00 (880초 후)[0m
+[2m10:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m10:45:10[0m [2m[I][0m [97m  BTCUSDT  [2m# WAIT[0m (ADX: 24.2)[0m
+[2m10:45:11[0m [2m[I][0m [97m  ETHUSDT  [2m# WAIT[0m (ADX: 26.3)[0m
+[2m10:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 19.7)[0m
+[2m10:45:12[0m [2m[I][0m [97m  SOLUSDT  [93m~ S.DN[0m (ADX: 22.0)[0m
+[2m10:45:12[0m [2m[I][0m [97m  XRPUSDT  [96m~ S.UP[0m (ADX: 21.0)[0m
+[2m10:45:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 23.7)[0m
+[2m10:45:13[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 24.8)[0m
+[2m10:45:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 33.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m10:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [2m# WAIT[0m  [2mETH[0m [2m# WAIT[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [93m~ S.DN[0m  [2mXRP[0m [96m~ S.UP[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 24.2 < 30
+  [Skip] [96mETHUSDT[0m - ADX 26.3 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 19.7 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 22.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 21.0 < 30
+  [Skip] [96mADAUSDT[0m - ADX 23.7 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 24.8 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m10:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 11:00:00 (880초 후)[0m
+[2m11:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m11:00:10[0m [2m[I][0m [97m  BTCUSDT  [2m# WAIT[0m (ADX: 26.2)[0m
+[2m11:00:11[0m [2m[I][0m [97m  ETHUSDT  [2m# WAIT[0m (ADX: 28.6)[0m
+[2m11:00:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 21.0)[0m
+[2m11:00:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 24.0)[0m
+[2m11:00:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 23.4)[0m
+[2m11:00:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 25.1)[0m
+[2m11:00:13[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 26.6)[0m
+[2m11:00:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 35.7)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m11:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [2m# WAIT[0m  [2mETH[0m [2m# WAIT[0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 26.2 < 30
+  [Skip] [96mETHUSDT[0m - ADX 28.6 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 21.0 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 24.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 23.4 < 30
+  [Skip] [96mADAUSDT[0m - ADX 25.1 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 26.6 < 30
+  [Skip] [96mUNIUSDT[0m - StochRSI 과열 (88)
+[2m11:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 11:15:00 (880초 후)[0m
+[2m11:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m11:15:10[0m [2m[I][0m [97m  BTCUSDT  [2m# WAIT[0m (ADX: 28.2)[0m
+[2m11:15:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 31.0)[0m
+[2m11:15:11[0m [2m[I][0m [97m  BNBUSDT  [2m# WAIT[0m (ADX: 23.3)[0m
+[2m11:15:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 26.0)[0m
+[2m11:15:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 25.6)[0m
+[2m11:15:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 27.2)[0m
+[2m11:15:14[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 29.0)[0m
+[2m11:15:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 38.3)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m11:15:15[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [2m# WAIT[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [2m# WAIT[0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 28.2 < 30
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - ADX 23.3 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 26.0 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 25.6 < 30
+  [Skip] [96mADAUSDT[0m - ADX 27.2 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 29.0 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m11:15:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 11:30:00 (880초 후)[0m
+[2m11:30:11[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m11:30:11[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m11:30:11[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m11:30:11[0m [2m[I][0m [97m  BTCUSDT  [2m# WAIT[0m (ADX: 26.9)[0m
+[2m11:30:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 30.9)[0m
+[2m11:30:12[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 21.6)[0m
+[2m11:30:13[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 24.6)[0m
+[2m11:30:13[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 24.2)[0m
+[2m11:30:14[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 26.0)[0m
+[2m11:30:14[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 28.4)[0m
+[2m11:30:15[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 37.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m11:30:15[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [2m# WAIT[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 26.9 < 30
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - ADX 21.6 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 24.6 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 24.2 < 30
+  [Skip] [96mADAUSDT[0m - ADX 26.0 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 28.4 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m11:30:21[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 11:45:00 (879초 후)[0m
+[2m11:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m11:45:10[0m [2m[I][0m [97m  BTCUSDT  [2m# WAIT[0m (ADX: 27.2)[0m
+[2m11:45:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 31.7)[0m
+[2m11:45:11[0m [2m[I][0m [97m  BNBUSDT  [93m~ S.DN[0m (ADX: 21.8)[0m
+[2m11:45:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 24.5)[0m
+[2m11:45:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 24.5)[0m
+[2m11:45:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 26.3)[0m
+[2m11:45:13[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 29.2)[0m
+[2m11:45:13[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 37.7)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m11:45:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [2m# WAIT[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [93m~ S.DN[0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 27.2 < 30
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - ADX 21.8 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 24.5 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 24.5 < 30
+  [Skip] [96mADAUSDT[0m - ADX 26.3 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 29.2 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m11:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 12:00:00 (880초 후)[0m
+[2m12:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m12:00:10[0m [2m[I][0m [97m  BTCUSDT  [2m# WAIT[0m (ADX: 29.0)[0m
+[2m12:00:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 33.8)[0m
+[2m12:00:11[0m [2m[I][0m [97m  BNBUSDT  [2m# WAIT[0m (ADX: 22.7)[0m
+[2m12:00:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 25.7)[0m
+[2m12:00:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 26.6)[0m
+[2m12:00:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 27.4)[0m
+[2m12:00:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 30.9)[0m
+[2m12:00:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 38.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m12:00:14[0m  잔고 [97m[1m    50,211 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [2m# WAIT[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [2m# WAIT[0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - ADX 29.0 < 30
+  [Skip] [96mETHUSDT[0m - 리스크 캡 초과
+  [Skip] [96mBNBUSDT[0m - ADX 22.7 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 25.7 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 26.6 < 30
+  [Skip] [96mADAUSDT[0m - ADX 27.4 < 30
+
+  [92m[1m▲ [FVG] LINKUSDT Buy[0m  레버 10x  수량 9983.5000
+  진입 7.5440  TP 7.7235  SL 7.4443
+
+[2m13:15:19[0m [2m[E][0m [91m[91m[Error Trace] Logic Error Exception (10001): order not exists or too late to cancel (ErrCode: 110001) (ErrTime: 04:15:19).
+Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linear", "symbol": "LINKUSDT", "orderId": "c3d5337b-72f0-4500-8c35-ed0990ac9a70"}.. 재시도 중단.[0m[0m
+[2m13:15:19[0m [2m[I][0m [97m⏭ [LINKUSDT] 취소 실패(이미 소멸) — 포지션 재확인 중[0m
+[2m13:15:19[0m [2m[I][0m [97m🔍 [LINKUSDT] 포지션 체결 확인됨.[0m
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m13:15:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 13:30:00 (879초 후)[0m
+[2m13:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m13:30:11[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 35.6)[0m
+[2m13:30:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 38.3)[0m
+[2m13:30:12[0m [2m[I][0m [97m  BNBUSDT  [2m# WAIT[0m (ADX: 24.0)[0m
+[2m13:30:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 30.3)[0m
+[2m13:30:13[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 27.9)[0m
+[2m13:30:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 25.5)[0m
+[2m13:30:14[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 33.9)[0m
+[2m13:30:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 41.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m13:30:15[0m  잔고 [97m[1m    50,196 USDT[0m  포지션 [92m[1m1/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [2m# WAIT[0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - ADX 24.0 < 30
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - ADX 27.9 < 30
+  [Skip] [96mADAUSDT[0m - ADX 25.5 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m13:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 13:45:00 (880초 후)[0m
+[2m13:45:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m13:45:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m13:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m13:45:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 37.2)[0m
+[2m13:45:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 39.5)[0m
+[2m13:45:11[0m [2m[I][0m [97m  BNBUSDT  [2m# WAIT[0m (ADX: 25.2)[0m
+[2m13:45:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 32.0)[0m
+[2m13:45:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 28.9)[0m
+[2m13:45:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 26.2)[0m
+[2m13:45:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 34.8)[0m
+[2m13:45:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 41.7)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m13:45:14[0m  잔고 [97m[1m    50,196 USDT[0m  포지션 [92m[1m1/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [2m# WAIT[0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - 리스크 캡 초과
+  [Skip] [96mETHUSDT[0m - 리스크 캡 초과
+  [Skip] [96mBNBUSDT[0m - ADX 25.2 < 30
+  [Skip] [96mSOLUSDT[0m - 리스크 캡 초과
+  [Skip] [96mXRPUSDT[0m - ADX 28.9 < 30
+  [Skip] [96mADAUSDT[0m - ADX 26.2 < 30
+
+  [92m[1m▲ [FVG] UNIUSDT Buy[0m  레버 10x  수량 29848.8000
+  진입 2.5225  TP 2.5799  SL 2.4906
+
+[2m15:00:19[0m [2m[E][0m [91m[91m[Error Trace] Logic Error Exception (10001): order not exists or too late to cancel (ErrCode: 110001) (ErrTime: 06:00:19).
+Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linear", "symbol": "UNIUSDT", "orderId": "83d4ca4c-e146-48aa-a847-af19ac8f98ce"}.. 재시도 중단.[0m[0m
+[2m15:00:19[0m [2m[I][0m [97m⏭ [UNIUSDT] 취소 실패(이미 소멸) — 포지션 재확인 중[0m
+[2m15:00:19[0m [2m[I][0m [97m🔍 [UNIUSDT] 포지션 체결 확인됨.[0m
+[2m15:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 15:15:00 (880초 후)[0m
+[2m15:15:12[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m15:15:12[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 42.5)[0m
+[2m15:15:13[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 43.5)[0m
+[2m15:15:13[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 33.2)[0m
+[2m15:15:14[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 37.1)[0m
+[2m15:15:14[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 29.7)[0m
+[2m15:15:15[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 21.1)[0m
+[2m15:15:15[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 38.4)[0m
+[2m15:15:16[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 45.4)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m15:15:16[0m  잔고 [97m[1m    50,181 USDT[0m  포지션 [92m[1m2/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - ADX 29.7 < 30
+  [Skip] [96mADAUSDT[0m - ADX 21.1 < 30
+[2m15:15:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 15:30:00 (879초 후)[0m
+[2m15:17:41[0m [2m[I][0m [97m🎯 [LINKUSDT] 스마트TP 활성화 (0.9R 도달)[0m
+[2m15:23:07[0m [2m[I][0m [97m🎯 [UNIUSDT] 스마트TP 활성화 (0.9R 도달)[0m
+[2m15:30:20[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m15:30:21[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 44.0)[0m
+[2m15:30:21[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 45.9)[0m
+[2m15:30:22[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 35.1)[0m
+[2m15:30:22[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 39.3)[0m
+[2m15:30:23[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 30.8)[0m
+[2m15:30:23[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 20.9)[0m
+[2m15:30:24[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 40.4)[0m
+[2m15:30:24[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 46.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m15:30:25[0m  잔고 [97m[1m    50,181 USDT[0m  포지션 [92m[1m2/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - 리스크 캡 초과
+  [Skip] [96mETHUSDT[0m - 리스크 캡 초과
+  [Skip] [96mBNBUSDT[0m - 리스크 캡 초과
+  [Skip] [96mSOLUSDT[0m - 리스크 캡 초과
+  [Skip] [96mXRPUSDT[0m - 리스크 캡 초과
+  [Skip] [96mADAUSDT[0m - ADX 20.9 < 30
+[2m15:30:28[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 15:45:00 (871초 후)[0m
+[2m15:45:25[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m15:45:26[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 45.7)[0m
+[2m15:45:26[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 46.9)[0m
+[2m15:45:27[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 36.8)[0m
+[2m15:45:27[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 40.6)[0m
+[2m15:45:28[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 31.7)[0m
+[2m15:45:28[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 22.2)[0m
+[2m15:45:29[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 41.8)[0m
+[2m15:45:29[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 46.4)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m15:45:30[0m  잔고 [97m[1m    50,181 USDT[0m  포지션 [92m[1m2/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - StochRSI 과열 (87)
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - StochRSI 과열 (89)
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - 리스크 캡 초과
+  [Skip] [96mADAUSDT[0m - ADX 22.2 < 30
+[2m15:45:34[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 16:00:00 (866초 후)[0m
+[2m16:00:07[0m [2m[C][0m [1m[91m📉 [UNIUSDT] 스마트TP 청산 (직전 저점 이탈)[0m
+[2m16:00:07[0m [2m[I][0m [97m✅ [UNIUSDT] 시장가 청산 성공.[0m
+[2m16:00:17[0m [2m[C][0m [1m[91m📉 [LINKUSDT] 스마트TP 청산 (직전 저점 이탈)[0m
+[2m16:00:17[0m [2m[I][0m [97m✅ [LINKUSDT] 시장가 청산 성공.[0m
+[2m16:00:25[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m16:00:25[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m16:00:25[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m16:00:26[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 46.8)[0m
+[2m16:00:26[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 46.5)[0m
+[2m16:00:27[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 38.2)[0m
+[2m16:00:27[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 41.7)[0m
+[2m16:00:28[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 31.9)[0m
+[2m16:00:28[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 21.8)[0m
+[2m16:00:29[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 42.4)[0m
+[2m16:00:29[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 46.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m16:00:30[0m  잔고 [97m[1m    50,181 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - ADX 21.8 < 30
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m16:00:35[0m [2m[I][0m [97m🎯 익절 성공! 연속 손절 카운트 초기화.[0m
+[2m16:00:35[0m [2m[I][0m [97m🎯 익절 성공! 연속 손절 카운트 초기화.[0m
+[2m16:00:35[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 16:15:00 (865초 후)[0m
+[2m16:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m16:15:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 48.0)[0m
+[2m16:15:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 46.0)[0m
+[2m16:15:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 39.7)[0m
+[2m16:15:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 41.6)[0m
+[2m16:15:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 31.3)[0m
+[2m16:15:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 20.8)[0m
+[2m16:15:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 41.8)[0m
+[2m16:15:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 45.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m16:15:14[0m  잔고 [97m[1m    52,240 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - ADX 20.8 < 30
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m16:15:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 16:30:00 (880초 후)[0m
+[2m16:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m16:30:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 49.0)[0m
+[2m16:30:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 45.9)[0m
+[2m16:30:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 40.9)[0m
+[2m16:30:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 42.1)[0m
+[2m16:30:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 31.3)[0m
+[2m16:30:13[0m [2m[I][0m [97m  ADAUSDT  [93m~ S.DN[0m (ADX: 20.3)[0m
+[2m16:30:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 42.2)[0m
+[2m16:30:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 44.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m16:30:14[0m  잔고 [97m[1m    52,240 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - StochRSI 과열 (89)
+  [Skip] [96mADAUSDT[0m - ADX 20.3 < 30
+  [Skip] [96mLINKUSDT[0m - StochRSI 과열 (83)
+
+  [92m[1m▲ [FVG] UNIUSDT Buy[0m  레버 10x  수량 30627.3000
+  진입 2.5585  TP 2.6182  SL 2.5253
+
+[2m17:45:20[0m [2m[E][0m [91m[91m[Error Trace] Logic Error Exception (10001): order not exists or too late to cancel (ErrCode: 110001) (ErrTime: 08:45:20).
+Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linear", "symbol": "UNIUSDT", "orderId": "2e875690-ecb1-40dc-a5af-abea6a216586"}.. 재시도 중단.[0m[0m
+[2m17:45:20[0m [2m[I][0m [97m⏭ [UNIUSDT] 취소 실패(이미 소멸) — 포지션 재확인 중[0m
+[2m17:45:20[0m [2m[I][0m [97m🔍 [UNIUSDT] 포지션 체결 확인됨.[0m
+[2m17:45:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 18:00:00 (879초 후)[0m
+[2m17:46:51[0m [2m[I][0m [97m🎯 [UNIUSDT] 스마트TP 활성화 (0.9R 도달)[0m
+[2m18:00:17[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m18:00:17[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 57.8)[0m
+[2m18:00:18[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 48.1)[0m
+[2m18:00:18[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 48.3)[0m
+[2m18:00:19[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 42.3)[0m
+[2m18:00:19[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 36.8)[0m
+[2m18:00:20[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 24.7)[0m
+[2m18:00:20[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 44.6)[0m
+[2m18:00:21[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 45.9)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m18:00:21[0m  잔고 [97m[1m    52,230 USDT[0m  포지션 [92m[1m1/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - StochRSI 과열 (98)
+  [Skip] [96mETHUSDT[0m - StochRSI 과열 (86)
+  [Skip] [96mBNBUSDT[0m - StochRSI 과열 (99)
+  [Skip] [96mSOLUSDT[0m - StochRSI 과열 (89)
+  [Skip] [96mXRPUSDT[0m - StochRSI 과열 (100)
+  [Skip] [96mADAUSDT[0m - ADX 24.7 < 30
+  [Skip] [96mLINKUSDT[0m - StochRSI 과열 (91)
+[2m18:00:25[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 18:15:00 (874초 후)[0m
+[2m18:15:18[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m18:15:18[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m18:15:18[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m18:15:18[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 59.3)[0m
+[2m18:15:18[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 49.3)[0m
+[2m18:15:19[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 49.9)[0m
+[2m18:15:19[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 43.4)[0m
+[2m18:15:20[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 39.3)[0m
+[2m18:15:20[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 27.4)[0m
+[2m18:15:21[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 45.9)[0m
+[2m18:15:21[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 46.5)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m18:15:22[0m  잔고 [97m[1m    52,230 USDT[0m  포지션 [92m[1m1/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - StochRSI 과열 (100)
+  [Skip] [96mADAUSDT[0m - ADX 27.4 < 30
+  [Skip] [96mLINKUSDT[0m - StochRSI 과열 (96)
+[2m18:15:26[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 18:30:00 (873초 후)[0m
+[2m18:23:15[0m [2m[C][0m [1m[91m📉 [UNIUSDT] 스마트TP 청산 (직전 저점 이탈)[0m
+[2m18:23:15[0m [2m[I][0m [97m✅ [UNIUSDT] 시장가 청산 성공.[0m
+[2m18:30:14[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m18:30:15[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 58.7)[0m
+[2m18:30:15[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 50.8)[0m
+[2m18:30:16[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 50.3)[0m
+[2m18:30:16[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 42.8)[0m
+[2m18:30:17[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 41.5)[0m
+[2m18:30:17[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 29.7)[0m
+[2m18:30:18[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 47.4)[0m
+[2m18:30:18[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 44.7)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m18:30:19[0m  잔고 [97m[1m    52,230 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - ADX 29.7 < 30
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m18:30:24[0m [2m[I][0m [97m🎯 익절 성공! 연속 손절 카운트 초기화.[0m
+[2m18:30:24[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 18:45:00 (876초 후)[0m
+[2m18:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m18:45:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 57.5)[0m
+[2m18:45:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 50.7)[0m
+[2m18:45:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 48.8)[0m
+[2m18:45:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 40.0)[0m
+[2m18:45:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 41.0)[0m
+[2m18:45:13[0m [2m[I][0m [97m  ADAUSDT  [92m^ UP  [0m (ADX: 31.3)[0m
+[2m18:45:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 47.1)[0m
+[2m18:45:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 43.7)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m18:45:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - FVG 조건 미달
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m18:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 19:00:00 (880초 후)[0m
+[2m19:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m19:00:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 55.9)[0m
+[2m19:00:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 49.6)[0m
+[2m19:00:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 47.2)[0m
+[2m19:00:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 37.3)[0m
+[2m19:00:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 40.6)[0m
+[2m19:00:13[0m [2m[I][0m [97m  ADAUSDT  [92m^ UP  [0m (ADX: 32.8)[0m
+[2m19:00:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 46.7)[0m
+[2m19:00:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 41.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m19:00:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - FVG 조건 미달
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m19:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 19:15:00 (880초 후)[0m
+[2m19:15:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m19:15:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m19:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m19:15:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 54.6)[0m
+[2m19:15:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 49.1)[0m
+[2m19:15:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 44.2)[0m
+[2m19:15:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 34.4)[0m
+[2m19:15:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 38.7)[0m
+[2m19:15:13[0m [2m[I][0m [97m  ADAUSDT  [92m^ UP  [0m (ADX: 31.0)[0m
+[2m19:15:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 45.5)[0m
+[2m19:15:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 37.5)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m19:15:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - FVG 조건 미달
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m19:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 19:30:00 (880초 후)[0m
+[2m19:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m19:30:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 53.6)[0m
+[2m19:30:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 48.9)[0m
+[2m19:30:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 42.9)[0m
+[2m19:30:12[0m [2m[I][0m [97m  SOLUSDT  [92m^ UP  [0m (ADX: 32.2)[0m
+[2m19:30:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 37.9)[0m
+[2m19:30:13[0m [2m[I][0m [97m  ADAUSDT  [92m^ UP  [0m (ADX: 31.5)[0m
+[2m19:30:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 45.0)[0m
+[2m19:30:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 35.0)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m19:30:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [92m^ UP  [0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - FVG 조건 미달
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - 리스크 캡 초과
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m19:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 19:45:00 (880초 후)[0m
+[2m19:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m19:45:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 51.3)[0m
+[2m19:45:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 48.6)[0m
+[2m19:45:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 41.5)[0m
+[2m19:45:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 29.9)[0m
+[2m19:45:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 35.4)[0m
+[2m19:45:13[0m [2m[I][0m [97m  ADAUSDT  [92m^ UP  [0m (ADX: 31.9)[0m
+[2m19:45:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 43.0)[0m
+[2m19:45:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 33.1)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m19:45:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - ADX 29.9 < 30
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - FVG 조건 미달
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m19:45:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 20:00:00 (880초 후)[0m
+[2m20:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m20:00:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 49.7)[0m
+[2m20:00:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 46.9)[0m
+[2m20:00:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 40.2)[0m
+[2m20:00:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 28.7)[0m
+[2m20:00:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 33.3)[0m
+[2m20:00:13[0m [2m[I][0m [97m  ADAUSDT  [92m^ UP  [0m (ADX: 30.3)[0m
+[2m20:00:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 40.8)[0m
+[2m20:00:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 31.6)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m20:00:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - ADX 28.7 < 30
+  [Skip] [96mXRPUSDT[0m - FVG 조건 미달
+  [Skip] [96mADAUSDT[0m - FVG 조건 미달
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m20:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 20:15:00 (880초 후)[0m
+[2m20:15:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m20:15:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m20:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m20:15:10[0m [2m[I][0m [97m  BTCUSDT  [92m^ UP  [0m (ADX: 48.8)[0m
+[2m20:15:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 45.1)[0m
+[2m20:15:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 40.4)[0m
+[2m20:15:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 27.2)[0m
+[2m20:15:12[0m [2m[I][0m [97m  XRPUSDT  [92m^ UP  [0m (ADX: 31.6)[0m
+[2m20:15:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 29.5)[0m
+[2m20:15:13[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 40.2)[0m
+[2m20:15:14[0m [2m[I][0m [97m  UNIUSDT  [92m^ UP  [0m (ADX: 31.1)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m20:15:14[0m  잔고 [97m[1m    53,044 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [92m^ UP  [0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [92m^ UP  [0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+
+  [92m[1m▲ [FVG] BNBUSDT Buy[0m  레버 10x  수량 134.1400
+  진입 593.1500  TP 603.6593  SL 587.3115
+
+[2m21:30:17[0m [2m[E][0m [91m[91m[Error Trace] Logic Error Exception (10001): order not exists or too late to cancel (ErrCode: 110001) (ErrTime: 12:30:17).
+Request → POST https://api-demo.bybit.com/v5/order/cancel: {"category": "linear", "symbol": "BNBUSDT", "orderId": "c6c03266-417a-4bf0-97ed-ba3dd631920f"}.. 재시도 중단.[0m[0m
+[2m21:30:17[0m [2m[I][0m [97m⏭ [BNBUSDT] 취소 실패(이미 소멸) — 포지션 재확인 중[0m
+  [Skip] [96mSOLUSDT[0m - ADX 24.8 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 26.9 < 30
+  [Skip] [96mADAUSDT[0m - ADX 26.5 < 30
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - ADX 29.8 < 30
+[2m21:30:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 21:45:00 (879초 후)[0m
+[2m21:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m21:45:10[0m [2m[I][0m [97m  BTCUSDT  [91mv DOWN[0m (ADX: 40.5)[0m
+[2m21:45:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 35.6)[0m
+[2m21:45:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 33.6)[0m
+[2m21:45:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 25.7)[0m
+[2m21:45:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 26.9)[0m
+[2m21:45:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 26.3)[0m
+[2m21:45:14[0m [2m[I][0m [97m  LINKUSDT  [92m^ UP  [0m (ADX: 33.2)[0m
+[2m21:45:14[0m [2m[I][0m [97m  UNIUSDT  [91mv DOWN[0m (ADX: 31.2)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m21:45:15[0m  잔고 [97m[1m    52,193 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [91mv DOWN[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - StochRSI 과매도 (0)
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - ADX 25.7 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 26.9 < 30
+  [Skip] [96mADAUSDT[0m - ADX 26.3 < 30
+  [Skip] [96mLINKUSDT[0m - FVG 조건 미달
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m21:45:20[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 22:00:00 (879초 후)[0m
+[2m22:00:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m22:00:10[0m [2m[I][0m [97m  BTCUSDT  [91mv DOWN[0m (ADX: 38.9)[0m
+[2m22:00:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 32.8)[0m
+[2m22:00:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 32.0)[0m
+[2m22:00:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 24.7)[0m
+[2m22:00:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 26.4)[0m
+[2m22:00:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 25.8)[0m
+[2m22:00:13[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 29.9)[0m
+[2m22:00:14[0m [2m[I][0m [97m  UNIUSDT  [91mv DOWN[0m (ADX: 31.6)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m22:00:14[0m  잔고 [97m[1m    52,193 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [91mv DOWN[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - 리스크 캡 초과
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - ADX 24.7 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 26.4 < 30
+  [Skip] [96mADAUSDT[0m - ADX 25.8 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 29.9 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m22:00:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 22:15:00 (880초 후)[0m
+[2m22:15:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m22:15:10[0m [2m[I][0m [97m  BTCUSDT  [91mv DOWN[0m (ADX: 37.8)[0m
+[2m22:15:11[0m [2m[I][0m [97m  ETHUSDT  [92m^ UP  [0m (ADX: 31.4)[0m
+[2m22:15:11[0m [2m[I][0m [97m  BNBUSDT  [92m^ UP  [0m (ADX: 30.9)[0m
+[2m22:15:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 24.4)[0m
+[2m22:15:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 26.0)[0m
+[2m22:15:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 25.1)[0m
+[2m22:15:13[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 27.8)[0m
+[2m22:15:14[0m [2m[I][0m [97m  UNIUSDT  [91mv DOWN[0m (ADX: 31.6)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m22:15:14[0m  잔고 [97m[1m    52,193 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [91mv DOWN[0m  [2mETH[0m [92m^ UP  [0m  [2mBNB[0m [92m^ UP  [0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - FVG 조건 미달
+  [Skip] [96mBNBUSDT[0m - FVG 조건 미달
+  [Skip] [96mSOLUSDT[0m - ADX 24.4 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 26.0 < 30
+  [Skip] [96mADAUSDT[0m - ADX 25.1 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 27.8 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m22:15:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 22:30:00 (880초 후)[0m
+[2m22:30:10[0m [2m[I][0m [97m거래대금 최상위 20개 종목 스캔 중... (금/스테이블 제외)[0m
+[2m22:30:10[0m [2m[I][0m [97m[고정 워치리스트] ['BTCUSDT', 'ETHUSDT', 'BNBUSDT', 'SOLUSDT', 'XRPUSDT', 'ADAUSDT', 'LINKUSDT', 'UNIUSDT'][0m
+[2m22:30:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m22:30:10[0m [2m[I][0m [97m  BTCUSDT  [91mv DOWN[0m (ADX: 36.7)[0m
+[2m22:30:11[0m [2m[I][0m [97m  ETHUSDT  [2m# WAIT[0m (ADX: 29.2)[0m
+[2m22:30:11[0m [2m[I][0m [97m  BNBUSDT  [2m# WAIT[0m (ADX: 29.8)[0m
+[2m22:30:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 23.9)[0m
+[2m22:30:12[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 25.5)[0m
+[2m22:30:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 24.6)[0m
+[2m22:30:13[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 25.9)[0m
+[2m22:30:14[0m [2m[I][0m [97m  UNIUSDT  [91mv DOWN[0m (ADX: 31.8)[0m
+
+[2m──────────────────────────────────────────────────[0m
+  [96m[1m22:30:14[0m  잔고 [97m[1m    52,193 USDT[0m  포지션 [92m[1m0/7[0m
+  [2mBTC[0m [91mv DOWN[0m  [2mETH[0m [2m# WAIT[0m  [2mBNB[0m [2m# WAIT[0m  [2mSOL[0m [2m# WAIT[0m  [2mXRP[0m [2m# WAIT[0m  
+[2m──────────────────────────────────────────────────[0m
+
+  [Skip] [96mBTCUSDT[0m - FVG 조건 미달
+  [Skip] [96mETHUSDT[0m - ADX 29.2 < 30
+  [Skip] [96mBNBUSDT[0m - ADX 29.8 < 30
+  [Skip] [96mSOLUSDT[0m - ADX 23.9 < 30
+  [Skip] [96mXRPUSDT[0m - ADX 25.5 < 30
+  [Skip] [96mADAUSDT[0m - ADX 24.6 < 30
+  [Skip] [96mLINKUSDT[0m - ADX 25.9 < 30
+  [Skip] [96mUNIUSDT[0m - FVG 조건 미달
+[2m22:30:19[0m [2m[I][0m [97m대기 중 — 다음 15분 정각: 22:45:00 (880초 후)[0m
+[2m22:45:10[0m [2m[I][0m [97m[15m] 장세 업데이트 및 개별 심볼 ADX/EMA 체크[0m
+[2m22:45:11[0m [2m[I][0m [97m  BTCUSDT  [91mv DOWN[0m (ADX: 35.2)[0m
+[2m22:45:11[0m [2m[I][0m [97m  ETHUSDT  [2m# WAIT[0m (ADX: 27.5)[0m
+[2m22:45:12[0m [2m[I][0m [97m  BNBUSDT  [2m# WAIT[0m (ADX: 28.4)[0m
+[2m22:45:12[0m [2m[I][0m [97m  SOLUSDT  [2m# WAIT[0m (ADX: 23.3)[0m
+[2m22:45:13[0m [2m[I][0m [97m  XRPUSDT  [2m# WAIT[0m (ADX: 25.1)[0m
+[2m22:45:13[0m [2m[I][0m [97m  ADAUSDT  [2m# WAIT[0m (ADX: 24.6)[0m
+[2m22:45:14[0m [2m[I][0m [97m  LINKUSDT  [2m# WAIT[0m (ADX: 24.8)[0m
+[2m22:45:14[0m [2m[I][0m [97m  UNIUSDT  [91mv DOWN[0m (ADX: 32.9)[0m
